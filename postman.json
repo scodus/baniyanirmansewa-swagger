@@ -77,10 +77,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/login",
+									"raw": "http://localhost:8000/api/login",
+									"protocol": "http",
 									"host": [
-										"{{url}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"login"
@@ -160,10 +162,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/logout",
+									"raw": "http://localhost:8000/api/logout",
+									"protocol": "http",
 									"host": [
-										"{{url}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"logout"
@@ -258,14 +262,16 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/refresh-token/{{refresh_token}}",
+									"raw": "http://localhost:8000/api/refresh-token/",
+									"protocol": "http",
 									"host": [
-										"{{url}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"refresh-token",
-										"{{refresh_token}}"
+										""
 									]
 								}
 							},
@@ -342,10 +348,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/user-detail",
+									"raw": "http://localhost:8000/api/user-detail",
+									"protocol": "http",
 									"host": [
-										"{{url}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"user-detail"
@@ -443,10 +451,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/change-password",
+									"raw": "http://localhost:8000/api/change-password",
+									"protocol": "http",
 									"host": [
-										"{{url}}"
+										"localhost"
 									],
+									"port": "8000",
 									"path": [
 										"api",
 										"change-password"
@@ -870,8 +880,8 @@
 								},
 								{
 									"key": "document",
-									"value": "",
-									"type": "text"
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
 								}
 							]
 						},
@@ -957,7 +967,7 @@
 					]
 				},
 				{
-					"name": "Store Document",
+					"name": "save multiple",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -971,26 +981,48 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "document",
+									"key": "data[0][key]",
+									"value": "KEY_1",
+									"type": "text"
+								},
+								{
+									"key": "data[0][value]",
+									"value": "some random value",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data[0][document]",
 									"type": "file",
 									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
 								},
 								{
-									"key": "key",
-									"value": "image",
+									"key": "data[1][key]",
+									"value": "KEY_2",
 									"type": "text"
+								},
+								{
+									"key": "data[1][value]",
+									"value": "random value",
+									"type": "text"
+								},
+								{
+									"key": "data[1][document]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "{{url}}/api/site-settings/document",
+							"raw": "{{url}}/api/site-settings/multiple",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"site-settings",
-								"document"
+								"multiple"
 							]
 						}
 					},
@@ -1031,7 +1063,7 @@
 			]
 		},
 		{
-			"name": "mission details",
+			"name": "Mission Details",
 			"item": [
 				{
 					"name": "get all",
@@ -1553,6 +1585,1873 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Mission detail has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Founder and MD",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/founders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"founders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/founders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"founders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:16:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"description\": \"Voluptatem voluptatem doloribus ipsum numquam id tempora ut porro. Qui repellendus quo voluptatum nesciunt.\\n\\nReiciendis qui in et harum et iure. Fugiat nemo autem quia aut aut et. Dolorem dignissimos dolor rerum voluptatem.\\n\\nTenetur aliquam excepturi et similique. Vero delectus enim voluptas facere.\\n\\nEius qui minus ad aut optio quod. Maxime qui odit magnam in et. Aliquam repellendus ratione sit voluptatibus et praesentium repellat. Ut dolorem voluptas et aut doloribus fugiat adipisci.\\n\\nQuia quo ut voluptate consequatur mollitia facere officia. Tenetur eos quaerat molestias optio ratione. Ipsam quidem sunt accusamus accusantium sed vero excepturi. Consequuntur est omnis quae ea voluptatem molestiae ad.\",\n            \"id\": 3,\n            \"image\": null,\n            \"name\": \"Prof. Abagail Dare DVM\",\n            \"order\": 2,\n            \"position\": \"labore nobis voluptas\",\n            \"quote\": \"Magnam harum quasi asperiores sed voluptatem.\",\n            \"title\": \"Sapiente nihil ab voluptatem.\"\n        },\n        {\n            \"description\": \"Sint aspernatur nobis ut vel rerum earum. Ut quis eaque fuga fugit dolorem quam. Molestiae aut voluptatum deleniti atque recusandae. Ut eligendi ab sit qui aliquam ea et eveniet.\\n\\nEt quia architecto maxime est placeat. Cum ducimus sed quis beatae impedit quia qui. Quasi assumenda quia maxime qui voluptatem nihil. Dignissimos qui quae soluta nihil soluta et sapiente et.\\n\\nEt voluptates sunt labore nulla consectetur. Maiores et non iste natus eos. Eos repellat molestiae quia a. Odit labore laudantium ipsum quo.\\n\\nEt ut minima ea quos. Iusto ex eum praesentium. Vitae rem repellat cum officiis sed id.\\n\\nOccaecati neque saepe pariatur perferendis eum omnis repellendus et. Aperiam sit aliquam dolorem id quis ipsam corrupti. Dolorem qui natus quidem maiores ratione assumenda. Aspernatur consectetur est quas repudiandae optio.\",\n            \"id\": 4,\n            \"image\": null,\n            \"name\": \"Prof. Madonna Baumbach\",\n            \"order\": 3,\n            \"position\": \"fugit sunt illo\",\n            \"quote\": \"Recusandae culpa necessitatibus facere sit aut iusto.\",\n            \"title\": \"Error porro iure accusamus explicabo non ducimus nam repellat.\"\n        },\n        {\n            \"description\": \"Recusandae minima quis similique. Ratione aut autem officiis eum. Et rerum et consequatur sit perspiciatis. Voluptatum aut sit vel vero.\\n\\nQuod dolores iusto quod sunt sed. Libero quis aspernatur ipsam non culpa. Laboriosam qui optio deserunt eius cumque id. Explicabo sapiente suscipit dolore repellat qui officiis eaque quod. Ea et non vitae.\\n\\nImpedit dolorem deleniti perferendis eum temporibus necessitatibus vitae. Nihil doloremque quia sit nihil. Eum animi officiis et consequatur autem aliquid. Iste aut iusto dolor voluptas praesentium dolore qui dolorem. Neque laborum rerum dolorem nulla sunt amet.\\n\\nEst fuga eaque et officiis repellendus unde. Dolorem dolorem excepturi quaerat neque rerum enim id. Beatae ex impedit quia neque culpa enim dicta enim. Eos dolores totam nulla aut et dolor est qui.\\n\\nHarum dolorem consectetur inventore eius reiciendis. Suscipit voluptatem iste qui aspernatur. Earum ducimus ut aliquam quia eligendi eveniet illo. Architecto aut amet accusamus fuga ullam.\",\n            \"id\": 1,\n            \"image\": null,\n            \"name\": \"Prof. Shannon Grimes\",\n            \"order\": 6,\n            \"position\": \"consequatur facere corporis\",\n            \"quote\": \"Quae velit vitae cumque tempore.\",\n            \"title\": \"Delectus aut non dolorem id.\"\n        },\n        {\n            \"description\": \"Vel tempora et debitis aut. Quibusdam dignissimos molestiae quaerat ipsa. Dignissimos illo dolores corrupti. Tempore dolor repellendus laborum eum ducimus voluptates.\\n\\nQui odio officiis autem rerum. Omnis voluptatem sed sit quidem eum. Alias voluptatem qui numquam iste. Aut aliquid repellendus voluptatem sunt ipsam eveniet.\\n\\nVoluptates doloribus aut voluptas soluta sequi et. Perspiciatis dicta aut impedit. Facilis reprehenderit id veritatis sapiente. Autem commodi odit qui. Omnis et consectetur error nisi laborum voluptatem aliquam.\\n\\nUt qui consequatur velit. Et est sunt ratione earum repellat. Aut nisi est enim quos voluptatem voluptatem. Ea aut aut molestiae qui optio.\\n\\nPorro praesentium laboriosam veniam est. Ut minima molestiae in pariatur dolores sit.\",\n            \"id\": 2,\n            \"image\": null,\n            \"name\": \"Norbert Jast\",\n            \"order\": 6,\n            \"position\": \"architecto labore recusandae\",\n            \"quote\": \"Corporis odio velit nemo labore dolores voluptas.\",\n            \"title\": \"Quos consequuntur odio vel vel.\"\n        },\n        {\n            \"description\": \"Nobis cupiditate fugit ratione rerum impedit. Ad et dolor nobis. Deleniti dolorem quas alias enim. Consequatur tenetur earum aut quibusdam assumenda.\\n\\nNulla voluptates sint qui nobis accusamus facilis. Ipsum non quo rerum praesentium maiores. Dignissimos qui tempore odit sed velit id.\\n\\nUllam beatae omnis et nostrum distinctio nostrum. Reprehenderit quisquam minus voluptatem. Eligendi dolor voluptatibus sed omnis asperiores laborum repellat fugit.\\n\\nQuasi quia sed fuga natus. Deserunt quae consequuntur cumque nostrum. Possimus itaque nihil numquam voluptate voluptatem et sit.\\n\\nDebitis ut velit occaecati atque animi. Unde accusantium commodi sunt architecto aut beatae accusantium. Eaque quis minima voluptas sint tempora. Quia ab quis quibusdam amet quae modi tempore.\",\n            \"id\": 5,\n            \"image\": null,\n            \"name\": \"Emilio Morar IV\",\n            \"order\": 8,\n            \"position\": \"accusamus omnis esse\",\n            \"quote\": \"Est velit debitis nisi ea nemo aut.\",\n            \"title\": \"Expedita sequi culpa non voluptatum vitae ut.\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Our Founder's Vision",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "MP. Indra Bahadur Baniya",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "Founder",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...",
+									"type": "text"
+								},
+								{
+									"key": "quote",
+									"value": "Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/founders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"founders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Our Founder's Vision",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "MP. Indra Bahadur Baniya",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "Founder",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...",
+											"type": "text"
+										},
+										{
+											"key": "quote",
+											"value": "Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/founders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"founders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:21:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created founder\",\n    \"status\": \"success\",\n    \"data\": {\n        \"description\": \"As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...\",\n        \"id\": 6,\n        \"image\": \"http://localhost:8000/storage/32/7a836b519ff331e8c8b7d61ffe0ad806.jpg\",\n        \"name\": \"MP. Indra Bahadur Baniya\",\n        \"order\": null,\n        \"position\": \"Founder\",\n        \"quote\": \"Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.\",\n        \"title\": \"Our Founder's Vision\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Our Founder's Vision",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "MP. Indra Bahadur Baniya",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "Founder",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...",
+									"type": "text"
+								},
+								{
+									"key": "quote",
+									"value": "Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/founders/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"founders",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Our Founder's Vision",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "MP. Indra Bahadur Baniya",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "Founder",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...",
+											"type": "text"
+										},
+										{
+											"key": "quote",
+											"value": "Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/founders/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"founders",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:22:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"description\": \"As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...\",\n        \"id\": 6,\n        \"image\": \"http://localhost:8000/storage/32/7a836b519ff331e8c8b7d61ffe0ad806.jpg\",\n        \"name\": \"MP. Indra Bahadur Baniya\",\n        \"order\": 1,\n        \"position\": \"Founder\",\n        \"quote\": \"Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.\",\n        \"title\": \"Our Founder's Vision\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Our Founder's Vision",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "MP. Indra Bahadur Baniya",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "Founder",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...",
+									"type": "text"
+								},
+								{
+									"key": "quote",
+									"value": "Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/founders/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"founders",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Our Founder's Vision",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "MP. Indra Bahadur Baniya",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "Founder",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...",
+											"type": "text"
+										},
+										{
+											"key": "quote",
+											"value": "Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/founders/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"founders",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:28:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated founder detail\",\n    \"status\": \"success\",\n    \"data\": {\n        \"description\": \"As we look back on our company's journey, a sense of immense pride fills me. In 1998, when we began this remarkable venture, the idea of ...\",\n        \"id\": 6,\n        \"image\": \"http://localhost:8000/storage/37/f20dfd68c1e64dc9305a3a8bf15479b4.jpg\",\n        \"name\": \"MP. Indra Bahadur Baniya\",\n        \"order\": 1,\n        \"position\": \"Founder\",\n        \"quote\": \"Over the last 2 decades, BMS has been instrumental in making our country's infrastructure more efficient through building & integrating townships and cityscapes.\",\n        \"title\": \"Our Founder's Vision\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/founders/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"founders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/founders/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"founders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:29:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Founder detail has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Board of Directors",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/directors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/directors",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"directors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:04:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"image\": null,\n            \"name\": \"Felton Monahan\",\n            \"order\": 1,\n            \"summary\": \"Ipsam deleniti amet corporis quidem. Porro autem exercitationem veniam qui harum. Voluptates corrupti et quis est. Id cumque aperiam voluptas blanditiis. Voluptatem necessitatibus molestiae ducimus sed tempore.\"\n        },\n        {\n            \"id\": 2,\n            \"image\": null,\n            \"name\": \"Annalise Rodriguez\",\n            \"order\": 2,\n            \"summary\": \"Sit aliquid facilis architecto autem a exercitationem laudantium. Quidem minus sequi ut repudiandae unde fugiat nulla. Necessitatibus facilis veritatis impedit repellat ut aliquid. Doloribus dolores autem impedit voluptatum temporibus doloremque.\"\n        },\n        {\n            \"id\": 8,\n            \"image\": null,\n            \"name\": \"Aditya Nader\",\n            \"order\": 3,\n            \"summary\": \"Rem molestiae quam nostrum sint. Debitis odio quo modi velit.\"\n        },\n        {\n            \"id\": 1,\n            \"image\": null,\n            \"name\": \"Daija Heidenreich\",\n            \"order\": 5,\n            \"summary\": \"Impedit eius sed aut quibusdam. Ut accusamus recusandae consequatur corrupti. Rerum molestias rem tenetur doloremque. Eos repellendus quia vero occaecati omnis sit.\"\n        },\n        {\n            \"id\": 7,\n            \"image\": null,\n            \"name\": \"Prof. Luisa Jacobson\",\n            \"order\": 5,\n            \"summary\": \"Possimus quia ducimus aliquam doloremque est deleniti. Ad fuga voluptatibus eveniet ea.\"\n        },\n        {\n            \"id\": 6,\n            \"image\": null,\n            \"name\": \"Ms. Alexandria Parisian\",\n            \"order\": 7,\n            \"summary\": \"Voluptas quidem aut eaque necessitatibus. Mollitia harum voluptas nihil. Quibusdam quos eos non necessitatibus praesentium animi quas adipisci. Nesciunt autem consequatur et voluptatem doloremque dolorem autem.\"\n        },\n        {\n            \"id\": 3,\n            \"image\": null,\n            \"name\": \"Shany Cruickshank\",\n            \"order\": 8,\n            \"summary\": \"Quos vero nemo eaque fugit aut quaerat. Aut possimus reiciendis suscipit rerum beatae consequatur distinctio qui. Doloribus expedita optio doloremque.\"\n        },\n        {\n            \"id\": 4,\n            \"image\": null,\n            \"name\": \"Gerhard Feest\",\n            \"order\": 8,\n            \"summary\": \"Quis et perferendis dolorem nisi. Quia ut qui illo repudiandae quod commodi mollitia. Vitae labore ut autem atque veniam voluptas. Cupiditate vitae quod vel repellendus unde hic vero.\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "MP. Indra Bahadur Baniya",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "Founder",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								},
+								{
+									"key": "order",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/directors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "MP. Indra Bahadur Baniya",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "Founder",
+											"type": "text"
+										},
+										{
+											"key": "summary",
+											"value": "The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/directors",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"directors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:08:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created director\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 10,\n        \"image\": \"http://localhost:8000/storage/39/a70da3bdcbb074fa2633af8ba676728c.jpg\",\n        \"name\": \"MP. Indra Bahadur Baniya\",\n        \"order\": \"1\",\n        \"summary\": \"The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/directors/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directors",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/directors/10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"directors",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:10:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 10,\n        \"image\": \"http://localhost:8000/storage/39/a70da3bdcbb074fa2633af8ba676728c.jpg\",\n        \"name\": \"MP. Indra Bahadur Baniya\",\n        \"order\": 1,\n        \"summary\": \"The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "MP. Indra Bahadur Baniya",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "Founder",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.",
+									"type": "text"
+								},
+								{
+									"key": "order",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/directors/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directors",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "MP. Indra Bahadur Baniya",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "Founder",
+											"type": "text"
+										},
+										{
+											"key": "summary",
+											"value": "The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.",
+											"type": "text"
+										},
+										{
+											"key": "order",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/directors/10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"directors",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:12:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated director detail\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 10,\n        \"image\": \"http://localhost:8000/storage/42/851a147f5ae4c61b9962938ab57ae967.jpg\",\n        \"name\": \"MP. Indra Bahadur Baniya\",\n        \"order\": 1,\n        \"summary\": \"The guiding force behind Baniya Nirman Sewa, serves as the guardian of its vision and excellence.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/directors/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/directors/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"directors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 08:13:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Director has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Press release",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/press-release?limit=15&page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"press-release"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "15"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/press-release?limit=15&page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"press-release"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "15"
+										},
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:39:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 32,\n                \"title\": \"Non nostrum voluptas magnam fugiat quidem velit dolores.\",\n                \"author_name\": \"Dr. Jarod O'Keefe\",\n                \"excerpt\": \"Dolore ea facere et qui id quia odit.\",\n                \"description\": \"Odit perspiciatis sint voluptatem unde saepe aliquid illum. Sunt qui assumenda voluptatibus voluptatibus enim fuga dolor laboriosam. Repudiandae nostrum quis sed fugiat fugiat possimus. Dolor aliquid itaque ut sed dolores facere.\\n\\nVelit ut qui et neque optio. Quam velit eaque qui nam officiis laborum. Et nesciunt exercitationem nesciunt dolor voluptate voluptatem. Animi necessitatibus et laborum veritatis fugiat aliquid.\\n\\nRerum et at ut minima. Eum magni aperiam quibusdam maiores et.\\n\\nPariatur voluptatem sit itaque veritatis odio. Sunt vel porro vel occaecati debitis aut perferendis sed.\\n\\nAt praesentium perferendis libero laudantium ratione fugit odit. Consequuntur deserunt qui sed tenetur ducimus ullam natus. Voluptates sit perferendis sint est voluptatum omnis. Ab odit voluptatibus quaerat sapiente debitis.\"\n            },\n            {\n                \"id\": 33,\n                \"title\": \"Qui quod eveniet quidem ea ut at autem.\",\n                \"author_name\": \"Miss Kamille Legros\",\n                \"excerpt\": \"Mollitia est velit delectus ullam.\",\n                \"description\": \"Animi totam optio est dignissimos doloremque. Et repellat optio officiis repellat voluptatem qui rem. Rerum ad nemo soluta molestias recusandae ea. Qui ipsa illum enim.\\n\\nFacilis quod repellat accusamus aut quod. Accusamus soluta sit cumque minima incidunt. Quis tenetur illum cupiditate fugit amet voluptas quia.\\n\\nPerferendis magnam quis perspiciatis velit unde nisi. Ratione aperiam voluptatibus esse enim aperiam voluptatem. Minus velit voluptatum quam labore. Quam earum sunt minus est dolorem atque soluta est.\\n\\nEst quia qui animi error vitae. Possimus ut pariatur tempore eveniet voluptate consequatur.\\n\\nEt consequatur aspernatur iure quam impedit provident. Modi laboriosam quidem mollitia quo. Voluptate unde consequatur eveniet quis. Quo quod et et dolorum quod laudantium.\"\n            },\n            {\n                \"id\": 16,\n                \"title\": \"Optio ullam quia neque ea.\",\n                \"author_name\": \"Delfina Grant\",\n                \"excerpt\": \"Non fuga sequi atque.\",\n                \"description\": \"Consequatur repellendus quisquam autem ipsa atque animi et. Molestias repudiandae dolorum adipisci eius ipsum corrupti. Officiis cum et ut. Mollitia animi cupiditate autem veritatis qui accusantium.\\n\\nOmnis numquam dolore tenetur eum. Esse sunt quo rerum commodi veniam consequatur. Fuga illum alias voluptatem iusto consequuntur.\\n\\nEveniet amet fuga voluptatem qui sed reprehenderit mollitia. Iure similique aut sint nihil nihil. Expedita illum dicta rerum inventore.\\n\\nProvident ut laudantium sed rerum. Quia velit est error dolore quia dolor ut. Voluptas ut omnis omnis. Nulla quibusdam velit vel ut omnis nihil.\\n\\nAtque corrupti repudiandae animi. Sint praesentium accusantium magnam eum distinctio et quaerat quo. Debitis commodi ut ipsum aperiam a et eum. Tenetur eos est dolor facilis praesentium voluptatum doloremque.\"\n            },\n            {\n                \"id\": 15,\n                \"title\": \"Quidem possimus quam sint ut voluptatem aut.\",\n                \"author_name\": \"Marjorie Cremin\",\n                \"excerpt\": \"Recusandae voluptatum pariatur quas delectus praesentium.\",\n                \"description\": \"Porro dolorem fugit consequatur nobis quia dolorum. Ducimus ipsa voluptatem earum eligendi. Autem omnis quidem veniam sed sit rerum.\\n\\nInventore molestiae vel illo quos quas. Omnis ea assumenda eligendi corporis consequatur rerum placeat et. Sit voluptatum distinctio rerum a. Suscipit voluptatem amet quo incidunt.\\n\\nQuibusdam harum et magnam quo ab. Explicabo sed laborum magnam id.\\n\\nPerferendis minus quo et animi minus. Velit et labore consequatur voluptatem sapiente. Quia accusamus ut velit repellat molestiae cupiditate voluptatem. Minima quia quidem vitae libero. Quasi possimus incidunt mollitia suscipit.\\n\\nHic nemo enim rerum. Alias iusto sint nam voluptatem et quaerat qui. Cumque voluptatibus et qui eos hic quia qui.\"\n            },\n            {\n                \"id\": 14,\n                \"title\": \"Tempore voluptatibus cupiditate deleniti repellat numquam est ex doloribus.\",\n                \"author_name\": \"Patricia Bruen\",\n                \"excerpt\": \"Quis debitis voluptatem in qui tempore.\",\n                \"description\": \"Non laborum et odio voluptatum. Nulla enim repellat dolores sed molestiae mollitia accusantium. Est quis dolor odit qui voluptatibus. Similique omnis odio possimus sunt ut excepturi.\\n\\nNesciunt mollitia eaque sit voluptatem quae nemo voluptas. Adipisci quae a ut hic qui. Aspernatur porro ut ea aperiam sed mollitia.\\n\\nEt veniam ipsam quia labore qui autem. Rerum aliquid sed quae aut nihil autem atque. Quasi voluptatem blanditiis architecto doloribus corporis. Illo est sit nemo alias aut et repellat.\\n\\nEnim qui est necessitatibus qui corrupti et. Velit amet nisi et voluptate alias.\\n\\nLabore enim eius voluptatibus. Sint aspernatur sint a est incidunt. Aut a eum officiis excepturi cumque natus. Odit autem consectetur atque ad id dolorem ea.\"\n            },\n            {\n                \"id\": 1,\n                \"title\": \"Debitis sequi vel exercitationem quam omnis dolor error.\",\n                \"author_name\": \"Carleton Ferry\",\n                \"excerpt\": \"Esse eveniet distinctio et dolorum earum. Aliquam sunt adipisci sunt dolorum magni minima dolorum deserunt. Corporis a animi dolorem id veniam.\",\n                \"description\": \"Expedita doloremque ducimus ex laboriosam. Sed voluptas tempora neque iusto rerum. Maxime veniam fugit delectus facilis molestiae praesentium maiores omnis. Amet facilis cum deleniti ut dignissimos.\\n\\nEst eum vitae eveniet laborum non voluptatem. Quaerat inventore rerum dolores eius laudantium impedit ea. Repellendus sed voluptas ratione voluptatem.\\n\\nEarum voluptatibus vitae cupiditate in et aspernatur. Numquam qui natus magni repellat amet laboriosam voluptatibus. Ut qui quasi neque aut sit.\\n\\nQuae praesentium sed dolor praesentium et sunt possimus. Doloribus non velit et. Praesentium non sapiente perferendis. Odit placeat error voluptas sit.\\n\\nSed eius est optio recusandae magni qui. Corrupti aut repellendus atque consequatur aliquam voluptatum. At velit nulla dolorem delectus et temporibus doloremque. Impedit aut hic modi maxime assumenda molestias.\"\n            },\n            {\n                \"id\": 13,\n                \"title\": \"Quis tenetur labore eos in et repudiandae.\",\n                \"author_name\": \"Prof. Lionel Stroman I\",\n                \"excerpt\": \"Qui quos cum non est corrupti suscipit. Nesciunt consequatur voluptatem et facilis vitae. Possimus delectus voluptatem amet qui expedita magnam aut. Error ut excepturi ex eveniet saepe.\",\n                \"description\": \"Doloribus unde est quis quo officia vel. Incidunt ea sapiente error id cupiditate animi a. Mollitia nobis vitae rem voluptatem. Iusto ad quia in quia odit voluptate quam.\\n\\nFuga aspernatur eum quasi sit dolorum ut qui ullam. Et dolor qui nemo fuga quia et repudiandae. Placeat labore architecto sapiente possimus nulla. Officia id at repudiandae mollitia a ut nihil.\\n\\nMagni dignissimos velit dignissimos eum voluptate dicta. Voluptatum rem enim et incidunt ipsum sunt quia. Magni vitae minus eos aperiam possimus vel earum. Doloremque ut aut enim sed.\\n\\nAliquid pariatur ut dicta magni. Atque nesciunt dolore ad molestiae magnam ut quia. Architecto similique similique et vel doloremque aspernatur. Dolorum doloremque et architecto perferendis.\\n\\nConsequatur praesentium ex non suscipit molestiae esse inventore eos. Omnis repellendus corrupti voluptas rem maxime odio. Ea qui omnis esse nesciunt eos qui delectus omnis. Qui non aut sequi nihil et.\"\n            },\n            {\n                \"id\": 12,\n                \"title\": \"Sed nisi voluptatibus et qui qui.\",\n                \"author_name\": \"Mrs. Carole Bahringer\",\n                \"excerpt\": \"Sed rem inventore eius. Aliquid alias adipisci exercitationem nesciunt non. Provident sint eos laboriosam officiis ea. Molestiae cupiditate ex doloremque ab neque accusamus id.\",\n                \"description\": \"Velit incidunt aut dolorem. Accusantium qui explicabo ad itaque beatae tempora.\\n\\nAmet nihil repellendus rerum quo repellat magni. Dolores quod dolores id sapiente perspiciatis omnis aliquam. Ut iure quisquam deleniti perspiciatis. Laudantium repellat dolor pariatur sint quis repudiandae adipisci.\\n\\nNihil itaque voluptatem ut quia perspiciatis dolores omnis. Quia voluptatem qui error et ipsum. Dolor velit quo ut consequatur voluptatibus rem beatae. Fugiat at odit natus corrupti dolorum sint omnis.\\n\\nPerspiciatis reprehenderit et molestiae magnam fugit rerum. Ad labore qui veritatis ipsam. Earum hic rerum est maxime deserunt ad ullam.\\n\\nPerspiciatis molestias at qui. Omnis illo quam nihil. Veritatis quas ratione at iste. Maxime dolor et est et odio facere corrupti. Qui magnam deleniti voluptate accusantium quam eum.\"\n            },\n            {\n                \"id\": 11,\n                \"title\": \"Adipisci dolorem modi suscipit et eos.\",\n                \"author_name\": \"Dortha Hintz\",\n                \"excerpt\": \"Aut fugit eius ipsam ut quos dolorem id. Sed in molestiae ut repellendus id aspernatur. Qui rem quos dolorem illo saepe vel quo possimus.\",\n                \"description\": \"Minima saepe ducimus ut vitae est maiores dignissimos. Aut maiores accusantium rem est. Quo sapiente corporis qui molestiae non quo. Culpa ullam quis quas omnis.\\n\\nBeatae voluptate qui eum laboriosam possimus sequi. Illo sequi ad explicabo sint est voluptatem aut. Repudiandae et quod voluptas et. Beatae quia est ut quos sunt reiciendis.\\n\\nAut consequatur ut ducimus. Eveniet quos et delectus quod inventore voluptatum. Iure beatae sed eaque iste ut.\\n\\nVoluptatem non beatae earum quo qui assumenda dolores. Dolorem quia perferendis quod enim maxime quod impedit. Iste similique cupiditate minus voluptatum ut dolorum.\\n\\nSit libero odit aspernatur placeat. Et esse eum asperiores consequuntur necessitatibus quae esse. Id vero repellat voluptatem asperiores velit corporis est.\"\n            },\n            {\n                \"id\": 10,\n                \"title\": \"Ducimus ad eum vel.\",\n                \"author_name\": \"Dr. Enoch Keebler II\",\n                \"excerpt\": \"Nihil rem sunt aut illo qui. Dolore rerum occaecati vero ipsa quam. Eum sequi perspiciatis qui praesentium alias cupiditate eaque. Minima quos quia quaerat.\",\n                \"description\": \"Consequatur aspernatur dolore nihil illo minima dolores. Cumque exercitationem natus fugiat veniam in. Dicta nesciunt vel et inventore illum quo.\\n\\nQuia magni dolores rerum dolorem quia. Sapiente temporibus laboriosam et facilis facere numquam. Sunt est et recusandae veritatis aut iste.\\n\\nQuaerat qui nisi numquam quos eos cupiditate consequatur. Asperiores voluptas dolorem voluptatem consequatur suscipit. Exercitationem doloremque blanditiis voluptate.\\n\\nCum at omnis voluptatem rerum. Nemo veniam amet cumque. Dolor voluptatibus sint et illo. Et enim nostrum neque cumque fugiat recusandae sed.\\n\\nMagnam molestias in tempora consequatur. Et dolorum ducimus ut. Rerum sed hic autem nam dolorem.\"\n            },\n            {\n                \"id\": 9,\n                \"title\": \"Quo atque veritatis mollitia id fuga.\",\n                \"author_name\": \"Donato Hill\",\n                \"excerpt\": \"Fuga sint dolore architecto qui explicabo fugit qui. Veritatis totam qui velit quo aperiam. Ex est ad non nemo. Minus quia accusamus est est. Totam deserunt nisi voluptatem et cumque fugiat.\",\n                \"description\": \"Rerum explicabo amet maxime temporibus qui aliquid nostrum eum. Quos quia id doloremque quia. Debitis placeat molestiae quibusdam debitis expedita laboriosam repudiandae. Perspiciatis ipsam aliquam provident architecto.\\n\\nQui aut aliquid saepe aut. Enim quisquam omnis accusamus velit incidunt voluptates quia. Repellat atque impedit qui. Natus et in aperiam placeat pariatur sunt.\\n\\nEveniet reprehenderit expedita adipisci nulla voluptatem velit. Odio et reprehenderit sunt quibusdam numquam tempora tenetur quia. Quo dolorum quibusdam quia.\\n\\nTotam et repudiandae quo earum corporis minima suscipit ratione. Voluptatem maiores dolores accusamus est saepe. Earum fugit nihil voluptas labore aut.\\n\\nVoluptatem rem dignissimos qui ut placeat sed. Vel nesciunt quas velit quia sed enim labore. Quia id qui molestias fugiat quo. Veritatis quaerat ea dolorem est voluptatem ab omnis.\"\n            },\n            {\n                \"id\": 8,\n                \"title\": \"Magni quo et ipsum quisquam harum non molestias.\",\n                \"author_name\": \"Dr. Lafayette Huels\",\n                \"excerpt\": \"Enim illum omnis dolorum aut aspernatur corporis. Non ex nemo eum itaque. Ducimus natus quos perferendis hic dolor eaque. Iure quam porro est dicta porro.\",\n                \"description\": \"Sequi nam ea doloribus corrupti. Est dolorem magni voluptatem. Sequi et eum necessitatibus sed ut ut sed.\\n\\nAut possimus aspernatur tenetur ab tenetur aspernatur ipsum dolores. Velit ut sequi ratione sit in dolores fuga consequatur. In explicabo vero magnam itaque sit a quaerat mollitia.\\n\\nSapiente animi odio deserunt eaque fugiat pariatur. Architecto labore officia velit reprehenderit. Rem magnam dolor sint qui. Tenetur enim eveniet ex eius.\\n\\nSequi aut at sit aliquid in a. Ex ut consequuntur soluta voluptate. Molestiae veniam dolores aspernatur. Earum aut dolorum est quis.\\n\\nIllo error quia quae omnis possimus voluptatem. Ratione sed optio ipsam ut culpa dolorem unde.\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"Ea inventore a dolores ut.\",\n                \"author_name\": \"Kendrick Frami\",\n                \"excerpt\": \"Molestiae asperiores cum accusantium qui deserunt et. Maiores error repellendus magnam explicabo. Consequatur nam eum et reiciendis.\",\n                \"description\": \"Voluptas quia error eius. Odit non atque sequi voluptatem.\\n\\nQui et doloremque omnis praesentium reprehenderit harum libero ad. Nemo voluptate omnis rerum provident iusto itaque. Occaecati placeat ut et omnis eius nobis ut.\\n\\nNam et pariatur totam autem laudantium possimus. Facere magni ut atque quo eos necessitatibus iusto quis. Sed sint eligendi illum sunt. Vel minima sequi corporis itaque. Eum quis non cum quis.\\n\\nPariatur quia dolores et voluptas. Harum id quam omnis maiores autem et possimus. Sunt sit nihil quaerat.\\n\\nNon ut laudantium non ipsa eveniet rerum consectetur molestiae. Distinctio saepe tempora dolorum non.\"\n            },\n            {\n                \"id\": 6,\n                \"title\": \"Explicabo nobis nostrum et ea dolorum et blanditiis.\",\n                \"author_name\": \"Malvina Botsford\",\n                \"excerpt\": \"Quia voluptatem veritatis velit sunt est voluptate. Ratione tempora nihil maiores adipisci. Omnis sint quia perspiciatis sint eum totam. Aliquid dolores deleniti eligendi ipsum provident accusantium corrupti.\",\n                \"description\": \"Maiores nostrum dolores doloribus expedita. Nihil eaque perspiciatis omnis. Corporis qui error fuga nulla alias. Quia fugit enim magnam rerum ut aut.\\n\\nIure dolorum asperiores eos nemo. Dolorem maxime voluptatem amet qui hic eligendi quis. Quis iste consequatur et distinctio est. Ut vel et voluptas qui ut.\\n\\nSint quaerat quia rerum modi eligendi pariatur. Consequuntur est consequatur placeat dolores magnam aut. Quod ut ut officia quo tempore quia et iusto.\\n\\nRepudiandae quia molestiae cum sed voluptates. Tenetur aspernatur dolorem repellendus quisquam sunt eius accusantium sint. Amet consequatur mollitia ratione nobis. Optio aut itaque sed aut omnis ullam et. Tempora aut consequatur aut corporis at.\\n\\nNecessitatibus dolor voluptatem et eos ut quibusdam eaque. Maxime et sed voluptatem qui. Voluptate laudantium qui voluptas commodi quis id sed nulla. Harum voluptas illo deleniti magnam sint in.\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Recusandae in esse nobis et consequuntur ad nisi.\",\n                \"author_name\": \"Georgette Gleason\",\n                \"excerpt\": \"Dolores distinctio veniam occaecati tempora sit. Corrupti qui et voluptates numquam ut sit. A placeat itaque magnam atque eos. Sapiente corporis eligendi possimus corrupti aliquid.\",\n                \"description\": \"Blanditiis esse quo qui autem ullam minima. Nobis maxime facilis culpa quod aspernatur minima omnis ratione. Sed ea explicabo dolor perspiciatis inventore libero animi. Eum ut dolores mollitia quod.\\n\\nIn facere nulla quis neque tempore. Ex quis illo sed. Hic dolor corporis debitis quos illum expedita. Sint debitis dolorum quaerat et magnam voluptatum qui.\\n\\nEt eveniet culpa voluptatem alias nulla nisi quia. Sit possimus corrupti nostrum. Et ut atque in voluptas saepe vero.\\n\\nQuia quo iste libero. In sed voluptas eum distinctio voluptas provident rem. Perferendis cum perferendis animi velit. Fuga ipsa id quibusdam voluptatem sed voluptas dignissimos.\\n\\nNobis error placeat provident excepturi rem. In fugiat fuga molestiae velit iure eum sed. Dolorem animi dolor maiores praesentium tempore vero. Quasi qui quo nisi eos est. Praesentium dolor et autem in culpa dolor.\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 33,\n            \"count\": 15,\n            \"per_page\": 15,\n            \"current_page\": 2,\n            \"total_pages\": 3\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu",
+									"type": "text"
+								},
+								{
+									"key": "excerpt",
+									"value": "In this article, I won’t talk about the general concepts of typography, which can be used both in print...",
+									"type": "text"
+								},
+								{
+									"key": "author_name",
+									"value": "Ian Aikman",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\n\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/press-release",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"press-release"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu",
+											"type": "text"
+										},
+										{
+											"key": "excerpt",
+											"value": "In this article, I won’t talk about the general concepts of typography, which can be used both in print...",
+											"type": "text"
+										},
+										{
+											"key": "author_name",
+											"value": "Ian Aikman",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\n\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/press-release",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"press-release"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:45:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created press release\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 37,\n        \"title\": \"Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu\",\n        \"author_name\": \"Ian Aikman\",\n        \"excerpt\": \"In this article, I won’t talk about the general concepts of typography, which can be used both in print...\",\n        \"description\": \"At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\\n\\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.\",\n        \"created_at\": \"2025-02-24T10:45:22.000000Z\",\n        \"updated_at\": \"2025-02-24T10:45:22.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/press-release/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"press-release",
+								"20"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/press-release/20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"press-release",
+										"20"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:46:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 20,\n        \"title\": \"Et omnis nobis molestiae est ea harum.\",\n        \"author_name\": \"Lionel Koss\",\n        \"excerpt\": \"Nobis beatae aut est sed eum voluptatem nesciunt beatae.\",\n        \"description\": \"Veritatis sint optio doloribus quam rerum. Dolor excepturi aut voluptatibus aliquam officia in. Iste consequatur consequatur necessitatibus nam sed. Qui deserunt vitae minima optio.\\n\\nCupiditate nam numquam dolore tempore eum architecto repellendus voluptatem. Totam dignissimos quo nostrum ut modi. Eum consequatur ut eum velit. Numquam voluptas dolorum placeat quam et ratione.\\n\\nId sint quisquam suscipit cupiditate ut. Repellendus omnis deserunt temporibus et nihil. Corrupti sed aliquam eos et id unde deserunt molestiae. Qui voluptatem dolor quibusdam blanditiis quos.\\n\\nVoluptas non quaerat a labore doloribus. Atque nihil libero molestias sit sed officiis. Labore modi et quia.\\n\\nQui aut porro sed voluptatem iusto autem. At unde et et blanditiis voluptatum magni est.\",\n        \"created_at\": \"2025-02-24T10:24:34.000000Z\",\n        \"updated_at\": \"2025-02-24T10:24:34.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu",
+									"type": "text"
+								},
+								{
+									"key": "excerpt",
+									"value": "In this article, I won’t talk about the general concepts of typography, which can be used both in print...",
+									"type": "text"
+								},
+								{
+									"key": "author_name",
+									"value": "Ian Aikman and other",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\n\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/press-release/37",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"press-release",
+								"37"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu",
+											"type": "text"
+										},
+										{
+											"key": "excerpt",
+											"value": "In this article, I won’t talk about the general concepts of typography, which can be used both in print...",
+											"type": "text"
+										},
+										{
+											"key": "author_name",
+											"value": "Ian Aikman and other",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\n\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/press-release/37",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"press-release",
+										"37"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:53:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated press release\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 37,\n        \"title\": \"Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu\",\n        \"author_name\": \"Ian Aikman and other\",\n        \"excerpt\": \"In this article, I won’t talk about the general concepts of typography, which can be used both in print...\",\n        \"description\": \"At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\\n\\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.\",\n        \"created_at\": \"2025-02-24T10:45:22.000000Z\",\n        \"updated_at\": \"2025-02-24T10:53:30.000000Z\",\n        \"image\": \"http://localhost:8000/storage/62/1004aec0c929f82483f158d14f92bee3.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/press-release/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"press-release",
+								"20"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/press-release/20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"press-release",
+										"20"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 10:54:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Press release has been deleted\"\n}"
 						}
 					]
 				}

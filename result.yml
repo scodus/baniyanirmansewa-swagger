@@ -24,7 +24,10 @@ tags:
   - name: Authentication
   - name: Social Link
   - name: Site Settings
-  - name: mission details
+  - name: Mission Details
+  - name: Founder and MD
+  - name: Board of Directors
+  - name: Press release
 paths:
   /api/login:
     post:
@@ -474,6 +477,7 @@ paths:
                   example: some value
                 document:
                   type: string
+                  format: binary
       parameters:
         - name: Accept
           in: header
@@ -575,23 +579,35 @@ paths:
                   type: TEXT
                   created_at: '2025-02-21T10:04:28.000000Z'
                   updated_at: '2025-02-21T10:04:28.000000Z'
-  /api/site-settings/document:
+  /api/site-settings/multiple:
     post:
       tags:
         - Site Settings
-      summary: Store Document
+      summary: save multiple
       requestBody:
         content:
           multipart/form-data:
             schema:
               type: object
               properties:
-                document:
+                data[0][key]:
+                  type: string
+                  example: KEY_1
+                data[0][value]:
+                  type: string
+                  example: some random value
+                data[0][document]:
                   type: string
                   format: binary
-                key:
+                data[1][key]:
                   type: string
-                  example: image
+                  example: KEY_2
+                data[1][value]:
+                  type: string
+                  example: random value
+                data[1][document]:
+                  type: string
+                  format: binary
       parameters:
         - name: Accept
           in: header
@@ -606,7 +622,7 @@ paths:
   /api/mission-details:
     get:
       tags:
-        - mission details
+        - Mission Details
       summary: get all
       parameters:
         - name: Accept
@@ -1001,7 +1017,7 @@ paths:
                       http://localhost:8000/storage/27/3efa8b5074c1123de1e70622101c8c0a.jpg
     post:
       tags:
-        - mission details
+        - Mission Details
       summary: Create
       requestBody:
         content:
@@ -1072,7 +1088,7 @@ paths:
   /api/mission-details/21:
     get:
       tags:
-        - mission details
+        - Mission Details
       summary: fetch
       parameters:
         - name: Accept
@@ -1127,7 +1143,7 @@ paths:
                     http://localhost:8000/storage/25/97ecc6feefcd13ad0222c5e75434397e.jpg
     post:
       tags:
-        - mission details
+        - Mission Details
       summary: update
       requestBody:
         content:
@@ -1205,7 +1221,7 @@ paths:
                     http://localhost:8000/storage/25/97ecc6feefcd13ad0222c5e75434397e.jpg
     delete:
       tags:
-        - mission details
+        - Mission Details
       summary: delete
       parameters:
         - name: Accept
@@ -1252,3 +1268,1813 @@ paths:
               example:
                 status: success
                 message: Mission detail has been deleted
+  /api/founders:
+    get:
+      tags:
+        - Founder and MD
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 07:16:30 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - description: >-
+                      Voluptatem voluptatem doloribus ipsum numquam id tempora
+                      ut porro. Qui repellendus quo voluptatum nesciunt.
+
+
+                      Reiciendis qui in et harum et iure. Fugiat nemo autem quia
+                      aut aut et. Dolorem dignissimos dolor rerum voluptatem.
+
+
+                      Tenetur aliquam excepturi et similique. Vero delectus enim
+                      voluptas facere.
+
+
+                      Eius qui minus ad aut optio quod. Maxime qui odit magnam
+                      in et. Aliquam repellendus ratione sit voluptatibus et
+                      praesentium repellat. Ut dolorem voluptas et aut doloribus
+                      fugiat adipisci.
+
+
+                      Quia quo ut voluptate consequatur mollitia facere officia.
+                      Tenetur eos quaerat molestias optio ratione. Ipsam quidem
+                      sunt accusamus accusantium sed vero excepturi.
+                      Consequuntur est omnis quae ea voluptatem molestiae ad.
+                    id: 3
+                    image: null
+                    name: Prof. Abagail Dare DVM
+                    order: 2
+                    position: labore nobis voluptas
+                    quote: Magnam harum quasi asperiores sed voluptatem.
+                    title: Sapiente nihil ab voluptatem.
+                  - description: >-
+                      Sint aspernatur nobis ut vel rerum earum. Ut quis eaque
+                      fuga fugit dolorem quam. Molestiae aut voluptatum deleniti
+                      atque recusandae. Ut eligendi ab sit qui aliquam ea et
+                      eveniet.
+
+
+                      Et quia architecto maxime est placeat. Cum ducimus sed
+                      quis beatae impedit quia qui. Quasi assumenda quia maxime
+                      qui voluptatem nihil. Dignissimos qui quae soluta nihil
+                      soluta et sapiente et.
+
+
+                      Et voluptates sunt labore nulla consectetur. Maiores et
+                      non iste natus eos. Eos repellat molestiae quia a. Odit
+                      labore laudantium ipsum quo.
+
+
+                      Et ut minima ea quos. Iusto ex eum praesentium. Vitae rem
+                      repellat cum officiis sed id.
+
+
+                      Occaecati neque saepe pariatur perferendis eum omnis
+                      repellendus et. Aperiam sit aliquam dolorem id quis ipsam
+                      corrupti. Dolorem qui natus quidem maiores ratione
+                      assumenda. Aspernatur consectetur est quas repudiandae
+                      optio.
+                    id: 4
+                    image: null
+                    name: Prof. Madonna Baumbach
+                    order: 3
+                    position: fugit sunt illo
+                    quote: Recusandae culpa necessitatibus facere sit aut iusto.
+                    title: >-
+                      Error porro iure accusamus explicabo non ducimus nam
+                      repellat.
+                  - description: >-
+                      Recusandae minima quis similique. Ratione aut autem
+                      officiis eum. Et rerum et consequatur sit perspiciatis.
+                      Voluptatum aut sit vel vero.
+
+
+                      Quod dolores iusto quod sunt sed. Libero quis aspernatur
+                      ipsam non culpa. Laboriosam qui optio deserunt eius cumque
+                      id. Explicabo sapiente suscipit dolore repellat qui
+                      officiis eaque quod. Ea et non vitae.
+
+
+                      Impedit dolorem deleniti perferendis eum temporibus
+                      necessitatibus vitae. Nihil doloremque quia sit nihil. Eum
+                      animi officiis et consequatur autem aliquid. Iste aut
+                      iusto dolor voluptas praesentium dolore qui dolorem. Neque
+                      laborum rerum dolorem nulla sunt amet.
+
+
+                      Est fuga eaque et officiis repellendus unde. Dolorem
+                      dolorem excepturi quaerat neque rerum enim id. Beatae ex
+                      impedit quia neque culpa enim dicta enim. Eos dolores
+                      totam nulla aut et dolor est qui.
+
+
+                      Harum dolorem consectetur inventore eius reiciendis.
+                      Suscipit voluptatem iste qui aspernatur. Earum ducimus ut
+                      aliquam quia eligendi eveniet illo. Architecto aut amet
+                      accusamus fuga ullam.
+                    id: 1
+                    image: null
+                    name: Prof. Shannon Grimes
+                    order: 6
+                    position: consequatur facere corporis
+                    quote: Quae velit vitae cumque tempore.
+                    title: Delectus aut non dolorem id.
+                  - description: >-
+                      Vel tempora et debitis aut. Quibusdam dignissimos
+                      molestiae quaerat ipsa. Dignissimos illo dolores corrupti.
+                      Tempore dolor repellendus laborum eum ducimus voluptates.
+
+
+                      Qui odio officiis autem rerum. Omnis voluptatem sed sit
+                      quidem eum. Alias voluptatem qui numquam iste. Aut aliquid
+                      repellendus voluptatem sunt ipsam eveniet.
+
+
+                      Voluptates doloribus aut voluptas soluta sequi et.
+                      Perspiciatis dicta aut impedit. Facilis reprehenderit id
+                      veritatis sapiente. Autem commodi odit qui. Omnis et
+                      consectetur error nisi laborum voluptatem aliquam.
+
+
+                      Ut qui consequatur velit. Et est sunt ratione earum
+                      repellat. Aut nisi est enim quos voluptatem voluptatem. Ea
+                      aut aut molestiae qui optio.
+
+
+                      Porro praesentium laboriosam veniam est. Ut minima
+                      molestiae in pariatur dolores sit.
+                    id: 2
+                    image: null
+                    name: Norbert Jast
+                    order: 6
+                    position: architecto labore recusandae
+                    quote: Corporis odio velit nemo labore dolores voluptas.
+                    title: Quos consequuntur odio vel vel.
+                  - description: >-
+                      Nobis cupiditate fugit ratione rerum impedit. Ad et dolor
+                      nobis. Deleniti dolorem quas alias enim. Consequatur
+                      tenetur earum aut quibusdam assumenda.
+
+
+                      Nulla voluptates sint qui nobis accusamus facilis. Ipsum
+                      non quo rerum praesentium maiores. Dignissimos qui tempore
+                      odit sed velit id.
+
+
+                      Ullam beatae omnis et nostrum distinctio nostrum.
+                      Reprehenderit quisquam minus voluptatem. Eligendi dolor
+                      voluptatibus sed omnis asperiores laborum repellat fugit.
+
+
+                      Quasi quia sed fuga natus. Deserunt quae consequuntur
+                      cumque nostrum. Possimus itaque nihil numquam voluptate
+                      voluptatem et sit.
+
+
+                      Debitis ut velit occaecati atque animi. Unde accusantium
+                      commodi sunt architecto aut beatae accusantium. Eaque quis
+                      minima voluptas sint tempora. Quia ab quis quibusdam amet
+                      quae modi tempore.
+                    id: 5
+                    image: null
+                    name: Emilio Morar IV
+                    order: 8
+                    position: accusamus omnis esse
+                    quote: Est velit debitis nisi ea nemo aut.
+                    title: Expedita sequi culpa non voluptatum vitae ut.
+    post:
+      tags:
+        - Founder and MD
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Our Founder's Vision
+                name:
+                  type: string
+                  example: MP. Indra Bahadur Baniya
+                position:
+                  type: string
+                  example: Founder
+                description:
+                  type: string
+                  example: >-
+                    As we look back on our company's journey, a sense of immense
+                    pride fills me. In 1998, when we began this remarkable
+                    venture, the idea of ...
+                quote:
+                  type: string
+                  example: >-
+                    Over the last 2 decades, BMS has been instrumental in making
+                    our country's infrastructure more efficient through building
+                    & integrating townships and cityscapes.
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 07:21:11 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created founder
+                status: success
+                data:
+                  description: >-
+                    As we look back on our company's journey, a sense of immense
+                    pride fills me. In 1998, when we began this remarkable
+                    venture, the idea of ...
+                  id: 6
+                  image: >-
+                    http://localhost:8000/storage/32/7a836b519ff331e8c8b7d61ffe0ad806.jpg
+                  name: MP. Indra Bahadur Baniya
+                  order: null
+                  position: Founder
+                  quote: >-
+                    Over the last 2 decades, BMS has been instrumental in making
+                    our country's infrastructure more efficient through building
+                    & integrating townships and cityscapes.
+                  title: Our Founder's Vision
+  /api/founders/6:
+    get:
+      tags:
+        - Founder and MD
+      summary: fetch
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 07:22:45 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  description: >-
+                    As we look back on our company's journey, a sense of immense
+                    pride fills me. In 1998, when we began this remarkable
+                    venture, the idea of ...
+                  id: 6
+                  image: >-
+                    http://localhost:8000/storage/32/7a836b519ff331e8c8b7d61ffe0ad806.jpg
+                  name: MP. Indra Bahadur Baniya
+                  order: 1
+                  position: Founder
+                  quote: >-
+                    Over the last 2 decades, BMS has been instrumental in making
+                    our country's infrastructure more efficient through building
+                    & integrating townships and cityscapes.
+                  title: Our Founder's Vision
+    post:
+      tags:
+        - Founder and MD
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Our Founder's Vision
+                name:
+                  type: string
+                  example: MP. Indra Bahadur Baniya
+                position:
+                  type: string
+                  example: Founder
+                description:
+                  type: string
+                  example: >-
+                    As we look back on our company's journey, a sense of immense
+                    pride fills me. In 1998, when we began this remarkable
+                    venture, the idea of ...
+                quote:
+                  type: string
+                  example: >-
+                    Over the last 2 decades, BMS has been instrumental in making
+                    our country's infrastructure more efficient through building
+                    & integrating townships and cityscapes.
+                _method:
+                  type: string
+                  example: PUT
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 07:28:26 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated founder detail
+                status: success
+                data:
+                  description: >-
+                    As we look back on our company's journey, a sense of immense
+                    pride fills me. In 1998, when we began this remarkable
+                    venture, the idea of ...
+                  id: 6
+                  image: >-
+                    http://localhost:8000/storage/37/f20dfd68c1e64dc9305a3a8bf15479b4.jpg
+                  name: MP. Indra Bahadur Baniya
+                  order: 1
+                  position: Founder
+                  quote: >-
+                    Over the last 2 decades, BMS has been instrumental in making
+                    our country's infrastructure more efficient through building
+                    & integrating townships and cityscapes.
+                  title: Our Founder's Vision
+  /api/founders/1:
+    delete:
+      tags:
+        - Founder and MD
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 07:29:43 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Founder detail has been deleted
+  /api/directors:
+    get:
+      tags:
+        - Board of Directors
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 08:04:38 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 5
+                    image: null
+                    name: Felton Monahan
+                    order: 1
+                    summary: >-
+                      Ipsam deleniti amet corporis quidem. Porro autem
+                      exercitationem veniam qui harum. Voluptates corrupti et
+                      quis est. Id cumque aperiam voluptas blanditiis.
+                      Voluptatem necessitatibus molestiae ducimus sed tempore.
+                  - id: 2
+                    image: null
+                    name: Annalise Rodriguez
+                    order: 2
+                    summary: >-
+                      Sit aliquid facilis architecto autem a exercitationem
+                      laudantium. Quidem minus sequi ut repudiandae unde fugiat
+                      nulla. Necessitatibus facilis veritatis impedit repellat
+                      ut aliquid. Doloribus dolores autem impedit voluptatum
+                      temporibus doloremque.
+                  - id: 8
+                    image: null
+                    name: Aditya Nader
+                    order: 3
+                    summary: >-
+                      Rem molestiae quam nostrum sint. Debitis odio quo modi
+                      velit.
+                  - id: 1
+                    image: null
+                    name: Daija Heidenreich
+                    order: 5
+                    summary: >-
+                      Impedit eius sed aut quibusdam. Ut accusamus recusandae
+                      consequatur corrupti. Rerum molestias rem tenetur
+                      doloremque. Eos repellendus quia vero occaecati omnis sit.
+                  - id: 7
+                    image: null
+                    name: Prof. Luisa Jacobson
+                    order: 5
+                    summary: >-
+                      Possimus quia ducimus aliquam doloremque est deleniti. Ad
+                      fuga voluptatibus eveniet ea.
+                  - id: 6
+                    image: null
+                    name: Ms. Alexandria Parisian
+                    order: 7
+                    summary: >-
+                      Voluptas quidem aut eaque necessitatibus. Mollitia harum
+                      voluptas nihil. Quibusdam quos eos non necessitatibus
+                      praesentium animi quas adipisci. Nesciunt autem
+                      consequatur et voluptatem doloremque dolorem autem.
+                  - id: 3
+                    image: null
+                    name: Shany Cruickshank
+                    order: 8
+                    summary: >-
+                      Quos vero nemo eaque fugit aut quaerat. Aut possimus
+                      reiciendis suscipit rerum beatae consequatur distinctio
+                      qui. Doloribus expedita optio doloremque.
+                  - id: 4
+                    image: null
+                    name: Gerhard Feest
+                    order: 8
+                    summary: >-
+                      Quis et perferendis dolorem nisi. Quia ut qui illo
+                      repudiandae quod commodi mollitia. Vitae labore ut autem
+                      atque veniam voluptas. Cupiditate vitae quod vel
+                      repellendus unde hic vero.
+    post:
+      tags:
+        - Board of Directors
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: MP. Indra Bahadur Baniya
+                position:
+                  type: string
+                  example: Founder
+                summary:
+                  type: string
+                  example: >-
+                    The guiding force behind Baniya Nirman Sewa, serves as the
+                    guardian of its vision and excellence.
+                image:
+                  type: string
+                  format: binary
+                order:
+                  type: integer
+                  example: '1'
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 08:08:21 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created director
+                status: success
+                data:
+                  id: 10
+                  image: >-
+                    http://localhost:8000/storage/39/a70da3bdcbb074fa2633af8ba676728c.jpg
+                  name: MP. Indra Bahadur Baniya
+                  order: '1'
+                  summary: >-
+                    The guiding force behind Baniya Nirman Sewa, serves as the
+                    guardian of its vision and excellence.
+  /api/directors/10:
+    get:
+      tags:
+        - Board of Directors
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 08:10:39 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 10
+                  image: >-
+                    http://localhost:8000/storage/39/a70da3bdcbb074fa2633af8ba676728c.jpg
+                  name: MP. Indra Bahadur Baniya
+                  order: 1
+                  summary: >-
+                    The guiding force behind Baniya Nirman Sewa, serves as the
+                    guardian of its vision and excellence.
+    post:
+      tags:
+        - Board of Directors
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: MP. Indra Bahadur Baniya
+                position:
+                  type: string
+                  example: Founder
+                summary:
+                  type: string
+                  example: >-
+                    The guiding force behind Baniya Nirman Sewa, serves as the
+                    guardian of its vision and excellence.
+                order:
+                  type: integer
+                  example: '2'
+                _method:
+                  type: string
+                  example: put
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 08:12:21 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated director detail
+                status: success
+                data:
+                  id: 10
+                  image: >-
+                    http://localhost:8000/storage/42/851a147f5ae4c61b9962938ab57ae967.jpg
+                  name: MP. Indra Bahadur Baniya
+                  order: 1
+                  summary: >-
+                    The guiding force behind Baniya Nirman Sewa, serves as the
+                    guardian of its vision and excellence.
+  /api/directors/1:
+    delete:
+      tags:
+        - Board of Directors
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 08:13:37 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Director has been deleted
+  /api/press-release:
+    get:
+      tags:
+        - Press release
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          example: '15'
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '2'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 10:39:43 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  data:
+                    - id: 32
+                      title: Non nostrum voluptas magnam fugiat quidem velit dolores.
+                      author_name: Dr. Jarod O'Keefe
+                      excerpt: Dolore ea facere et qui id quia odit.
+                      description: >-
+                        Odit perspiciatis sint voluptatem unde saepe aliquid
+                        illum. Sunt qui assumenda voluptatibus voluptatibus enim
+                        fuga dolor laboriosam. Repudiandae nostrum quis sed
+                        fugiat fugiat possimus. Dolor aliquid itaque ut sed
+                        dolores facere.
+
+
+                        Velit ut qui et neque optio. Quam velit eaque qui nam
+                        officiis laborum. Et nesciunt exercitationem nesciunt
+                        dolor voluptate voluptatem. Animi necessitatibus et
+                        laborum veritatis fugiat aliquid.
+
+
+                        Rerum et at ut minima. Eum magni aperiam quibusdam
+                        maiores et.
+
+
+                        Pariatur voluptatem sit itaque veritatis odio. Sunt vel
+                        porro vel occaecati debitis aut perferendis sed.
+
+
+                        At praesentium perferendis libero laudantium ratione
+                        fugit odit. Consequuntur deserunt qui sed tenetur
+                        ducimus ullam natus. Voluptates sit perferendis sint est
+                        voluptatum omnis. Ab odit voluptatibus quaerat sapiente
+                        debitis.
+                    - id: 33
+                      title: Qui quod eveniet quidem ea ut at autem.
+                      author_name: Miss Kamille Legros
+                      excerpt: Mollitia est velit delectus ullam.
+                      description: >-
+                        Animi totam optio est dignissimos doloremque. Et
+                        repellat optio officiis repellat voluptatem qui rem.
+                        Rerum ad nemo soluta molestias recusandae ea. Qui ipsa
+                        illum enim.
+
+
+                        Facilis quod repellat accusamus aut quod. Accusamus
+                        soluta sit cumque minima incidunt. Quis tenetur illum
+                        cupiditate fugit amet voluptas quia.
+
+
+                        Perferendis magnam quis perspiciatis velit unde nisi.
+                        Ratione aperiam voluptatibus esse enim aperiam
+                        voluptatem. Minus velit voluptatum quam labore. Quam
+                        earum sunt minus est dolorem atque soluta est.
+
+
+                        Est quia qui animi error vitae. Possimus ut pariatur
+                        tempore eveniet voluptate consequatur.
+
+
+                        Et consequatur aspernatur iure quam impedit provident.
+                        Modi laboriosam quidem mollitia quo. Voluptate unde
+                        consequatur eveniet quis. Quo quod et et dolorum quod
+                        laudantium.
+                    - id: 16
+                      title: Optio ullam quia neque ea.
+                      author_name: Delfina Grant
+                      excerpt: Non fuga sequi atque.
+                      description: >-
+                        Consequatur repellendus quisquam autem ipsa atque animi
+                        et. Molestias repudiandae dolorum adipisci eius ipsum
+                        corrupti. Officiis cum et ut. Mollitia animi cupiditate
+                        autem veritatis qui accusantium.
+
+
+                        Omnis numquam dolore tenetur eum. Esse sunt quo rerum
+                        commodi veniam consequatur. Fuga illum alias voluptatem
+                        iusto consequuntur.
+
+
+                        Eveniet amet fuga voluptatem qui sed reprehenderit
+                        mollitia. Iure similique aut sint nihil nihil. Expedita
+                        illum dicta rerum inventore.
+
+
+                        Provident ut laudantium sed rerum. Quia velit est error
+                        dolore quia dolor ut. Voluptas ut omnis omnis. Nulla
+                        quibusdam velit vel ut omnis nihil.
+
+
+                        Atque corrupti repudiandae animi. Sint praesentium
+                        accusantium magnam eum distinctio et quaerat quo.
+                        Debitis commodi ut ipsum aperiam a et eum. Tenetur eos
+                        est dolor facilis praesentium voluptatum doloremque.
+                    - id: 15
+                      title: Quidem possimus quam sint ut voluptatem aut.
+                      author_name: Marjorie Cremin
+                      excerpt: >-
+                        Recusandae voluptatum pariatur quas delectus
+                        praesentium.
+                      description: >-
+                        Porro dolorem fugit consequatur nobis quia dolorum.
+                        Ducimus ipsa voluptatem earum eligendi. Autem omnis
+                        quidem veniam sed sit rerum.
+
+
+                        Inventore molestiae vel illo quos quas. Omnis ea
+                        assumenda eligendi corporis consequatur rerum placeat
+                        et. Sit voluptatum distinctio rerum a. Suscipit
+                        voluptatem amet quo incidunt.
+
+
+                        Quibusdam harum et magnam quo ab. Explicabo sed laborum
+                        magnam id.
+
+
+                        Perferendis minus quo et animi minus. Velit et labore
+                        consequatur voluptatem sapiente. Quia accusamus ut velit
+                        repellat molestiae cupiditate voluptatem. Minima quia
+                        quidem vitae libero. Quasi possimus incidunt mollitia
+                        suscipit.
+
+
+                        Hic nemo enim rerum. Alias iusto sint nam voluptatem et
+                        quaerat qui. Cumque voluptatibus et qui eos hic quia
+                        qui.
+                    - id: 14
+                      title: >-
+                        Tempore voluptatibus cupiditate deleniti repellat
+                        numquam est ex doloribus.
+                      author_name: Patricia Bruen
+                      excerpt: Quis debitis voluptatem in qui tempore.
+                      description: >-
+                        Non laborum et odio voluptatum. Nulla enim repellat
+                        dolores sed molestiae mollitia accusantium. Est quis
+                        dolor odit qui voluptatibus. Similique omnis odio
+                        possimus sunt ut excepturi.
+
+
+                        Nesciunt mollitia eaque sit voluptatem quae nemo
+                        voluptas. Adipisci quae a ut hic qui. Aspernatur porro
+                        ut ea aperiam sed mollitia.
+
+
+                        Et veniam ipsam quia labore qui autem. Rerum aliquid sed
+                        quae aut nihil autem atque. Quasi voluptatem blanditiis
+                        architecto doloribus corporis. Illo est sit nemo alias
+                        aut et repellat.
+
+
+                        Enim qui est necessitatibus qui corrupti et. Velit amet
+                        nisi et voluptate alias.
+
+
+                        Labore enim eius voluptatibus. Sint aspernatur sint a
+                        est incidunt. Aut a eum officiis excepturi cumque natus.
+                        Odit autem consectetur atque ad id dolorem ea.
+                    - id: 1
+                      title: Debitis sequi vel exercitationem quam omnis dolor error.
+                      author_name: Carleton Ferry
+                      excerpt: >-
+                        Esse eveniet distinctio et dolorum earum. Aliquam sunt
+                        adipisci sunt dolorum magni minima dolorum deserunt.
+                        Corporis a animi dolorem id veniam.
+                      description: >-
+                        Expedita doloremque ducimus ex laboriosam. Sed voluptas
+                        tempora neque iusto rerum. Maxime veniam fugit delectus
+                        facilis molestiae praesentium maiores omnis. Amet
+                        facilis cum deleniti ut dignissimos.
+
+
+                        Est eum vitae eveniet laborum non voluptatem. Quaerat
+                        inventore rerum dolores eius laudantium impedit ea.
+                        Repellendus sed voluptas ratione voluptatem.
+
+
+                        Earum voluptatibus vitae cupiditate in et aspernatur.
+                        Numquam qui natus magni repellat amet laboriosam
+                        voluptatibus. Ut qui quasi neque aut sit.
+
+
+                        Quae praesentium sed dolor praesentium et sunt possimus.
+                        Doloribus non velit et. Praesentium non sapiente
+                        perferendis. Odit placeat error voluptas sit.
+
+
+                        Sed eius est optio recusandae magni qui. Corrupti aut
+                        repellendus atque consequatur aliquam voluptatum. At
+                        velit nulla dolorem delectus et temporibus doloremque.
+                        Impedit aut hic modi maxime assumenda molestias.
+                    - id: 13
+                      title: Quis tenetur labore eos in et repudiandae.
+                      author_name: Prof. Lionel Stroman I
+                      excerpt: >-
+                        Qui quos cum non est corrupti suscipit. Nesciunt
+                        consequatur voluptatem et facilis vitae. Possimus
+                        delectus voluptatem amet qui expedita magnam aut. Error
+                        ut excepturi ex eveniet saepe.
+                      description: >-
+                        Doloribus unde est quis quo officia vel. Incidunt ea
+                        sapiente error id cupiditate animi a. Mollitia nobis
+                        vitae rem voluptatem. Iusto ad quia in quia odit
+                        voluptate quam.
+
+
+                        Fuga aspernatur eum quasi sit dolorum ut qui ullam. Et
+                        dolor qui nemo fuga quia et repudiandae. Placeat labore
+                        architecto sapiente possimus nulla. Officia id at
+                        repudiandae mollitia a ut nihil.
+
+
+                        Magni dignissimos velit dignissimos eum voluptate dicta.
+                        Voluptatum rem enim et incidunt ipsum sunt quia. Magni
+                        vitae minus eos aperiam possimus vel earum. Doloremque
+                        ut aut enim sed.
+
+
+                        Aliquid pariatur ut dicta magni. Atque nesciunt dolore
+                        ad molestiae magnam ut quia. Architecto similique
+                        similique et vel doloremque aspernatur. Dolorum
+                        doloremque et architecto perferendis.
+
+
+                        Consequatur praesentium ex non suscipit molestiae esse
+                        inventore eos. Omnis repellendus corrupti voluptas rem
+                        maxime odio. Ea qui omnis esse nesciunt eos qui delectus
+                        omnis. Qui non aut sequi nihil et.
+                    - id: 12
+                      title: Sed nisi voluptatibus et qui qui.
+                      author_name: Mrs. Carole Bahringer
+                      excerpt: >-
+                        Sed rem inventore eius. Aliquid alias adipisci
+                        exercitationem nesciunt non. Provident sint eos
+                        laboriosam officiis ea. Molestiae cupiditate ex
+                        doloremque ab neque accusamus id.
+                      description: >-
+                        Velit incidunt aut dolorem. Accusantium qui explicabo ad
+                        itaque beatae tempora.
+
+
+                        Amet nihil repellendus rerum quo repellat magni. Dolores
+                        quod dolores id sapiente perspiciatis omnis aliquam. Ut
+                        iure quisquam deleniti perspiciatis. Laudantium repellat
+                        dolor pariatur sint quis repudiandae adipisci.
+
+
+                        Nihil itaque voluptatem ut quia perspiciatis dolores
+                        omnis. Quia voluptatem qui error et ipsum. Dolor velit
+                        quo ut consequatur voluptatibus rem beatae. Fugiat at
+                        odit natus corrupti dolorum sint omnis.
+
+
+                        Perspiciatis reprehenderit et molestiae magnam fugit
+                        rerum. Ad labore qui veritatis ipsam. Earum hic rerum
+                        est maxime deserunt ad ullam.
+
+
+                        Perspiciatis molestias at qui. Omnis illo quam nihil.
+                        Veritatis quas ratione at iste. Maxime dolor et est et
+                        odio facere corrupti. Qui magnam deleniti voluptate
+                        accusantium quam eum.
+                    - id: 11
+                      title: Adipisci dolorem modi suscipit et eos.
+                      author_name: Dortha Hintz
+                      excerpt: >-
+                        Aut fugit eius ipsam ut quos dolorem id. Sed in
+                        molestiae ut repellendus id aspernatur. Qui rem quos
+                        dolorem illo saepe vel quo possimus.
+                      description: >-
+                        Minima saepe ducimus ut vitae est maiores dignissimos.
+                        Aut maiores accusantium rem est. Quo sapiente corporis
+                        qui molestiae non quo. Culpa ullam quis quas omnis.
+
+
+                        Beatae voluptate qui eum laboriosam possimus sequi. Illo
+                        sequi ad explicabo sint est voluptatem aut. Repudiandae
+                        et quod voluptas et. Beatae quia est ut quos sunt
+                        reiciendis.
+
+
+                        Aut consequatur ut ducimus. Eveniet quos et delectus
+                        quod inventore voluptatum. Iure beatae sed eaque iste
+                        ut.
+
+
+                        Voluptatem non beatae earum quo qui assumenda dolores.
+                        Dolorem quia perferendis quod enim maxime quod impedit.
+                        Iste similique cupiditate minus voluptatum ut dolorum.
+
+
+                        Sit libero odit aspernatur placeat. Et esse eum
+                        asperiores consequuntur necessitatibus quae esse. Id
+                        vero repellat voluptatem asperiores velit corporis est.
+                    - id: 10
+                      title: Ducimus ad eum vel.
+                      author_name: Dr. Enoch Keebler II
+                      excerpt: >-
+                        Nihil rem sunt aut illo qui. Dolore rerum occaecati vero
+                        ipsa quam. Eum sequi perspiciatis qui praesentium alias
+                        cupiditate eaque. Minima quos quia quaerat.
+                      description: >-
+                        Consequatur aspernatur dolore nihil illo minima dolores.
+                        Cumque exercitationem natus fugiat veniam in. Dicta
+                        nesciunt vel et inventore illum quo.
+
+
+                        Quia magni dolores rerum dolorem quia. Sapiente
+                        temporibus laboriosam et facilis facere numquam. Sunt
+                        est et recusandae veritatis aut iste.
+
+
+                        Quaerat qui nisi numquam quos eos cupiditate
+                        consequatur. Asperiores voluptas dolorem voluptatem
+                        consequatur suscipit. Exercitationem doloremque
+                        blanditiis voluptate.
+
+
+                        Cum at omnis voluptatem rerum. Nemo veniam amet cumque.
+                        Dolor voluptatibus sint et illo. Et enim nostrum neque
+                        cumque fugiat recusandae sed.
+
+
+                        Magnam molestias in tempora consequatur. Et dolorum
+                        ducimus ut. Rerum sed hic autem nam dolorem.
+                    - id: 9
+                      title: Quo atque veritatis mollitia id fuga.
+                      author_name: Donato Hill
+                      excerpt: >-
+                        Fuga sint dolore architecto qui explicabo fugit qui.
+                        Veritatis totam qui velit quo aperiam. Ex est ad non
+                        nemo. Minus quia accusamus est est. Totam deserunt nisi
+                        voluptatem et cumque fugiat.
+                      description: >-
+                        Rerum explicabo amet maxime temporibus qui aliquid
+                        nostrum eum. Quos quia id doloremque quia. Debitis
+                        placeat molestiae quibusdam debitis expedita laboriosam
+                        repudiandae. Perspiciatis ipsam aliquam provident
+                        architecto.
+
+
+                        Qui aut aliquid saepe aut. Enim quisquam omnis accusamus
+                        velit incidunt voluptates quia. Repellat atque impedit
+                        qui. Natus et in aperiam placeat pariatur sunt.
+
+
+                        Eveniet reprehenderit expedita adipisci nulla voluptatem
+                        velit. Odio et reprehenderit sunt quibusdam numquam
+                        tempora tenetur quia. Quo dolorum quibusdam quia.
+
+
+                        Totam et repudiandae quo earum corporis minima suscipit
+                        ratione. Voluptatem maiores dolores accusamus est saepe.
+                        Earum fugit nihil voluptas labore aut.
+
+
+                        Voluptatem rem dignissimos qui ut placeat sed. Vel
+                        nesciunt quas velit quia sed enim labore. Quia id qui
+                        molestias fugiat quo. Veritatis quaerat ea dolorem est
+                        voluptatem ab omnis.
+                    - id: 8
+                      title: Magni quo et ipsum quisquam harum non molestias.
+                      author_name: Dr. Lafayette Huels
+                      excerpt: >-
+                        Enim illum omnis dolorum aut aspernatur corporis. Non ex
+                        nemo eum itaque. Ducimus natus quos perferendis hic
+                        dolor eaque. Iure quam porro est dicta porro.
+                      description: >-
+                        Sequi nam ea doloribus corrupti. Est dolorem magni
+                        voluptatem. Sequi et eum necessitatibus sed ut ut sed.
+
+
+                        Aut possimus aspernatur tenetur ab tenetur aspernatur
+                        ipsum dolores. Velit ut sequi ratione sit in dolores
+                        fuga consequatur. In explicabo vero magnam itaque sit a
+                        quaerat mollitia.
+
+
+                        Sapiente animi odio deserunt eaque fugiat pariatur.
+                        Architecto labore officia velit reprehenderit. Rem
+                        magnam dolor sint qui. Tenetur enim eveniet ex eius.
+
+
+                        Sequi aut at sit aliquid in a. Ex ut consequuntur soluta
+                        voluptate. Molestiae veniam dolores aspernatur. Earum
+                        aut dolorum est quis.
+
+
+                        Illo error quia quae omnis possimus voluptatem. Ratione
+                        sed optio ipsam ut culpa dolorem unde.
+                    - id: 7
+                      title: Ea inventore a dolores ut.
+                      author_name: Kendrick Frami
+                      excerpt: >-
+                        Molestiae asperiores cum accusantium qui deserunt et.
+                        Maiores error repellendus magnam explicabo. Consequatur
+                        nam eum et reiciendis.
+                      description: >-
+                        Voluptas quia error eius. Odit non atque sequi
+                        voluptatem.
+
+
+                        Qui et doloremque omnis praesentium reprehenderit harum
+                        libero ad. Nemo voluptate omnis rerum provident iusto
+                        itaque. Occaecati placeat ut et omnis eius nobis ut.
+
+
+                        Nam et pariatur totam autem laudantium possimus. Facere
+                        magni ut atque quo eos necessitatibus iusto quis. Sed
+                        sint eligendi illum sunt. Vel minima sequi corporis
+                        itaque. Eum quis non cum quis.
+
+
+                        Pariatur quia dolores et voluptas. Harum id quam omnis
+                        maiores autem et possimus. Sunt sit nihil quaerat.
+
+
+                        Non ut laudantium non ipsa eveniet rerum consectetur
+                        molestiae. Distinctio saepe tempora dolorum non.
+                    - id: 6
+                      title: Explicabo nobis nostrum et ea dolorum et blanditiis.
+                      author_name: Malvina Botsford
+                      excerpt: >-
+                        Quia voluptatem veritatis velit sunt est voluptate.
+                        Ratione tempora nihil maiores adipisci. Omnis sint quia
+                        perspiciatis sint eum totam. Aliquid dolores deleniti
+                        eligendi ipsum provident accusantium corrupti.
+                      description: >-
+                        Maiores nostrum dolores doloribus expedita. Nihil eaque
+                        perspiciatis omnis. Corporis qui error fuga nulla alias.
+                        Quia fugit enim magnam rerum ut aut.
+
+
+                        Iure dolorum asperiores eos nemo. Dolorem maxime
+                        voluptatem amet qui hic eligendi quis. Quis iste
+                        consequatur et distinctio est. Ut vel et voluptas qui
+                        ut.
+
+
+                        Sint quaerat quia rerum modi eligendi pariatur.
+                        Consequuntur est consequatur placeat dolores magnam aut.
+                        Quod ut ut officia quo tempore quia et iusto.
+
+
+                        Repudiandae quia molestiae cum sed voluptates. Tenetur
+                        aspernatur dolorem repellendus quisquam sunt eius
+                        accusantium sint. Amet consequatur mollitia ratione
+                        nobis. Optio aut itaque sed aut omnis ullam et. Tempora
+                        aut consequatur aut corporis at.
+
+
+                        Necessitatibus dolor voluptatem et eos ut quibusdam
+                        eaque. Maxime et sed voluptatem qui. Voluptate
+                        laudantium qui voluptas commodi quis id sed nulla. Harum
+                        voluptas illo deleniti magnam sint in.
+                    - id: 5
+                      title: Recusandae in esse nobis et consequuntur ad nisi.
+                      author_name: Georgette Gleason
+                      excerpt: >-
+                        Dolores distinctio veniam occaecati tempora sit.
+                        Corrupti qui et voluptates numquam ut sit. A placeat
+                        itaque magnam atque eos. Sapiente corporis eligendi
+                        possimus corrupti aliquid.
+                      description: >-
+                        Blanditiis esse quo qui autem ullam minima. Nobis maxime
+                        facilis culpa quod aspernatur minima omnis ratione. Sed
+                        ea explicabo dolor perspiciatis inventore libero animi.
+                        Eum ut dolores mollitia quod.
+
+
+                        In facere nulla quis neque tempore. Ex quis illo sed.
+                        Hic dolor corporis debitis quos illum expedita. Sint
+                        debitis dolorum quaerat et magnam voluptatum qui.
+
+
+                        Et eveniet culpa voluptatem alias nulla nisi quia. Sit
+                        possimus corrupti nostrum. Et ut atque in voluptas saepe
+                        vero.
+
+
+                        Quia quo iste libero. In sed voluptas eum distinctio
+                        voluptas provident rem. Perferendis cum perferendis
+                        animi velit. Fuga ipsa id quibusdam voluptatem sed
+                        voluptas dignissimos.
+
+
+                        Nobis error placeat provident excepturi rem. In fugiat
+                        fuga molestiae velit iure eum sed. Dolorem animi dolor
+                        maiores praesentium tempore vero. Quasi qui quo nisi eos
+                        est. Praesentium dolor et autem in culpa dolor.
+                  pagination:
+                    total: 33
+                    count: 15
+                    per_page: 15
+                    current_page: 2
+                    total_pages: 3
+    post:
+      tags:
+        - Press release
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: >-
+                    Stone Laying Ceremony Marks Commencement of 132 kV
+                    Amarpur-Dhungesanghu
+                excerpt:
+                  type: string
+                  example: >-
+                    In this article, I won’t talk about the general concepts of
+                    typography, which can be used both in print...
+                author_name:
+                  type: string
+                  example: Ian Aikman
+                description:
+                  type: string
+                  example: >-
+                    At the start of the eclipse, there should be some good clear
+                    skies in Mexico, but into Texas, Austin and Dallas are
+                    looking quite cloudy with an increasing threat of some
+                    severe weather.
+
+
+                    For eastern areas of Texas, severe storms, including
+                    tornadoes, may actually impact travel here after the
+                    spectacle.
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 10:45:22 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created press release
+                status: success
+                data:
+                  id: 37
+                  title: >-
+                    Stone Laying Ceremony Marks Commencement of 132 kV
+                    Amarpur-Dhungesanghu
+                  author_name: Ian Aikman
+                  excerpt: >-
+                    In this article, I won’t talk about the general concepts of
+                    typography, which can be used both in print...
+                  description: >-
+                    At the start of the eclipse, there should be some good clear
+                    skies in Mexico, but into Texas, Austin and Dallas are
+                    looking quite cloudy with an increasing threat of some
+                    severe weather.
+
+
+                    For eastern areas of Texas, severe storms, including
+                    tornadoes, may actually impact travel here after the
+                    spectacle.
+                  created_at: '2025-02-24T10:45:22.000000Z'
+                  updated_at: '2025-02-24T10:45:22.000000Z'
+  /api/press-release/20:
+    get:
+      tags:
+        - Press release
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 10:46:24 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 20
+                  title: Et omnis nobis molestiae est ea harum.
+                  author_name: Lionel Koss
+                  excerpt: Nobis beatae aut est sed eum voluptatem nesciunt beatae.
+                  description: >-
+                    Veritatis sint optio doloribus quam rerum. Dolor excepturi
+                    aut voluptatibus aliquam officia in. Iste consequatur
+                    consequatur necessitatibus nam sed. Qui deserunt vitae
+                    minima optio.
+
+
+                    Cupiditate nam numquam dolore tempore eum architecto
+                    repellendus voluptatem. Totam dignissimos quo nostrum ut
+                    modi. Eum consequatur ut eum velit. Numquam voluptas dolorum
+                    placeat quam et ratione.
+
+
+                    Id sint quisquam suscipit cupiditate ut. Repellendus omnis
+                    deserunt temporibus et nihil. Corrupti sed aliquam eos et id
+                    unde deserunt molestiae. Qui voluptatem dolor quibusdam
+                    blanditiis quos.
+
+
+                    Voluptas non quaerat a labore doloribus. Atque nihil libero
+                    molestias sit sed officiis. Labore modi et quia.
+
+
+                    Qui aut porro sed voluptatem iusto autem. At unde et et
+                    blanditiis voluptatum magni est.
+                  created_at: '2025-02-24T10:24:34.000000Z'
+                  updated_at: '2025-02-24T10:24:34.000000Z'
+    delete:
+      tags:
+        - Press release
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 10:54:28 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Press release has been deleted
+  /api/press-release/37:
+    post:
+      tags:
+        - Press release
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: >-
+                    Stone Laying Ceremony Marks Commencement of 132 kV
+                    Amarpur-Dhungesanghu
+                excerpt:
+                  type: string
+                  example: >-
+                    In this article, I won’t talk about the general concepts of
+                    typography, which can be used both in print...
+                author_name:
+                  type: string
+                  example: Ian Aikman and other
+                description:
+                  type: string
+                  example: >-
+                    At the start of the eclipse, there should be some good clear
+                    skies in Mexico, but into Texas, Austin and Dallas are
+                    looking quite cloudy with an increasing threat of some
+                    severe weather.
+
+
+                    For eastern areas of Texas, severe storms, including
+                    tornadoes, may actually impact travel here after the
+                    spectacle.
+                _method:
+                  type: string
+                  example: put
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 10:53:33 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated press release
+                status: success
+                data:
+                  id: 37
+                  title: >-
+                    Stone Laying Ceremony Marks Commencement of 132 kV
+                    Amarpur-Dhungesanghu
+                  author_name: Ian Aikman and other
+                  excerpt: >-
+                    In this article, I won’t talk about the general concepts of
+                    typography, which can be used both in print...
+                  description: >-
+                    At the start of the eclipse, there should be some good clear
+                    skies in Mexico, but into Texas, Austin and Dallas are
+                    looking quite cloudy with an increasing threat of some
+                    severe weather.
+
+
+                    For eastern areas of Texas, severe storms, including
+                    tornadoes, may actually impact travel here after the
+                    spectacle.
+                  created_at: '2025-02-24T10:45:22.000000Z'
+                  updated_at: '2025-02-24T10:53:30.000000Z'
+                  image: >-
+                    http://localhost:8000/storage/62/1004aec0c929f82483f158d14f92bee3.jpg
