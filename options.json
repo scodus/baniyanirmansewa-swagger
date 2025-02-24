@@ -1,0 +1,32 @@
+{
+    "info": {
+        "title": "Baniya nirman sewa",
+        "version": "1.0",
+        "description": "Baniya nirman sewa API documentation",
+        "termsOfService": "#",
+        "license": {
+            "name": "MIT",
+            "url": "https://es.wikipedia.org/wiki/Licencia_MIT"
+        },
+        "contact": {
+            "name": "Scodus",
+            "url": "https://scodus.com",
+            "email": "scodusnp@gmail.com"
+        },
+        "xLogo": {
+            "url": "https://github.com/joolfe/logoBanner.png",
+            "backgroundColor": "#FFFFFF",
+            "altText": "logo"
+        }
+    },
+    "servers": [
+        {
+            "url": "https://baniyanirmansewa.scoduscorp.com",
+            "description": "test server"
+        },
+        {
+            "url": "https://baniyanirmansewa.com",
+            "description": "main server"
+        }
+    ]
+}

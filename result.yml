@@ -1,0 +1,1254 @@
+openapi: 3.0.0
+info:
+  title: Baniya nirman sewa
+  description: Baniya nirman sewa API documentation
+  version: '1.0'
+  x-logo:
+    url: https://github.com/joolfe/logoBanner.png
+    backgroundColor: '#FFFFFF'
+    altText: logo
+  termsOfService: '#'
+  contact:
+    name: Scodus
+    url: https://scodus.com
+    email: scodusnp@gmail.com
+  license:
+    name: MIT
+    url: https://es.wikipedia.org/wiki/Licencia_MIT
+servers:
+  - url: https://baniyanirmansewa.scoduscorp.com
+    description: test server
+  - url: https://baniyanirmansewa.com
+    description: main server
+tags:
+  - name: Authentication
+  - name: Social Link
+  - name: Site Settings
+  - name: mission details
+paths:
+  /api/login:
+    post:
+      tags:
+        - Authentication
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: admin@admin.com
+                password: Pa$$word2
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 07:53:30 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Login Successful
+                status: success
+                data:
+                  user:
+                    id: 2
+                    email: admin@admin.com
+                    email_verified_at: '2025-02-21 07:36:04'
+                    name: Jeremy Turner MD
+                    created_at: '2025-02-21 07:36:04'
+                    updated_at: '2025-02-21 07:36:04'
+                  token_type: Bearer
+                  access_token: >-
+                    eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQzNjhmZS1kZjIyLTQ2MzgtYTg2Ny03ZTI1NDc4ZjE3ODgiLCJqdGkiOiJhMTk2ODgwODgwNDYyY2Q1ZjBiZGE5OTlhMDUyYTlkMDI2MjE3NGQwYTU1ODIwMDAxODc0M2Q5ZWFiODVmMmE1ZmI5Njg1ZDA5M2RmYzI4ZSIsImlhdCI6MTc0MDEyNDQxMC44MTMwNDksIm5iZiI6MTc0MDEyNDQxMC44MTMwNTEsImV4cCI6MTc0MDcyOTIxMC44MTAwMzMsInN1YiI6IjIiLCJzY29wZXMiOlsiKiJdfQ.dsDK2OqKGzItbMnHLHMy2XFYXcqzCg4Jqa6GB9vlVCLeaGiCyceIRIQ9S68ufKcg-ux06FkcgcsT6Bn346m_hV_wuhQND_9ffWnyKSajzKw1NtPfmKaVy6HqcuG0s6fnAZ9z-n7tkwegj3QnyWmVg7m7tWP30fAOiqVM3zyWmsncI-6cP-P94h0WjA8aCucYbuE1w37_AqjP5CwF8YWRsVvH3XW__TP324MPL3vg8SdZp8OiUBH8-_hwMOmIpU3J84UY3U34vZbyX2kITAhH8Jug2PqYBfwn50DqU80qCfd699DenV3RJu2T0LTrNSjOp-1mXqQETaHD8vAlGdvKOQpy9opzMpYD8JiM1Lv2ATSEsB2Ae3g_KZYFIU-hAFhokFTFFCd4PQlmy7yvtwtw9h-nBFbefabyhnOy079So9If1HcMz33luRMOGdrKa3fovYhu4MAb63pkORzEaWLccLnlkGL3_c3d9iQJxqC1wFf0ynnkU1O6Hz9ySns69hQBKczYmBWg8OQpesSBnpMtkQq-ItxEMOEDEQ0GockMxw_QUlUaXxjRyIqr8Bm4JlsuGZcY2qB7b0LU6gfCcd6Y9_eb2hbzDjy8v_unduCwbaZwKbznN0rhwgXTr4OEXkeCjeQ9PxCL5VKwbHWMSeU-Qwl7OD6FNvX_CUFQQkvuv7E
+                  refresh_token: >-
+                    def50200e3624be74a1d42d5ea95120da5163bfda09855f4d9e4cedd4274996ec0baf4e19465ca2eee6fedddaea3d2effac1909a2a1539672823c58a13c3b7ef7baaeb7128488214d8113aeabce53deac5b30ac82db71de98ffd4d6d9a8feec2c3ba9a6c86b9e875eaf1c57e332e4e993214b7330ce2616bae7ce2ad0c7b65962b2eeaf7d788884eec5b85ffdb551bffdbe69b368fc03a966e0f7c6c6709a9c520603ef89aeab54d9defaa5a7f10bdc77dbd7c84b4415c49f97917fb3ac5c35e2ac82d30427f81419feab1b6c1e5fccb65ec52517cd065be197e41f008a91154f270f80db6a1cc48cbc6f296faf86b1f44d92743450ef38c0acc493de5e324513b221723f59c579e784da9145f6e90dbeec8320994717a34a0b652275e74bdfb0d3cfa755c99bb18ba9d5cc56ad3c464019fc169d2640e3374d3e37911fd40ef95e08562663d77616004918b7b7f4564eb4799a1d73d86fff95345be1f3ef71e0a0bda7b486db4258604da9a7dd42839f3434f903b912a79bdd7a1dd162d06a6c1b7ca09528a98
+                  expires_in: 604800
+  /api/logout:
+    post:
+      tags:
+        - Authentication
+      summary: Logout
+      requestBody:
+        content: {}
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 07:54:42 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: You have been successfully logged out!
+  /api/refresh-token/{refresh_token}:
+    post:
+      tags:
+        - Authentication
+      summary: Refresh Token
+      requestBody:
+        content: {}
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: refresh_token
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 07:58:34 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Token Refreshed
+                status: success
+                data:
+                  token_type: Bearer
+                  access_token: >-
+                    eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZTQzNjhmZS1kZjIyLTQ2MzgtYTg2Ny03ZTI1NDc4ZjE3ODgiLCJqdGkiOiI2NWRmZWEwZmIzOTg5MjkzNWMxMjI0MmRiYTI5ZDQ4MDU2ZjJmM2VhN2UzYWU4OTZmODZmZWFlNzYyMWQ5ODk3ODIyMzA5ZTczMTJhNjZkYyIsImlhdCI6MTc0MDEyNDcxNC43OTM5MTEsIm5iZiI6MTc0MDEyNDcxNC43OTM5MTMsImV4cCI6MTc0MDcyOTUxNC43OTExODksInN1YiI6IjIiLCJzY29wZXMiOlsiKiJdfQ.mHMemg19fd_5VHiuPX6j4j8Kv723Tq9AoJNS3VhohdOoSOsC7OXLw9d7ABETJXPB1EKAK7AkFNGmJQNCfhJBwtdjH4ddELIHyAwWemVXi4XyV3bZ73K2xnFbj4CEawr9QA_ZkqaCxc9dtMimkbB6K1AZOV0a7um0PyKVjAP_RdMKpDSGkw1l2wqera6glR_fqVia_-vNznoOeic9ROAKbZbdoAwN6Smhm-gczKw3OxEGBnca6-CVQpAX0E4DGPMiN7FJlgjsx6sn_0AEpgIlnVhW25RGzQMTYYKW6dwfT0BRkzQGjJGKudOb3vJaNOnwy6jGVsfnbPr0tG6tDaN5duaCUt3Hh8fCOvH5zgfewu1usMSAH5zIxTqvTqDDWu29ZeuLc2BWA46V_oi_DNnfbP4pvy75SsDV_z4fXjE0XbhuH2eCs92pjrXsJeAorPPCXtzzqypAUZglBlZbV30xe1Pf7fJP1VjRw0D_-ZZNwG1sGOGhd7KEwxhQ3SeeQfitqI32BRlTlmLNFCBrBdt8K_zKqBFN56j-wDSW0fMRwn6yuZhra3WPotlzixH61NGIJgdshRxSirip3PSLdp9m0uRQDpvK_GdsavcVuWuBfBIqyiBJWkxqrrONcZma-47628m7vEF_OlSJHsKXJpRFmO9nUmYCOn2Wba9UFUc-3nE
+                  refresh_token: >-
+                    def5020007272377366183be4370f93f5f7664b1a67c1e50841b188a305886d0d6d1fdbddeddd658d458c0505155b2b1f95c766b467b4969d5ef2e857d5fc81033830cf3976068553b6a42d4a8b2bfb80eb45f5783d70ccc597e973890fc423403a4f76d500e948051d0703c1bd549072db5aa846fad2bdd1beb01f74daace98712b341f6a373983c04a36074d8921fde7903736e747baeb1692d8cc426c598ddcbdff6fa98ad07852d89513994fa8bfa781d84404388997f6c0b63e128b5de941f77c3aa9b24a73c61c0daeadb8e9b12ee81568388efabded225dfb8fc0af759b40a00256d433c7b10ea3a79923810bcd7ec0817cfc100131800f3e7c3daade3f5f3bb55f9fc259a8f7e6a4fef4ba8adb1c584770f1d0546e9dd4ee46fa607a3fde2652d6cd513c2f3eb616cc94a4337430c80e1c6648ccbdf0c8aaeb1724db4d21d6a66a560151dd6b3d161ce703fc52b41f73133a7c752bb4798a683732ae6ed10245893df5bd579c52d0d54d33e1b9aabbc1dd7ffeeb993ed823f5bb88f55b1004f43e79de
+                  expires_in: 604800
+  /api/user-detail:
+    get:
+      tags:
+        - Authentication
+      summary: User Detail
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 08:01:49 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Auth User Detail
+                status: success
+                data:
+                  id: 2
+                  email: admin@admin.com
+                  email_verified_at: '2025-02-21 07:36:04'
+                  name: Jeremy Turner MD
+                  created_at: '2025-02-21 07:36:04'
+                  updated_at: '2025-02-21 07:36:04'
+  /api/change-password:
+    put:
+      tags:
+        - Authentication
+      summary: Update Password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                old_password: Pa$$word1
+                password: Pa$$word2
+                password_confirmation: Pa$$word2
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 08:15:37 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Password changed successfully
+  /api/site-settings/social-links/twitter:
+    get:
+      tags:
+        - Social Link
+      summary: Get
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/site-settings/social-links/facebook:
+    post:
+      tags:
+        - Social Link
+      summary: Create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                social_media_link: http://facebook.com
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/site-settings/social-links:
+    get:
+      tags:
+        - Social Link
+      summary: Get all social links
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/site-settings:
+    get:
+      tags:
+        - Site Settings
+      summary: Get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 10:38:44 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - key: s_o_c_i_a_l_l_i_n_k_t_w_i_t_t_e_r
+                    value: http://twitter.com
+                    type: TEXT
+                    created_at: null
+                    updated_at: null
+                  - key: SOCIAL_LINK_TWITTER
+                    value: http://twitter.com
+                    type: TEXT
+                    created_at: null
+                    updated_at: null
+                  - key: SOCIAL_LINK_FACEBOOK
+                    value: http://facebook.com
+                    type: TEXT
+                    created_at: null
+                    updated_at: null
+                  - key: SOCIAL_LINK_FACEBOOKDFSDF
+                    value: http://facebook.com
+                    type: TEXT
+                    created_at: null
+                    updated_at: null
+    post:
+      tags:
+        - Site Settings
+      summary: Create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                  example: image
+                value:
+                  type: string
+                  example: some value
+                document:
+                  type: string
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 10:46:58 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Successfully Created
+  /api/site-settings/SOCIAL_LINK_TWITTER:
+    get:
+      tags:
+        - Site Settings
+      summary: get one
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Fri, 21 Feb 2025 10:45:18 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  key: SOCIAL_LINK_TWITTER
+                  value: http://twitter.com
+                  type: TEXT
+                  created_at: '2025-02-21T10:04:28.000000Z'
+                  updated_at: '2025-02-21T10:04:28.000000Z'
+  /api/site-settings/document:
+    post:
+      tags:
+        - Site Settings
+      summary: Store Document
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                document:
+                  type: string
+                  format: binary
+                key:
+                  type: string
+                  example: image
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/mission-details:
+    get:
+      tags:
+        - mission details
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 05:22:49 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 1
+                    title: Voluptas et aspernatur nam.
+                    description: >-
+                      Dicta dolor recusandae delectus aut et inventore harum.
+                      Illum fugit porro deleniti. Illo sed sit quaerat quo rerum
+                      perspiciatis vero.
+
+
+                      Inventore sit repudiandae dicta in. Officiis non corporis
+                      corporis. Soluta temporibus magnam aut blanditiis.
+
+
+                      Earum debitis consequatur voluptas. Vero est tempora ut
+                      sed cum et maxime.
+
+
+                      Ullam reiciendis et autem non aspernatur saepe
+                      perspiciatis. Iure enim consequatur tempora excepturi
+                      nihil. Sit voluptatum eum eum deleniti velit commodi
+                      rerum.
+
+
+                      Est sunt asperiores vel placeat consectetur est
+                      consectetur. Cum ratione adipisci exercitationem quaerat.
+                      Repellat et veritatis ex atque ducimus repellat voluptas.
+                    image: null
+                  - id: 2
+                    title: >-
+                      Sunt blanditiis quia ea mollitia ipsam reprehenderit
+                      facilis.
+                    description: >-
+                      Qui aut dolorem reiciendis temporibus illo dolores cum.
+                      Itaque esse perferendis nulla. Tenetur illum qui sit est
+                      et exercitationem. Et voluptas aut nesciunt laudantium.
+                      Non necessitatibus laborum et dolores.
+
+
+                      Voluptas vel est autem. Qui et est modi aut molestiae
+                      quaerat. Ea suscipit odio distinctio illum. Repudiandae ut
+                      atque qui sed.
+
+
+                      Fugiat occaecati magnam est eos quo. Voluptatem rem vel
+                      porro nobis. Asperiores fuga qui officia et. Tempore quos
+                      et quam dolor est dolore.
+
+
+                      Necessitatibus sint autem quis et praesentium. Quia
+                      dolorem doloribus aut eius eos quaerat praesentium
+                      possimus. Ut quia et animi ut sunt. Mollitia deleniti ea
+                      ut tempore ea.
+
+
+                      Qui rem ut voluptas voluptatem. Possimus ipsa rerum
+                      incidunt et et dolorum illum. Eveniet voluptatem non
+                      laudantium et omnis autem. Aut aliquam facere quo repellat
+                      deserunt.
+                    image: null
+                  - id: 3
+                    title: Laborum excepturi et sequi ducimus nam hic aut aut.
+                    description: >-
+                      Omnis rerum quasi id reiciendis id exercitationem.
+                      Explicabo alias nihil quos impedit ducimus distinctio
+                      aliquam. Consequatur quia illo autem rerum sed aut
+                      consequatur et. Perspiciatis eos eum eligendi tenetur et
+                      numquam.
+
+
+                      Velit qui quas nam facilis tenetur fugiat aspernatur. Quo
+                      voluptas voluptates dignissimos quo iusto cupiditate ut.
+                      Sint odit quisquam qui in minus debitis aut.
+
+
+                      Sint praesentium labore quia magnam numquam vitae et.
+                      Similique id aut aut libero quaerat. Perferendis qui
+                      minima aut nesciunt quis. Eligendi ipsum et a maiores.
+
+
+                      Perspiciatis veritatis consectetur molestiae explicabo
+                      sunt perferendis numquam. Et assumenda explicabo qui id id
+                      delectus quisquam dolores. Ratione amet consequatur veniam
+                      expedita ratione omnis consequatur at. Aut cumque repellat
+                      doloribus aspernatur doloribus magni molestiae.
+
+
+                      Totam illo ducimus eum ipsam assumenda eum. Nobis ducimus
+                      et amet culpa. Autem laudantium natus ut quo quis. Rerum
+                      nihil ipsam quo voluptatem ullam ea.
+                    image: null
+                  - id: 4
+                    title: A voluptatem beatae illo reprehenderit quod nihil.
+                    description: >-
+                      Dolorem reiciendis quos a at animi at qui deleniti.
+                      Molestiae cupiditate quis quaerat omnis est excepturi.
+                      Quia laboriosam voluptas maxime quia. Quam ex est eum
+                      cupiditate.
+
+
+                      Ducimus est quis qui ut aut ipsa dolor. At ex cupiditate
+                      enim. Ratione harum doloremque aperiam.
+
+
+                      Sapiente molestias et quasi nobis ducimus voluptates
+                      aspernatur. Soluta itaque sunt vel impedit eius. Rem eos
+                      saepe sunt dignissimos officia. Assumenda et placeat
+                      accusamus facilis facilis suscipit voluptate animi.
+
+
+                      Ea esse id omnis dolorum tempora quidem. Reprehenderit
+                      adipisci vel aliquam enim est voluptatem. Ab odit ut cum.
+                      Dolor eveniet tempore fugit unde minima.
+
+
+                      Id ea illo possimus iusto eius dolor sed. Aut optio
+                      dolores minima omnis deserunt laudantium eum.
+                    image: null
+                  - id: 5
+                    title: Officiis est est accusantium consequatur quae.
+                    description: >-
+                      Illo qui est aspernatur quo ratione. Neque maxime sit odit
+                      enim esse. Dolores nulla iste sit velit.
+
+
+                      Cum et ea in ab blanditiis expedita. Aut in sequi magni
+                      voluptatem iure. Sed aut mollitia et perspiciatis qui.
+
+
+                      Et vitae consequuntur voluptatem qui porro quis. Harum
+                      quia et quae iste voluptatem et dignissimos. Asperiores
+                      aspernatur dolor consectetur quas rerum neque corrupti.
+
+
+                      Rem quae id non ut. Voluptatem perspiciatis et id aut
+                      animi voluptatibus molestiae. Est dolores deserunt nostrum
+                      sit voluptas.
+
+
+                      Ut sunt et placeat est fuga iste dolorem et. Dolore
+                      perferendis a iste sed ex odio. Accusantium saepe sed
+                      repellat accusamus quo repellendus. Earum ut autem rerum
+                      animi sequi sit amet ut. Maiores tempora deserunt tempore
+                      molestias.
+                    image: null
+                  - id: 6
+                    title: Quos ut optio odio praesentium.
+                    description: >-
+                      Consequatur sint consequatur excepturi sed amet facere
+                      sapiente. Rerum veritatis unde repellendus omnis totam.
+                      Facere sit quo sint. Veniam aspernatur qui sed nostrum
+                      nemo eos.
+
+
+                      Dicta adipisci est aliquid optio rerum. Autem laudantium
+                      et magnam placeat aspernatur sint nostrum nemo. Asperiores
+                      aut corporis nihil voluptatibus.
+
+
+                      Consectetur voluptas aut nemo et. Ad omnis mollitia
+                      laborum nemo quo suscipit. Id adipisci voluptatem dolorem
+                      labore.
+
+
+                      Est sed porro totam cumque architecto tenetur. Voluptatum
+                      nam aut doloribus blanditiis quibusdam. Magni quod aut
+                      rerum mollitia et enim harum voluptate.
+
+
+                      Vero sapiente qui cupiditate numquam ullam labore. Natus
+                      dolor excepturi voluptatibus iusto. Officiis ad non
+                      dolores temporibus adipisci tenetur est. Voluptas
+                      voluptatem sed reprehenderit earum.
+                    image: null
+                  - id: 7
+                    title: Id aut sed ducimus nam.
+                    description: >-
+                      Fuga est sint inventore debitis repellendus eos eos
+                      explicabo. Maxime saepe sapiente laborum veniam.
+                      Voluptatem aut asperiores unde.
+
+
+                      Numquam veritatis quae blanditiis sunt qui qui quisquam
+                      esse. Recusandae ea commodi sapiente iste sit magni
+                      voluptatem ut. Reprehenderit odio numquam molestias.
+                      Exercitationem aut fugit cumque itaque qui ab nesciunt.
+
+
+                      Consequuntur et ut dolorum ad. Rerum dolores nobis
+                      voluptates dolor vitae et ea. Consectetur dolorum esse est
+                      quidem provident vel architecto.
+
+
+                      Eveniet quod ratione quis amet maxime ad. Suscipit tempora
+                      quas excepturi. Ea quasi corrupti velit reiciendis
+                      molestiae veritatis sunt.
+
+
+                      Eligendi aut placeat ratione rerum cupiditate quis. Nihil
+                      est sequi corporis ut. Hic laborum omnis dolor nobis
+                      architecto sed voluptas. Voluptas repudiandae esse
+                      repellendus similique. Repudiandae reprehenderit unde
+                      illum quasi nesciunt culpa et.
+                    image: null
+                  - id: 8
+                    title: Dolores aut minus possimus quia.
+                    description: >-
+                      Doloribus numquam sunt modi odit. Quis iusto laboriosam
+                      cupiditate excepturi et iusto. Adipisci assumenda quae
+                      quasi consectetur quos odio asperiores. Qui qui distinctio
+                      sit et quam.
+
+
+                      Quod hic provident labore qui voluptatem molestiae. Autem
+                      hic modi neque. Explicabo temporibus neque et maiores aut
+                      doloribus. Nam consequatur a eligendi est quisquam
+                      distinctio voluptas voluptas. Cum sint sapiente distinctio
+                      quam et.
+
+
+                      Temporibus voluptas sunt quod aliquam excepturi atque.
+                      Quis consequatur voluptates autem provident quis eaque
+                      vitae. Inventore ipsam rerum id nesciunt aut autem.
+                      Dolores sapiente iure optio a consequatur.
+
+
+                      Doloribus est minima quibusdam et laudantium. Quis qui qui
+                      saepe nesciunt. Optio enim quia deserunt a voluptate.
+
+
+                      Nulla consequatur voluptas tempora dolor incidunt sit
+                      illo. Non iure unde nesciunt magnam et soluta vel
+                      temporibus. Provident debitis amet cupiditate accusamus.
+                    image: null
+                  - id: 9
+                    title: Aspernatur labore adipisci rem.
+                    description: >-
+                      Consequatur quibusdam modi qui rerum. Id et nam laudantium
+                      corporis id et. Placeat cupiditate maiores et.
+
+
+                      Tenetur aut esse doloribus quasi culpa. Aliquid ut quia
+                      sapiente nemo. Et facere deserunt qui sint maxime error
+                      dignissimos mollitia. Sed iusto molestiae enim minima in
+                      pariatur. Cum dignissimos consequatur consequuntur
+                      corrupti.
+
+
+                      Iusto et est consequuntur labore laborum omnis corporis.
+                      Ad velit qui amet eligendi. Qui exercitationem voluptatem
+                      odio in qui ut. Assumenda dicta tempore praesentium sunt.
+
+
+                      Occaecati sed nihil quaerat quo nobis pariatur. Aut nihil
+                      unde recusandae. Sit iste dicta eum aut reiciendis. Eos
+                      sed molestias tempora nisi.
+
+
+                      Incidunt sequi natus perferendis quia non. Atque sint
+                      accusamus quos exercitationem non quisquam aut
+                      perferendis. Distinctio veniam consequuntur quos saepe
+                      quibusdam quae totam.
+                    image: null
+                  - id: 10
+                    title: Culpa voluptas ex asperiores quae quo atque laborum.
+                    description: >-
+                      Et laborum architecto quia id est iste ut. Deleniti nam
+                      aut ut praesentium expedita ut nostrum. Dolorem id
+                      assumenda non ipsum assumenda qui. Odit labore similique
+                      laboriosam in officiis et.
+
+
+                      Veritatis consequatur voluptatem fugiat in doloribus sed
+                      facere. Commodi corporis culpa nemo delectus.
+                      Necessitatibus mollitia eos repellendus tempore tempora
+                      nisi natus. Quo explicabo id et vitae.
+
+
+                      Blanditiis praesentium accusantium hic architecto et.
+                      Magnam consequatur rerum dolores. Modi quis sunt quae
+                      laudantium et delectus odit. Voluptatem provident expedita
+                      aliquid delectus recusandae similique.
+
+
+                      Sit accusantium nobis exercitationem unde animi iusto.
+                      Autem et qui sunt temporibus voluptatem in fugit.
+
+
+                      Accusamus voluptate eos reiciendis fugit maiores excepturi
+                      et. Exercitationem quibusdam voluptates molestias. Nihil
+                      laborum beatae voluptatem neque commodi quo.
+                    image: null
+                  - id: 12
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/16/56a8d73c1a97ca40ff35f015da880bca.jpg
+                  - id: 13
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/17/68bd015f4c9c6cc46ade3cca0a2a5572.jpg
+                  - id: 14
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/18/b18678e0380b288bdedc9f829364ec47.jpg
+                  - id: 15
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/19/57351be9a8bf9d2d91a96d083bfec32e.jpg
+                  - id: 16
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/20/9b4a71aa9a3f9865b641f49a227e5f8a.jpg
+                  - id: 17
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/21/ccf2ab7a9f20b05b8f28dd5f907e7d26.jpg
+                  - id: 18
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/22/8b83db979714722a56b0b8e066691e62.jpg
+                  - id: 19
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/23/3d66d5e343c9760976ffa42bf0bf9d47.jpg
+                  - id: 21
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/25/97ecc6feefcd13ad0222c5e75434397e.jpg
+                  - id: 22
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/26/965cfc5f61f81d02afb5cadf88361036.jpg
+                  - id: 23
+                    title: some title
+                    description: some description
+                    image: >-
+                      http://localhost:8000/storage/27/3efa8b5074c1123de1e70622101c8c0a.jpg
+    post:
+      tags:
+        - mission details
+      summary: Create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: some title
+                description:
+                  type: string
+                  example: some description
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 05:23:20 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created mission detail
+                status: success
+                data:
+                  id: 24
+                  title: some title
+                  description: some description
+                  image: >-
+                    http://localhost:8000/storage/31/c7a186c35c67bc5f17e894c0efb4ba51.jpg
+  /api/mission-details/21:
+    get:
+      tags:
+        - mission details
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 05:29:23 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 21
+                  title: some title
+                  description: some description
+                  image: >-
+                    http://localhost:8000/storage/25/97ecc6feefcd13ad0222c5e75434397e.jpg
+    post:
+      tags:
+        - mission details
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: new title new 1
+                description:
+                  type: string
+                  example: new description
+                image:
+                  type: string
+                  format: binary
+                _method:
+                  type: string
+                  example: put
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 05:29:36 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated mission detail
+                status: success
+                data:
+                  id: 21
+                  title: new title new 1
+                  description: new description
+                  image: >-
+                    http://localhost:8000/storage/25/97ecc6feefcd13ad0222c5e75434397e.jpg
+    delete:
+      tags:
+        - mission details
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Mon, 24 Feb 2025 05:30:09 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Mission detail has been deleted
