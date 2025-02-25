@@ -28,6 +28,15 @@ tags:
   - name: Founder and MD
   - name: Board of Directors
   - name: Press release
+  - name: Our Projects
+  - name: Categories
+  - name: Our Verticals
+  - name: Careers
+  - name: Expertise
+  - name: Testimonials
+  - name: Contact Us
+  - name: Banners
+  - name: Financial Index
 paths:
   /api/login:
     post:
@@ -3078,3 +3087,4200 @@ paths:
                   updated_at: '2025-02-24T10:53:30.000000Z'
                   image: >-
                     http://localhost:8000/storage/62/1004aec0c929f82483f158d14f92bee3.jpg
+  /api/projects:
+    get:
+      tags:
+        - Our Projects
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 05:29:31 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 2
+                    title: Mollitia eveniet dolores amet maxime blanditiis.
+                    summary_1: >-
+                      Expedita suscipit consectetur temporibus quia sunt
+                      laudantium. Quo occaecati esse dolor perferendis at amet
+                      autem. Voluptas voluptas animi qui. Molestiae qui quisquam
+                      optio ut animi culpa quod voluptates.
+                    summary_2: >-
+                      Quod eveniet ipsam dolore quia porro. Et corrupti
+                      repellendus iure. Consequatur sit ut distinctio non. Eum
+                      alias numquam nihil quas sunt ab magni.
+                    features:
+                      - Non voluptatem adipisci voluptatem.
+                      - Ad sit repellendus ea autem officiis non.
+                      - >-
+                        Reiciendis nesciunt sit architecto magni voluptas
+                        itaque.
+                      - >-
+                        Repellat voluptas quaerat voluptatem laudantium aut
+                        vitae at quam.
+                      - Ex et provident nostrum itaque molestias.
+                      - Atque magni fugit neque vel.
+                    description: >
+                      <html><head><title>Officia et eos amet impedit dolor quia
+                      architecto non omnis.</title></head><body><form
+                      action="example.net" method="POST"><label
+                      for="username">debitis</label><input type="text"
+                      id="username"><label for="password">est</label><input
+                      type="password" id="password"></form><div
+                      class="quod"></div></body></html>
+                    image: null
+                    categories: []
+                  - id: 3
+                    title: Mollitia voluptatem minima cum culpa.
+                    summary_1: >-
+                      At magni aperiam eveniet blanditiis. Quo possimus et
+                      similique. Minus asperiores sed quibusdam.
+                    summary_2: >-
+                      Perspiciatis repellat dignissimos sunt tenetur. Dolorum
+                      omnis eaque sunt accusamus eum voluptatem. Eligendi
+                      pariatur ipsum adipisci recusandae. Inventore dolor iste
+                      voluptatem aliquam. Consequatur ad consequatur mollitia
+                      nobis assumenda.
+                    features:
+                      - >-
+                        Minima exercitationem nobis sit id labore velit
+                        voluptas.
+                      - Est nesciunt nemo voluptatibus voluptates.
+                      - At nulla qui consequatur omnis enim enim.
+                      - Odit est consequuntur nisi qui sed ut natus sapiente.
+                      - Qui sequi soluta voluptates consequatur rerum dolorem.
+                      - Eum doloribus itaque et ducimus porro est.
+                      - Ratione doloremque ullam non veritatis.
+                      - >-
+                        Et necessitatibus commodi inventore earum accusantium
+                        sit incidunt.
+                      - Animi velit earum amet quisquam.
+                      - Eius sapiente est quae et rem eveniet consequatur quasi.
+                    description: >
+                      <html><head><title>Porro et
+                      nihil.</title></head><body><form action="example.com"
+                      method="POST"><label
+                      for="username">consequuntur</label><input type="text"
+                      id="username"><label for="password">sed</label><input
+                      type="password" id="password"></form><div
+                      class="dolores"><div id="21361"></div></div><div
+                      id="65072"><div id="81520">Provident dolores iure
+                      exercitationem suscipit iure sed.<table><thead><tr><th>Et
+                      sed.</th><th>Pariatur ab.</th><th>Cupiditate et
+                      odit.</th><th>Sunt velit suscipit id.</th><th>Voluptas
+                      excepturi tempora.</th></tr></thead><tbody><tr><td>Magnam
+                      aut et mollitia ducimus.</td><td>Consequatur totam ullam
+                      ea odio rerum labore est tenetur et porro.</td><td>Ratione
+                      ut harum quas molestias consequatur aut sint et
+                      unde.</td><td>Aut nulla est deserunt nobis optio
+                      consequatur iste eum.</td><td>Dolorum qui ut et excepturi
+                      odit quo voluptas ea doloremque deserunt voluptatum sed
+                      iusto.</td></tr><tr><td>Velit aliquid quo sed
+                      est.</td><td>Rem velit nemo esse aut id laborum doloremque
+                      deserunt et aut ut aperiam.</td><td>Dolores rerum
+                      voluptates facilis eos quia et repellendus accusamus autem
+                      qui.</td><td>Assumenda placeat.</td><td>Est est porro
+                      occaecati fuga dolor et voluptatibus nesciunt nulla est
+                      consequatur dolor
+                      nobis.</td></tr></tbody></table></div><div
+                      class="non"></div><div class="aut"></div><div
+                      class="minus"><h2>Adipisci provident accusantium alias
+                      voluptas ratione sit minus.</h2>Qui modi recusandae
+                      accusamus.</div></div><div id="57025"></div></body></html>
+                    image: null
+                    categories: []
+                  - id: 4
+                    title: Voluptatem ea quidem qui et magni aliquid dolor.
+                    summary_1: >-
+                      Qui laudantium quae illum. Quos quae quos iusto labore
+                      dolorum quia. Repudiandae voluptatem dolores molestias
+                      deleniti aut voluptate enim. Delectus voluptatem placeat
+                      voluptatem enim.
+                    summary_2: >-
+                      Corporis laboriosam rerum fugiat ut sapiente debitis. Odio
+                      eius tempora et eos itaque dignissimos repudiandae. Eaque
+                      maxime ratione alias ea ab.
+                    features:
+                      - Suscipit sunt optio facere in autem quasi ut.
+                      - Quae molestiae delectus molestiae.
+                      - Ab assumenda cumque ut eligendi iste quo esse.
+                      - Voluptatem quia nisi iure facere placeat.
+                      - Blanditiis similique quaerat maiores et.
+                      - Esse eum non et distinctio voluptate debitis.
+                      - Ad reiciendis voluptates ad veritatis explicabo.
+                      - Quibusdam inventore maxime non porro.
+                    description: >
+                      <html><head><title>Molestiae aut adipisci illo
+                      mollitia.</title></head><body><form action="example.org"
+                      method="POST"><label for="username">illum</label><input
+                      type="text" id="username"><label
+                      for="password">accusantium</label><input type="password"
+                      id="password"></form><div class="quasi"><i>Deserunt
+                      delectus inventore expedita.</i><i>Sit sed harum placeat
+                      rerum.</i><a href="example.org">Qui velit molestias
+                      dolorem aut aliquid excepturi eos debitis nisi
+                      illo.</a><b>Maiores aut molestiae qui ipsum aliquam enim
+                      dignissimos consequuntur odit doloremque
+                      inventore.</b></div></body></html>
+                    image: null
+                    categories: []
+                  - id: 5
+                    title: >-
+                      Saepe deserunt quam hic rem architecto fuga inventore
+                      debitis.
+                    summary_1: >-
+                      Similique laudantium qui praesentium animi. Modi id et
+                      enim beatae cumque possimus officiis velit. A odit cumque
+                      et quia fugit veritatis qui.
+                    summary_2: >-
+                      Veniam unde ut sunt voluptate voluptatem quo sit. Et
+                      exercitationem est vero. In velit minus autem pariatur.
+                      Incidunt qui tenetur voluptas tempore rerum neque.
+                    features:
+                      - >-
+                        Omnis est dolores provident rerum sit mollitia
+                        repudiandae.
+                      - Et deleniti illum quibusdam quo.
+                      - >-
+                        Ducimus dolorem ipsum perferendis aut veritatis minima
+                        saepe est.
+                      - >-
+                        Voluptates necessitatibus sed veritatis dolorem et
+                        dignissimos.
+                      - Sit consequatur sint aut laborum qui facilis.
+                      - Atque nemo corrupti suscipit qui dolores.
+                      - Dicta et ut assumenda numquam illum quidem.
+                    description: >
+                      <html><head><title>Deleniti optio nostrum
+                      beatae.</title></head><body><form action="example.net"
+                      method="POST"><label for="username">aut</label><input
+                      type="text" id="username"><label
+                      for="password">corrupti</label><input type="password"
+                      id="password"></form><div id="74690"><div
+                      id="62827"></div><div id="76757"></div><div
+                      class="omnis"></div><div
+                      id="54084"></div></div></body></html>
+                    image: null
+                    categories: []
+                  - id: 6
+                    title: Periodic Maintenance of Parasi-Bhairahawa Road
+                    summary_1: >-
+                      Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                      to km 555.19) of NH05-026, and Bamaha Khola kothi River
+                      Road (km 598.21 to km 615.45) of NH01-048
+                    summary_2: >-
+                      Our team brings creativity, precision, and dedication to
+                      every phase of the project, from concept to completion,
+                      ensuring the best possible outcome.
+                    features:
+                      - 'Project Type: Road Construction (Completed)'
+                      - 'Contract Amount (Inc. VAT): 288,136,062.58'
+                      - Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                      - 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                      - 'Employer: Road Division Butwal'
+                    description: >-
+                      Believe it or not, copywriting is one of the most
+                      important content-creation skills a designer can possess.
+                      If you think about it, design exists to support and
+                      deliver content—not the other way around.
+
+
+                      As a designer, content should be the driving force behind
+                      many of your decisions, whether you’re creating the
+                      content or someone else is. So if you can understand how
+                      to write effective copy (and understand the purpose that
+                      it serves), you’ll be able to better serve your clients
+                      and ultimately create better designs.
+
+
+                      Green Icon
+
+                      Landmarks to intimate residential spaces
+
+                      Green Icon
+
+                      Leverage cutting-edge technologies
+
+                      Green Icon
+
+                      Sustainable practices to drive efficiency
+                    image: >-
+                      http://localhost:8000/storage/77/f309243c96ed3c016cbd07c380f09088.jpg
+                    categories: []
+                  - id: 7
+                    title: Periodic Maintenance of Parasi-Bhairahawa Road
+                    summary_1: >-
+                      Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                      to km 555.19) of NH05-026, and Bamaha Khola kothi River
+                      Road (km 598.21 to km 615.45) of NH01-048
+                    summary_2: >-
+                      Our team brings creativity, precision, and dedication to
+                      every phase of the project, from concept to completion,
+                      ensuring the best possible outcome.
+                    features:
+                      - 'Project Type: Road Construction (Completed) 123'
+                      - 'Contract Amount (Inc. VAT): 288,136,062.58'
+                      - Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                      - 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                      - 'Employer: Road Division Butwal'
+                    description: >-
+                      Believe it or not, copywriting is one of the most
+                      important content-creation skills a designer can possess.
+                      If you think about it, design exists to support and
+                      deliver content—not the other way around.
+
+
+                      As a designer, content should be the driving force behind
+                      many of your decisions, whether you’re creating the
+                      content or someone else is. So if you can understand how
+                      to write effective copy (and understand the purpose that
+                      it serves), you’ll be able to better serve your clients
+                      and ultimately create better designs.
+
+
+                      Green Icon
+
+                      Landmarks to intimate residential spaces
+
+                      Green Icon
+
+                      Leverage cutting-edge technologies
+
+                      Green Icon
+
+                      Sustainable practices to drive efficiency
+                    image: >-
+                      http://localhost:8000/storage/80/947a518d4fef13286c1f4d60ad647dcd.jpg
+                    categories:
+                      - id: 3
+                        title: dolorem
+                      - id: 2
+                        title: aliquid
+    post:
+      tags:
+        - Our Projects
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Periodic Maintenance of Parasi-Bhairahawa Road
+                summary_1:
+                  type: string
+                  example: >-
+                    Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                    to km 555.19) of NH05-026, and Bamaha Khola kothi River Road
+                    (km 598.21 to km 615.45) of NH01-048
+                summary_2:
+                  type: string
+                  example: >-
+                    Our team brings creativity, precision, and dedication to
+                    every phase of the project, from concept to completion,
+                    ensuring the best possible outcome.
+                features[0]:
+                  type: string
+                  example: 'Project Type: Road Construction (Completed)'
+                features[1]:
+                  type: string
+                  example: 'Contract Amount (Inc. VAT): 288,136,062.58'
+                features[2]:
+                  type: string
+                  example: Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                features[3]:
+                  type: string
+                  example: 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                features[4]:
+                  type: string
+                  example: 'Employer: Road Division Butwal'
+                description:
+                  type: string
+                  example: >-
+                    Believe it or not, copywriting is one of the most important
+                    content-creation skills a designer can possess. If you think
+                    about it, design exists to support and deliver content—not
+                    the other way around.
+
+
+                    As a designer, content should be the driving force behind
+                    many of your decisions, whether you’re creating the content
+                    or someone else is. So if you can understand how to write
+                    effective copy (and understand the purpose that it serves),
+                    you’ll be able to better serve your clients and ultimately
+                    create better designs.
+
+
+                    Green Icon
+
+                    Landmarks to intimate residential spaces
+
+                    Green Icon
+
+                    Leverage cutting-edge technologies
+
+                    Green Icon
+
+                    Sustainable practices to drive efficiency
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 05:30:10 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created project
+                status: success
+                data:
+                  id: 8
+                  title: Periodic Maintenance of Parasi-Bhairahawa Road
+                  summary_1: >-
+                    Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                    to km 555.19) of NH05-026, and Bamaha Khola kothi River Road
+                    (km 598.21 to km 615.45) of NH01-048
+                  summary_2: >-
+                    Our team brings creativity, precision, and dedication to
+                    every phase of the project, from concept to completion,
+                    ensuring the best possible outcome.
+                  features:
+                    - 'Project Type: Road Construction (Completed)'
+                    - 'Contract Amount (Inc. VAT): 288,136,062.58'
+                    - Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                    - 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                    - 'Employer: Road Division Butwal'
+                  description: >-
+                    Believe it or not, copywriting is one of the most important
+                    content-creation skills a designer can possess. If you think
+                    about it, design exists to support and deliver content—not
+                    the other way around.
+
+
+                    As a designer, content should be the driving force behind
+                    many of your decisions, whether you’re creating the content
+                    or someone else is. So if you can understand how to write
+                    effective copy (and understand the purpose that it serves),
+                    you’ll be able to better serve your clients and ultimately
+                    create better designs.
+
+
+                    Green Icon
+
+                    Landmarks to intimate residential spaces
+
+                    Green Icon
+
+                    Leverage cutting-edge technologies
+
+                    Green Icon
+
+                    Sustainable practices to drive efficiency
+                  image: >-
+                    http://localhost:8000/storage/81/40503209a502e936bf31ea7ff31ac207.jpg
+                  categories: []
+  /api/projects/7:
+    get:
+      tags:
+        - Our Projects
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 05:20:46 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 7
+                  title: Periodic Maintenance of Parasi-Bhairahawa Road
+                  summary_1: >-
+                    Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                    to km 555.19) of NH05-026, and Bamaha Khola kothi River Road
+                    (km 598.21 to km 615.45) of NH01-048
+                  summary_2: >-
+                    Our team brings creativity, precision, and dedication to
+                    every phase of the project, from concept to completion,
+                    ensuring the best possible outcome.
+                  features:
+                    - 'Project Type: Road Construction (Completed) 123'
+                    - 'Contract Amount (Inc. VAT): 288,136,062.58'
+                    - Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                    - 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                    - 'Employer: Road Division Butwal'
+                  description: >-
+                    Believe it or not, copywriting is one of the most important
+                    content-creation skills a designer can possess. If you think
+                    about it, design exists to support and deliver content—not
+                    the other way around.
+
+
+                    As a designer, content should be the driving force behind
+                    many of your decisions, whether you’re creating the content
+                    or someone else is. So if you can understand how to write
+                    effective copy (and understand the purpose that it serves),
+                    you’ll be able to better serve your clients and ultimately
+                    create better designs.
+
+
+                    Green Icon
+
+                    Landmarks to intimate residential spaces
+
+                    Green Icon
+
+                    Leverage cutting-edge technologies
+
+                    Green Icon
+
+                    Sustainable practices to drive efficiency
+                  image: >-
+                    http://localhost:8000/storage/80/947a518d4fef13286c1f4d60ad647dcd.jpg
+                  categories:
+                    - id: 3
+                      title: dolorem
+                    - id: 2
+                      title: aliquid
+    post:
+      tags:
+        - Our Projects
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Periodic Maintenance of Parasi-Bhairahawa Road
+                summary_1:
+                  type: string
+                  example: >-
+                    Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                    to km 555.19) of NH05-026, and Bamaha Khola kothi River Road
+                    (km 598.21 to km 615.45) of NH01-048
+                summary_2:
+                  type: string
+                  example: >-
+                    Our team brings creativity, precision, and dedication to
+                    every phase of the project, from concept to completion,
+                    ensuring the best possible outcome.
+                features[0]:
+                  type: string
+                  example: 'Project Type: Road Construction (Completed) 123'
+                features[1]:
+                  type: string
+                  example: 'Contract Amount (Inc. VAT): 288,136,062.58'
+                features[2]:
+                  type: string
+                  example: Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                features[3]:
+                  type: string
+                  example: 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                features[4]:
+                  type: string
+                  example: 'Employer: Road Division Butwal'
+                description:
+                  type: string
+                  example: >-
+                    Believe it or not, copywriting is one of the most important
+                    content-creation skills a designer can possess. If you think
+                    about it, design exists to support and deliver content—not
+                    the other way around.
+
+
+                    As a designer, content should be the driving force behind
+                    many of your decisions, whether you’re creating the content
+                    or someone else is. So if you can understand how to write
+                    effective copy (and understand the purpose that it serves),
+                    you’ll be able to better serve your clients and ultimately
+                    create better designs.
+
+
+                    Green Icon
+
+                    Landmarks to intimate residential spaces
+
+                    Green Icon
+
+                    Leverage cutting-edge technologies
+
+                    Green Icon
+
+                    Sustainable practices to drive efficiency
+                _method:
+                  type: string
+                  example: put
+                image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 05:30:34 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated project
+                status: success
+                data:
+                  id: 7
+                  title: Periodic Maintenance of Parasi-Bhairahawa Road
+                  summary_1: >-
+                    Periodic maintenance of parasi-Bhairahawa Road( km 532.240
+                    to km 555.19) of NH05-026, and Bamaha Khola kothi River Road
+                    (km 598.21 to km 615.45) of NH01-048
+                  summary_2: >-
+                    Our team brings creativity, precision, and dedication to
+                    every phase of the project, from concept to completion,
+                    ensuring the best possible outcome.
+                  features:
+                    - 'Project Type: Road Construction (Completed) 123'
+                    - 'Contract Amount (Inc. VAT): 288,136,062.58'
+                    - Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki
+                    - 'J/V: Baniya Nirman Sewa Pvt Ltd.'
+                    - 'Employer: Road Division Butwal'
+                  description: >-
+                    Believe it or not, copywriting is one of the most important
+                    content-creation skills a designer can possess. If you think
+                    about it, design exists to support and deliver content—not
+                    the other way around.
+
+
+                    As a designer, content should be the driving force behind
+                    many of your decisions, whether you’re creating the content
+                    or someone else is. So if you can understand how to write
+                    effective copy (and understand the purpose that it serves),
+                    you’ll be able to better serve your clients and ultimately
+                    create better designs.
+
+
+                    Green Icon
+
+                    Landmarks to intimate residential spaces
+
+                    Green Icon
+
+                    Leverage cutting-edge technologies
+
+                    Green Icon
+
+                    Sustainable practices to drive efficiency
+                  image: >-
+                    http://localhost:8000/storage/80/947a518d4fef13286c1f4d60ad647dcd.jpg
+                  categories:
+                    - id: 3
+                      title: dolorem
+                    - id: 2
+                      title: aliquid
+  /api/projects/1:
+    delete:
+      tags:
+        - Our Projects
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 04:19:12 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Project has been deleted
+  /api/projects/7/categories:
+    post:
+      tags:
+        - Our Projects
+      summary: save categories
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                category_ids[0]:
+                  type: integer
+                  example: '3'
+                category_ids[1]:
+                  type: integer
+                  example: '2'
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 05:19:49 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Successfully saved categories
+  /api/categories:
+    get:
+      tags:
+        - Categories
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 04:43:17 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 1
+                    title: qui
+                  - id: 2
+                    title: aliquid
+                  - id: 3
+                    title: dolorem
+                  - id: 4
+                    title: doloremque
+                  - id: 5
+                    title: vero
+    post:
+      tags:
+        - Categories
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Projects
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 04:44:24 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created category
+                status: success
+                data:
+                  id: 6
+                  title: Projects
+  /api/categories/6:
+    get:
+      tags:
+        - Categories
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 04:45:37 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 6
+                  title: Projects
+    post:
+      tags:
+        - Categories
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Project 1
+                _method:
+                  type: string
+                  example: put
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 04:46:38 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated category
+                status: success
+                data:
+                  id: 6
+                  title: Project 1
+  /api/categories/1:
+    delete:
+      tags:
+        - Categories
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 04:47:07 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Category has been deleted
+  /api/verticals:
+    get:
+      tags:
+        - Our Verticals
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:11:16 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 1
+                    title: Rerum molestias et quia debitis.
+                    list:
+                      - Vel cum qui vitae qui.
+                      - Hic distinctio aliquid ab optio sed hic molestias.
+                      - Sapiente excepturi veniam ea porro sed ratione.
+                      - Quos est atque porro fuga laboriosam est totam.
+                      - >-
+                        Nihil neque tempore ad saepe debitis dolore consequuntur
+                        dolor.
+                      - >-
+                        Id eligendi voluptatem quae corporis fuga quo voluptatem
+                        non.
+                      - Delectus animi aperiam dolorum.
+                      - Mollitia illo accusamus vel eum ipsam nihil.
+                      - Voluptatibus iste asperiores quae iusto id.
+                  - id: 2
+                    title: Fugit eligendi maxime architecto veritatis magnam unde.
+                    list:
+                      - >-
+                        Adipisci assumenda distinctio occaecati minus nostrum
+                        qui in.
+                      - Incidunt libero et asperiores et totam eaque.
+                      - Velit quo voluptatibus id.
+                      - >-
+                        Nostrum eveniet dolor reiciendis sint esse eum
+                        voluptatem quibusdam.
+                      - >-
+                        Recusandae cupiditate debitis quis qui omnis molestias
+                        cum.
+                      - In eos magni et quas adipisci enim neque sit.
+                      - Eos cum aut voluptatem optio accusamus.
+                      - Commodi rerum ut ut velit qui ad voluptas.
+                      - Consectetur quas distinctio itaque libero.
+                      - Itaque id voluptates fuga ipsam aut aut.
+                  - id: 3
+                    title: >-
+                      Delectus cumque quaerat qui animi earum commodi
+                      perspiciatis.
+                    list:
+                      - Inventore rem voluptatem dolore ut officia excepturi et.
+                      - >-
+                        Nemo voluptatibus occaecati rerum recusandae deserunt
+                        vitae inventore.
+                      - >-
+                        Minus distinctio sed qui possimus qui odio nesciunt
+                        enim.
+                      - Eaque aut similique animi aliquid.
+                      - Enim qui qui quia nobis fugit.
+                      - >-
+                        Aspernatur rerum nostrum laudantium aspernatur
+                        laboriosam optio.
+                      - Quo accusamus id et doloremque et.
+                      - Earum voluptatem et dicta deserunt.
+                      - Accusamus voluptas nisi praesentium sapiente.
+                  - id: 4
+                    title: Laborum dolores repellat sed ut perferendis.
+                    list:
+                      - Totam magnam possimus aut voluptatum.
+                      - Ab eaque maxime velit quis repellendus sed et.
+                      - Vel aliquid corporis quod voluptatem veniam.
+                      - >-
+                        Ipsa adipisci veniam delectus nobis reprehenderit
+                        suscipit et.
+                      - Molestiae aut laudantium saepe qui velit.
+                      - Nostrum qui neque doloremque quis.
+                      - Voluptas autem quis sint quam ratione qui assumenda.
+                      - Iusto impedit non dolor libero inventore distinctio.
+                      - Sed eum ipsa accusantium autem.
+                  - id: 5
+                    title: Quae nisi et sint voluptatibus.
+                    list:
+                      - Odio voluptate sequi ab tempore.
+                      - Voluptates odio qui eveniet vitae sequi minima id ut.
+                      - Nostrum ut maiores sit nihil neque assumenda.
+                      - Sequi voluptas sunt similique aut rerum repellat.
+                      - Voluptatum ad molestias est sequi laborum.
+                      - >-
+                        Quas rerum provident reiciendis et aliquid dignissimos
+                        dolor.
+                      - Tenetur quis id nemo nesciunt quasi sunt dolor.
+                      - >-
+                        Nihil excepturi porro aut quidem doloremque dignissimos
+                        aperiam qui.
+                      - >-
+                        Perspiciatis in libero et saepe officia placeat est
+                        reiciendis.
+                  - id: 6
+                    title: >-
+                      In sint nostrum consequatur consequatur tempore accusamus
+                      alias.
+                    list:
+                      - Sit hic enim qui voluptates natus repudiandae.
+                      - >-
+                        At voluptatem reiciendis quo aut dolores et maiores
+                        magni.
+                      - Natus ullam ut ipsum velit distinctio qui.
+                      - Ipsum facere aut error tempore sint quia sunt.
+                      - Magnam quo aperiam non.
+                      - Omnis cupiditate earum qui corporis rerum.
+                      - Ut perferendis aliquid provident ad.
+                      - Aut nihil delectus sit corrupti eaque eum qui accusamus.
+                      - Odit quos debitis veniam quis eum excepturi.
+                      - Consequuntur aut minus dignissimos eos.
+                  - id: 7
+                    title: Numquam sed facilis et hic eum rerum.
+                    list:
+                      - Itaque aut voluptate velit illo deleniti.
+                      - Sit laboriosam quo eum sit esse.
+                      - Deleniti ab libero sed adipisci iste aut quia.
+                      - Perferendis magnam in dolor tenetur modi.
+                      - Nobis harum vitae minima animi.
+                      - Pariatur veniam qui aut quos adipisci ut dolorem illum.
+                      - >-
+                        Libero reiciendis quisquam molestias molestiae
+                        accusantium exercitationem porro.
+                      - Ratione occaecati ad rerum.
+                      - >-
+                        Ut voluptatem alias quisquam aspernatur et minima
+                        consequatur.
+                      - Quos laborum quisquam perspiciatis sed.
+                  - id: 8
+                    title: Et itaque pariatur unde.
+                    list:
+                      - Debitis facere odio maiores asperiores.
+                      - Ut aut qui eveniet sint magnam tenetur velit.
+                      - Molestias dolorem fugit ducimus ut harum porro.
+                      - >-
+                        Et nihil voluptatem aliquid et rerum non expedita
+                        consequatur.
+                      - Exercitationem quasi voluptas et sapiente illo soluta.
+                      - Unde voluptatibus nostrum et et.
+                      - Doloribus vitae autem eum exercitationem.
+                      - Sit ducimus architecto officiis et.
+                      - >-
+                        Dolor dolor distinctio quia nobis repudiandae vel
+                        consectetur quod.
+                      - Velit sit dicta modi minima odit vel quo.
+                  - id: 9
+                    title: Ut omnis fuga temporibus cum.
+                    list:
+                      - Corporis ab aut cupiditate.
+                      - Rerum aut officia qui odio laborum aspernatur.
+                      - >-
+                        Facere aspernatur est accusantium veritatis id quae
+                        voluptate.
+                      - Quam consequuntur blanditiis quia aut.
+                      - >-
+                        Et consequuntur nisi nostrum et dolores aliquid
+                        exercitationem.
+                      - Qui iusto nulla fuga.
+                      - >-
+                        Corrupti deleniti tempore error aliquid voluptatem esse
+                        voluptas vel.
+                      - Officia similique autem id eum est ratione consequatur.
+                      - Omnis minima impedit voluptatem sed.
+                      - Rerum consequatur reprehenderit id id.
+    post:
+      tags:
+        - Our Verticals
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Mining
+                list[0]:
+                  type: string
+                  example: Shivam Cements Ltd.
+                list[1]:
+                  type: string
+                  example: Bhugarbha Cements Pvt.Ltd
+                list[2]:
+                  type: string
+                  example: Riddhi Siddhi Cements
+                list[3]:
+                  type: string
+                  example: Arghakhanchi Cements
+                list[4]:
+                  type: string
+                  example: Shuvashree Agni Cements
+                list[5]:
+                  type: string
+                  example: Hetauda Cements
+                list[6]:
+                  type: string
+                  example: Hongshi Shivam Cements
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:14:28 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created vertical
+                status: success
+                data:
+                  id: 11
+                  title: Mining
+                  list:
+                    - Shivam Cements Ltd.
+                    - Bhugarbha Cements Pvt.Ltd
+                    - Riddhi Siddhi Cements
+                    - Arghakhanchi Cements
+                    - Shuvashree Agni Cements
+                    - Hetauda Cements
+                    - Hongshi Shivam Cements
+                  image: >-
+                    http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg
+  /api/verticals/11:
+    get:
+      tags:
+        - Our Verticals
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:14:56 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 11
+                  title: Mining
+                  list:
+                    - Shivam Cements Ltd.
+                    - Bhugarbha Cements Pvt.Ltd
+                    - Riddhi Siddhi Cements
+                    - Arghakhanchi Cements
+                    - Shuvashree Agni Cements
+                    - Hetauda Cements
+                    - Hongshi Shivam Cements
+                  image: >-
+                    http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg
+    post:
+      tags:
+        - Our Verticals
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Mining
+                list[0]:
+                  type: string
+                  example: Shivam Cements Ltd.
+                list[1]:
+                  type: string
+                  example: Bhugarbha Cements Pvt.Ltd
+                list[2]:
+                  type: string
+                  example: Riddhi Siddhi Cements
+                list[3]:
+                  type: string
+                  example: Arghakhanchi Cements
+                list[4]:
+                  type: string
+                  example: Shuvashree Agni Cements
+                list[5]:
+                  type: string
+                  example: Hetauda Cements
+                list[6]:
+                  type: string
+                  example: Hongshi Shivam Cements
+                _method:
+                  type: string
+                  example: put
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:17:11 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated vertical
+                status: success
+                data:
+                  id: 11
+                  title: Mining
+                  list:
+                    - Shivam Cements Ltd.
+                    - Bhugarbha Cements Pvt.Ltd
+                    - Riddhi Siddhi Cements
+                    - Arghakhanchi Cements
+                    - Shuvashree Agni Cements
+                    - Hetauda Cements
+                    - Hongshi Shivam Cements
+                  image: >-
+                    http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg
+  /api/verticals/1:
+    delete:
+      tags:
+        - Our Verticals
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:18:03 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Vertical has been deleted
+  /api/careers:
+    get:
+      tags:
+        - Careers
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:38:34 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 1
+                    title: Data Entry Operator
+                    address: |-
+                      6979 Edgar Path Suite 107
+                      Port Gennaro, ID 39601-0997
+                    description: >
+                      <html><head><title>Asperiores quo soluta et sint molestias
+                      eveniet quae quos eaque.</title></head><body><form
+                      action="example.net" method="POST"><label
+                      for="username">quis</label><input type="text"
+                      id="username"><label for="password">eos</label><input
+                      type="password" id="password"></form><div id="80061"><div
+                      id="1794"></div><div id="12383"></div><div
+                      class="est"><ul><li>Consequatur dolorem
+                      quibusdam.</li><li>Id repellendus.</li><li>Vel
+                      assumenda.</li><li>Ut quia
+                      voluptas.</li></ul></div></div><div id="37429"></div><div
+                      class="libero"></div><div class="impedit"><div
+                      id="9658"><table><thead><tr><th>Earum ut ut
+                      dolorem.</th><th>Cupiditate nihil ratione
+                      molestiae.</th></tr></thead><tbody><tr><td>Consequatur
+                      voluptatem et ut sunt dolorem molestiae voluptatem fugit
+                      nam.</td><td>Optio officia mollitia numquam quisquam
+                      repudiandae veniam.</td></tr></tbody></table><p>Iusto
+                      voluptas ullam recusandae et sit.</p></div><div
+                      id="46433"></div></div></body></html>
+                  - id: 2
+                    title: Artillery Officer
+                    address: |-
+                      93462 Armstrong Ports Suite 006
+                      Ezrashire, MD 11119-3461
+                    description: >
+                      <html><head><title>Molestias expedita ut eos harum ut sed
+                      ipsa.</title></head><body><form action="example.com"
+                      method="POST"><label for="username">est</label><input
+                      type="text" id="username"><label
+                      for="password">quaerat</label><input type="password"
+                      id="password"></form><div id="91302"></div><div
+                      class="fugiat"><a href="example.com">Est
+                      illo.</a><ul><li>Maiores aspernatur unde
+                      et.</li><li>Assumenda cupiditate voluptas est
+                      harum.</li><li>Minus exercitationem.</li><li>Voluptatum
+                      cupiditate.</li><li>Perspiciatis adipisci et
+                      molestiae.</li><li>Perferendis quibusdam.</li><li>Eveniet
+                      nostrum qui.</li><li>Nam dolores.</li><li>Sequi
+                      dicta.</li><li>Incidunt ut.</li><li>Ut rerum et nihil
+                      iste.</li></ul><h1>Aut autem sed sint molestiae minus vel
+                      numquam quos.</h1></div></body></html>
+                  - id: 3
+                    title: Naval Architects
+                    address: |-
+                      5398 Myrtis Meadows Apt. 867
+                      Charleytown, NE 21211
+                    description: >
+                      <html><head><title>Explicabo dolorem molestias voluptas
+                      sunt deserunt ut asperiores.</title></head><body><form
+                      action="example.org" method="POST"><label
+                      for="username">iusto</label><input type="text"
+                      id="username"><label
+                      for="password">molestiae</label><input type="password"
+                      id="password"></form><div id="43486"></div></body></html>
+                  - id: 4
+                    title: Plant and System Operator
+                    address: |-
+                      220 Emmy Dale Apt. 237
+                      Willshire, OR 22000-8009
+                    description: >
+                      <html><head><title>Illo excepturi
+                      et.</title></head><body><form action="example.net"
+                      method="POST"><label for="username">quidem</label><input
+                      type="text" id="username"><label
+                      for="password">in</label><input type="password"
+                      id="password"></form><div id="20425"><span>Magnam quae
+                      rerum doloremque ab hic.</span></div></body></html>
+                  - id: 5
+                    title: Rehabilitation Counselor
+                    address: |-
+                      571 Willms Forge Apt. 567
+                      Paigeton, OK 23699-8141
+                    description: >
+                      <html><head><title>Sapiente dicta minus voluptatem qui
+                      earum soluta magnam consequatur placeat laudantium
+                      tenetur.</title></head><body><form action="example.net"
+                      method="POST"><label for="username">quam</label><input
+                      type="text" id="username"><label
+                      for="password">molestiae</label><input type="password"
+                      id="password"></form><div id="52108"><h1>Qui non
+                      cupiditate quaerat expedita quisquam.</h1><p>Eos dolor sed
+                      et qui possimus.</p></div><div id="97304"></div><div
+                      id="84427"></div></body></html>
+                  - id: 6
+                    title: Letterpress Setters Operator
+                    address: |-
+                      214 O'Keefe Spurs
+                      Port Tabitha, TN 05422-0666
+                    description: >
+                      <html><head><title>Totam consectetur
+                      eum.</title></head><body><form action="example.com"
+                      method="POST"><label for="username">est</label><input
+                      type="text" id="username"><label
+                      for="password">quam</label><input type="password"
+                      id="password"></form><div class="enim"></div><div
+                      class="quae">Temporibus et neque fugiat at neque
+                      et.<ul><li>A qui beatae.</li><li>Aliquid at iure ut
+                      aliquid.</li></ul></div><div id="44088">Nostrum nisi ullam
+                      eaque voluptate nihil eligendi et vitae fugit.<h2>Expedita
+                      porro est minima vel labore.</h2><a
+                      href="example.com">Blanditiis iusto esse rerum corrupti
+                      unde quo itaque aperiam.</a><i>Fuga.</i></div><div
+                      id="34496"></div></body></html>
+                  - id: 7
+                    title: Order Clerk
+                    address: |-
+                      1523 Schulist Knolls
+                      North Lorine, MO 32064-7625
+                    description: >
+                      <html><head><title>Ipsam laudantium repellat tempora
+                      ratione voluptatem.</title></head><body><form
+                      action="example.org" method="POST"><label
+                      for="username">repudiandae</label><input type="text"
+                      id="username"><label for="password">impedit</label><input
+                      type="password" id="password"></form><div
+                      id="30641"></div><div class="ea"></div><div
+                      class="et"><div
+                      class="rerum"><table><thead><tr><th>Reprehenderit
+                      consequatur ut.</th><th>Nam ullam maiores.</th><th>Omnis
+                      qui.</th></tr></thead><tbody><tr><td>Et et
+                      eos.</td><td>Hic illo molestias molestiae
+                      modi.</td><td>Tempora explicabo fugit facere sed illum et
+                      ea impedit.</td></tr><tr><td>Expedita doloremque tempore
+                      labore deserunt reiciendis consectetur reprehenderit ipsam
+                      illo.</td><td>Suscipit a illo.</td><td>Expedita quo vero
+                      et.</td></tr></tbody></table><h2>Inventore sit ipsa nam
+                      iure perferendis consequatur laboriosam necessitatibus
+                      inventore.</h2></div><div
+                      id="30301"></div></div></body></html>
+                  - id: 8
+                    title: Precision Printing Worker
+                    address: |-
+                      1588 Ally Courts
+                      New Jacquelyn, NH 72180-1419
+                    description: >
+                      <html><head><title>Sapiente repellat nesciunt
+                      possimus.</title></head><body><form action="example.org"
+                      method="POST"><label for="username">unde</label><input
+                      type="text" id="username"><label
+                      for="password">unde</label><input type="password"
+                      id="password"></form><div class="alias"><div
+                      id="52212"><table><thead><tr><th>Odit doloribus
+                      blanditiis.</th><th>Harum aliquid
+                      expedita.</th><th>Perspiciatis.</th><th>Quo maxime
+                      natus.</th><th>Quo illo
+                      laboriosam.</th></tr></thead><tbody><tr><td>Consectetur
+                      officiis ipsa ad dolores odit voluptatibus.</td><td>Dolore
+                      ea et cumque quo aut sequi sit quibusdam ut omnis amet ut
+                      qui.</td><td>Qui ut voluptate et reprehenderit
+                      molestias.</td><td>Error voluptate sit officia similique
+                      tenetur est necessitatibus et ut.</td><td>Ut
+                      ea.</td></tr><tr><td>Reiciendis excepturi.</td><td>Et sed
+                      provident dolores iure maiores eos sint aut
+                      inventore.</td><td>Iure ut aut deleniti totam quis
+                      molestiae sed odio maiores a veritatis.</td><td>Et
+                      commodi.</td><td>Saepe nam enim fugit
+                      eaque.</td></tr><tr><td>Velit saepe sit.</td><td>Cumque ab
+                      harum eos odit quasi illo neque inventore
+                      aliquam.</td><td>Qui eum ut rerum voluptatum et quibusdam
+                      unde provident.</td><td>Labore nihil beatae ducimus rerum
+                      aliquam iste et.</td><td>Alias inventore quasi magni
+                      repellat porro facilis neque libero recusandae natus non
+                      sit.</td></tr><tr><td>Sunt doloribus dolores corrupti sed
+                      dolorum.</td><td>Et occaecati.</td><td>Et quisquam
+                      quibusdam velit ad quis adipisci eligendi.</td><td>Eveniet
+                      expedita.</td><td>Doloremque corporis dolores perferendis
+                      qui distinctio sint et.</td></tr><tr><td>Omnis ea
+                      perferendis.</td><td>Non asperiores deleniti impedit et
+                      est.</td><td>Corrupti repellendus necessitatibus quos ipsa
+                      eaque.</td><td>Aut nulla est voluptatem dolorum qui et
+                      facere qui omnis
+                      minima.</td><td>Quibusdam.</td></tr><tr><td>Rerum commodi
+                      aut perspiciatis.</td><td>Eum et.</td><td>Repudiandae non
+                      consequatur alias cumque eum aut
+                      libero.</td><td>Voluptates illo et.</td><td>Sit porro
+                      facere expedita quia ea quaerat
+                      perspiciatis.</td></tr><tr><td>Dicta aliquid repudiandae
+                      recusandae quas ea.</td><td>Omnis molestiae reprehenderit
+                      vel dolorem modi dolor rerum nisi a.</td><td>Est
+                      cum.</td><td>Eaque ut voluptatem.</td><td>Corporis
+                      adipisci.</td></tr><tr><td>Quasi aut ea et omnis et
+                      adipisci doloribus perferendis quae eos
+                      sapiente.</td><td>Ducimus maxime qui rem quia
+                      molestiae.</td><td>A
+                      iste.</td><td>Praesentium.</td><td>Provident
+                      autem.</td></tr><tr><td>Voluptatem est quod.</td><td>Nihil
+                      ut totam aut a nesciunt perspiciatis cum reprehenderit
+                      quo.</td><td>Minima veritatis officiis itaque id
+                      voluptates quasi harum sunt tempora et.</td><td>Ullam a
+                      quisquam vel.</td><td>Voluptatum odit eius corrupti
+                      veritatis possimus et reiciendis et
+                      illo.</td></tr><tr><td>Quod eum laborum hic
+                      qui.</td><td>Facere laudantium voluptas saepe aperiam
+                      quibusdam est ut quia minus eaque.</td><td>Ratione nihil
+                      placeat quod voluptas iusto nihil sed tempora
+                      totam.</td><td>Suscipit quis expedita asperiores dolorum
+                      doloribus.</td><td>Consequatur aliquid voluptatem id illo
+                      consequatur voluptas
+                      perferendis.</td></tr></tbody></table></div><div
+                      id="46890"></div><div id="33507"><i>Voluptas sint ratione
+                      rerum velit earum rerum sed.</i></div><div
+                      id="98427"></div></div><div id="47968"><div
+                      class="ipsam"></div><div id="67700"></div><div
+                      id="24264"></div></div><div id="9236"></div></body></html>
+                  - id: 9
+                    title: Engineering
+                    address: |-
+                      845 Michaela Greens Suite 127
+                      Port Fidel, NY 01237
+                    description: >
+                      <html><head><title>Consequuntur tempora suscipit et porro
+                      et fugit.</title></head><body><form action="example.net"
+                      method="POST"><label for="username">tempore</label><input
+                      type="text" id="username"><label
+                      for="password">et</label><input type="password"
+                      id="password"></form><div class="odio"></div><div
+                      id="72678"></div><div id="90002"><div id="18925"><a
+                      href="example.com">Iste molestiae illo quaerat eaque qui
+                      ipsam.</a></div><div id="41847"></div></div></body></html>
+                  - id: 10
+                    title: Agricultural Engineer
+                    address: |-
+                      14391 Swaniawski Green Apt. 035
+                      Doyleland, OH 48761-6930
+                    description: >
+                      <html><head><title>Dolores aut et non qui aut
+                      laborum.</title></head><body><form action="example.org"
+                      method="POST"><label for="username">sed</label><input
+                      type="text" id="username"><label
+                      for="password">voluptas</label><input type="password"
+                      id="password"></form><div
+                      class="consequatur"></div></body></html>
+    post:
+      tags:
+        - Careers
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Principal Software Engineer
+                address:
+                  type: string
+                  example: Kalanki, Kathmandu
+                description:
+                  type: string
+                  example: >-
+                    About Company
+
+                    Leapfrog is on a mission to be a role model technology
+                    company. Since 2010, we have relentlessly worked on crafting
+                    better digital products with our team of superior engineers.
+                    We’re a full-stack company specializing in SaaS products and
+                    have served over 100 clients with our mastery of emerging
+                    technologies.
+
+
+                    We’re thinkers and doers, creatives and coders, makers and
+                    builders— but most importantly, we are trusted partners with
+                    world-class engineers. Hundreds of companies in Boston,
+                    Seattle, Silicon Valley, and San Francisco choose us to gain
+                    speed, agility, quality, and stability, giving them an edge
+                    over their competitors.
+
+
+                    About the Role
+
+                    At Leapfrog, our mission is to be a role model technology
+                    company. We want to be trusted partners, world-class
+                    engineers, and craftspeople. We’ve crafted impactful
+                    software solutions for many industries and ecosystems.
+
+
+                    Make architectural decisions in collaboration with
+                    technology experts, ensure proper technical documentation.
+
+                    Pro-active involvement in project risk analysis and
+                    mitigation, continuously reviewing problems to determine the
+                    root cause in order to prevent them in the future.
+
+                    Ensure scalability, performance, reliability, and security
+                    of the application.
+
+                    Keep up with trends in the constantly evolving technology.
+
+                    Gather and analyze business requirements, understand the
+                    business perspective of the client, and plan product roadmap
+                    in collaboration with the project manager and client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Identify training needs, organize, and coach team members on
+                    various aspects of their career growth.
+
+                    Actively involved in ensuring implementation of
+                    organizational culture, process, and standards.
+
+                    Job Requirements
+
+                    Minimum 7 years of experience preferably for US-based
+                    clients. Prior experience leading a small team of dedicated
+                    engineers will be a plus.
+
+                    An ideal candidate is someone who is multi-skilled and
+                    comfortable in both front-end and back-end technologies.
+
+                    Desired skills required of a front-end developer are React
+                    and Tailwind.
+
+                    Desired skills required of a back-end developer are Next and
+                    Supabase.
+
+                    The candidate should be able to own a code base
+                    independently and proactively gather and clarify
+                    requirements from the client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Experience with Python, AWS, Azure, and CI/CD pipelines is a
+                    bonus.
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:40:46 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created career
+                status: success
+                data:
+                  id: 12
+                  title: Principal Software Engineer
+                  address: Kalanki, Kathmandu
+                  description: >-
+                    About Company
+
+                    Leapfrog is on a mission to be a role model technology
+                    company. Since 2010, we have relentlessly worked on crafting
+                    better digital products with our team of superior engineers.
+                    We’re a full-stack company specializing in SaaS products and
+                    have served over 100 clients with our mastery of emerging
+                    technologies.
+
+
+                    We’re thinkers and doers, creatives and coders, makers and
+                    builders— but most importantly, we are trusted partners with
+                    world-class engineers. Hundreds of companies in Boston,
+                    Seattle, Silicon Valley, and San Francisco choose us to gain
+                    speed, agility, quality, and stability, giving them an edge
+                    over their competitors.
+
+
+                    About the Role
+
+                    At Leapfrog, our mission is to be a role model technology
+                    company. We want to be trusted partners, world-class
+                    engineers, and craftspeople. We’ve crafted impactful
+                    software solutions for many industries and ecosystems.
+
+
+                    Make architectural decisions in collaboration with
+                    technology experts, ensure proper technical documentation.
+
+                    Pro-active involvement in project risk analysis and
+                    mitigation, continuously reviewing problems to determine the
+                    root cause in order to prevent them in the future.
+
+                    Ensure scalability, performance, reliability, and security
+                    of the application.
+
+                    Keep up with trends in the constantly evolving technology.
+
+                    Gather and analyze business requirements, understand the
+                    business perspective of the client, and plan product roadmap
+                    in collaboration with the project manager and client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Identify training needs, organize, and coach team members on
+                    various aspects of their career growth.
+
+                    Actively involved in ensuring implementation of
+                    organizational culture, process, and standards.
+
+                    Job Requirements
+
+                    Minimum 7 years of experience preferably for US-based
+                    clients. Prior experience leading a small team of dedicated
+                    engineers will be a plus.
+
+                    An ideal candidate is someone who is multi-skilled and
+                    comfortable in both front-end and back-end technologies.
+
+                    Desired skills required of a front-end developer are React
+                    and Tailwind.
+
+                    Desired skills required of a back-end developer are Next and
+                    Supabase.
+
+                    The candidate should be able to own a code base
+                    independently and proactively gather and clarify
+                    requirements from the client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Experience with Python, AWS, Azure, and CI/CD pipelines is a
+                    bonus.
+  /api/careers/12:
+    get:
+      tags:
+        - Careers
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:43:23 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 12
+                  title: Principal Software Engineer
+                  address: Kalanki, Kathmandu
+                  description: >-
+                    About Company
+
+                    Leapfrog is on a mission to be a role model technology
+                    company. Since 2010, we have relentlessly worked on crafting
+                    better digital products with our team of superior engineers.
+                    We’re a full-stack company specializing in SaaS products and
+                    have served over 100 clients with our mastery of emerging
+                    technologies.
+
+
+                    We’re thinkers and doers, creatives and coders, makers and
+                    builders— but most importantly, we are trusted partners with
+                    world-class engineers. Hundreds of companies in Boston,
+                    Seattle, Silicon Valley, and San Francisco choose us to gain
+                    speed, agility, quality, and stability, giving them an edge
+                    over their competitors.
+
+
+                    About the Role
+
+                    At Leapfrog, our mission is to be a role model technology
+                    company. We want to be trusted partners, world-class
+                    engineers, and craftspeople. We’ve crafted impactful
+                    software solutions for many industries and ecosystems.
+
+
+                    Make architectural decisions in collaboration with
+                    technology experts, ensure proper technical documentation.
+
+                    Pro-active involvement in project risk analysis and
+                    mitigation, continuously reviewing problems to determine the
+                    root cause in order to prevent them in the future.
+
+                    Ensure scalability, performance, reliability, and security
+                    of the application.
+
+                    Keep up with trends in the constantly evolving technology.
+
+                    Gather and analyze business requirements, understand the
+                    business perspective of the client, and plan product roadmap
+                    in collaboration with the project manager and client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Identify training needs, organize, and coach team members on
+                    various aspects of their career growth.
+
+                    Actively involved in ensuring implementation of
+                    organizational culture, process, and standards.
+
+                    Job Requirements
+
+                    Minimum 7 years of experience preferably for US-based
+                    clients. Prior experience leading a small team of dedicated
+                    engineers will be a plus.
+
+                    An ideal candidate is someone who is multi-skilled and
+                    comfortable in both front-end and back-end technologies.
+
+                    Desired skills required of a front-end developer are React
+                    and Tailwind.
+
+                    Desired skills required of a back-end developer are Next and
+                    Supabase.
+
+                    The candidate should be able to own a code base
+                    independently and proactively gather and clarify
+                    requirements from the client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Experience with Python, AWS, Azure, and CI/CD pipelines is a
+                    bonus.
+    post:
+      tags:
+        - Careers
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Principal Software Engineer 1
+                address:
+                  type: string
+                  example: Kalanki, Kathmandu
+                description:
+                  type: string
+                  example: >-
+                    About Company
+
+                    Leapfrog is on a mission to be a role model technology
+                    company. Since 2010, we have relentlessly worked on crafting
+                    better digital products with our team of superior engineers.
+                    We’re a full-stack company specializing in SaaS products and
+                    have served over 100 clients with our mastery of emerging
+                    technologies.
+
+
+                    We’re thinkers and doers, creatives and coders, makers and
+                    builders— but most importantly, we are trusted partners with
+                    world-class engineers. Hundreds of companies in Boston,
+                    Seattle, Silicon Valley, and San Francisco choose us to gain
+                    speed, agility, quality, and stability, giving them an edge
+                    over their competitors.
+
+
+                    About the Role
+
+                    At Leapfrog, our mission is to be a role model technology
+                    company. We want to be trusted partners, world-class
+                    engineers, and craftspeople. We’ve crafted impactful
+                    software solutions for many industries and ecosystems.
+
+
+                    Make architectural decisions in collaboration with
+                    technology experts, ensure proper technical documentation.
+
+                    Pro-active involvement in project risk analysis and
+                    mitigation, continuously reviewing problems to determine the
+                    root cause in order to prevent them in the future.
+
+                    Ensure scalability, performance, reliability, and security
+                    of the application.
+
+                    Keep up with trends in the constantly evolving technology.
+
+                    Gather and analyze business requirements, understand the
+                    business perspective of the client, and plan product roadmap
+                    in collaboration with the project manager and client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Identify training needs, organize, and coach team members on
+                    various aspects of their career growth.
+
+                    Actively involved in ensuring implementation of
+                    organizational culture, process, and standards.
+
+                    Job Requirements
+
+                    Minimum 7 years of experience preferably for US-based
+                    clients. Prior experience leading a small team of dedicated
+                    engineers will be a plus.
+
+                    An ideal candidate is someone who is multi-skilled and
+                    comfortable in both front-end and back-end technologies.
+
+                    Desired skills required of a front-end developer are React
+                    and Tailwind.
+
+                    Desired skills required of a back-end developer are Next and
+                    Supabase.
+
+                    The candidate should be able to own a code base
+                    independently and proactively gather and clarify
+                    requirements from the client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Experience with Python, AWS, Azure, and CI/CD pipelines is a
+                    bonus.
+                _method:
+                  type: string
+                  example: put
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:44:32 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated career
+                status: success
+                data:
+                  id: 12
+                  title: Principal Software Engineer 1
+                  address: Kalanki, Kathmandu
+                  description: >-
+                    About Company
+
+                    Leapfrog is on a mission to be a role model technology
+                    company. Since 2010, we have relentlessly worked on crafting
+                    better digital products with our team of superior engineers.
+                    We’re a full-stack company specializing in SaaS products and
+                    have served over 100 clients with our mastery of emerging
+                    technologies.
+
+
+                    We’re thinkers and doers, creatives and coders, makers and
+                    builders— but most importantly, we are trusted partners with
+                    world-class engineers. Hundreds of companies in Boston,
+                    Seattle, Silicon Valley, and San Francisco choose us to gain
+                    speed, agility, quality, and stability, giving them an edge
+                    over their competitors.
+
+
+                    About the Role
+
+                    At Leapfrog, our mission is to be a role model technology
+                    company. We want to be trusted partners, world-class
+                    engineers, and craftspeople. We’ve crafted impactful
+                    software solutions for many industries and ecosystems.
+
+
+                    Make architectural decisions in collaboration with
+                    technology experts, ensure proper technical documentation.
+
+                    Pro-active involvement in project risk analysis and
+                    mitigation, continuously reviewing problems to determine the
+                    root cause in order to prevent them in the future.
+
+                    Ensure scalability, performance, reliability, and security
+                    of the application.
+
+                    Keep up with trends in the constantly evolving technology.
+
+                    Gather and analyze business requirements, understand the
+                    business perspective of the client, and plan product roadmap
+                    in collaboration with the project manager and client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Identify training needs, organize, and coach team members on
+                    various aspects of their career growth.
+
+                    Actively involved in ensuring implementation of
+                    organizational culture, process, and standards.
+
+                    Job Requirements
+
+                    Minimum 7 years of experience preferably for US-based
+                    clients. Prior experience leading a small team of dedicated
+                    engineers will be a plus.
+
+                    An ideal candidate is someone who is multi-skilled and
+                    comfortable in both front-end and back-end technologies.
+
+                    Desired skills required of a front-end developer are React
+                    and Tailwind.
+
+                    Desired skills required of a back-end developer are Next and
+                    Supabase.
+
+                    The candidate should be able to own a code base
+                    independently and proactively gather and clarify
+                    requirements from the client.
+
+                    Encourage, involve, motivate, and lead team members in
+                    learning and achieving project and departmental goals.
+
+                    Experience with Python, AWS, Azure, and CI/CD pipelines is a
+                    bonus.
+  /api/careers/1:
+    delete:
+      tags:
+        - Careers
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 06:45:20 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Career has been deleted
+  /api/expertise:
+    get:
+      tags:
+        - Expertise
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 07:46:01 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 1
+                    title: In et at necessitatibus quas sed enim.
+                    description: >-
+                      Et est ad doloremque in sapiente alias. Dolor animi
+                      laborum excepturi. Iste nobis cupiditate minima similique
+                      expedita. Doloribus et eum expedita ut sint et.
+                    image: null
+                  - id: 2
+                    title: Voluptates repudiandae vel nulla beatae.
+                    description: >-
+                      Explicabo consequatur cum quia sapiente. Tenetur et
+                      voluptatem qui accusamus. Beatae ullam maxime nam
+                      reprehenderit et neque et. Facilis suscipit harum in
+                      labore fugiat labore aperiam.
+                    image: null
+                  - id: 3
+                    title: In consequatur rerum accusantium porro.
+                    description: >-
+                      Iusto in magnam qui minima earum ea. Rerum eum dolore
+                      temporibus porro dolor eos totam omnis. Non voluptatem et
+                      ut dolore sit. Neque et cupiditate est consequatur facere.
+                    image: null
+                  - id: 4
+                    title: Quae veniam qui provident eos unde nostrum.
+                    description: >-
+                      Placeat delectus voluptatum alias sit maxime porro. Error
+                      praesentium quia ut facere nam nemo perspiciatis. Ut qui
+                      sunt non et. Voluptas consequatur dolores ut voluptates.
+                    image: null
+                  - id: 5
+                    title: Sed voluptate repellat rerum consequatur asperiores.
+                    description: >-
+                      Nulla eius non tempora et id. Placeat fugit dolores hic et
+                      quod eum pariatur. Voluptas asperiores assumenda nihil
+                      ullam in sit sapiente.
+                    image: null
+                  - id: 6
+                    title: Non aperiam animi est.
+                    description: >-
+                      Voluptatum nesciunt quis velit. Dolores incidunt
+                      asperiores minus impedit. Asperiores eum et doloribus
+                      voluptatem ut in. Labore porro harum atque.
+                    image: null
+                  - id: 7
+                    title: Accusamus corrupti tempora quibusdam et eligendi.
+                    description: >-
+                      Ea inventore est odio et. Consectetur est amet alias
+                      alias. Aut voluptatem eos alias aut velit eos consequuntur
+                      ducimus.
+                    image: null
+                  - id: 8
+                    title: Ut voluptatem excepturi neque in quo earum ducimus.
+                    description: >-
+                      Quibusdam ut eligendi libero quisquam. Tenetur odit
+                      recusandae tenetur ad omnis incidunt. Qui consequatur
+                      excepturi porro deserunt cumque nisi.
+                    image: null
+                  - id: 9
+                    title: Aliquam ut et nesciunt quam optio magnam.
+                    description: >-
+                      Id earum sint fugiat exercitationem aperiam et est.
+                      Recusandae consequatur consequatur consequatur ex vel.
+                      Similique et aut doloremque deleniti facere odit ab et.
+                    image: null
+                  - id: 10
+                    title: Est voluptas est ea consequatur labore modi non.
+                    description: >-
+                      Praesentium aut ut consequuntur ut aut cupiditate.
+                      Voluptas ut explicabo explicabo est et. Quae nobis beatae
+                      omnis nisi praesentium esse fugit.
+                    image: null
+    post:
+      tags:
+        - Expertise
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Hydropower
+                description:
+                  type: string
+                  example: >-
+                    Embracing innovation is at the core of our ethos. We utilize
+                    advanced technologies and sustainable practices to enhance
+                    efficiency, reduce environmental impact, and achieve
+                    outstanding results in hydropower.
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 07:47:18 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created expertise
+                status: success
+                data:
+                  id: 11
+                  title: Hydropower
+                  description: >-
+                    Embracing innovation is at the core of our ethos. We utilize
+                    advanced technologies and sustainable practices to enhance
+                    efficiency, reduce environmental impact, and achieve
+                    outstanding results in hydropower.
+                  image: >-
+                    http://localhost:8000/storage/86/75a0b156bc8e3ae5448428c2c042117b.jpg
+  /api/expertise/11:
+    get:
+      tags:
+        - Expertise
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 07:47:42 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 11
+                  title: Hydropower
+                  description: >-
+                    Embracing innovation is at the core of our ethos. We utilize
+                    advanced technologies and sustainable practices to enhance
+                    efficiency, reduce environmental impact, and achieve
+                    outstanding results in hydropower.
+                  image: >-
+                    http://localhost:8000/storage/86/75a0b156bc8e3ae5448428c2c042117b.jpg
+    post:
+      tags:
+        - Expertise
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Hydropower 1
+                description:
+                  type: string
+                  example: >-
+                    Embracing innovation is at the core of our ethos. We utilize
+                    advanced technologies and sustainable practices to enhance
+                    efficiency, reduce environmental impact, and achieve
+                    outstanding results in hydropower.
+                _method:
+                  type: string
+                  example: put
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 07:49:29 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated expertise
+                status: success
+                data:
+                  id: 11
+                  title: Hydropower 1
+                  description: >-
+                    Embracing innovation is at the core of our ethos. We utilize
+                    advanced technologies and sustainable practices to enhance
+                    efficiency, reduce environmental impact, and achieve
+                    outstanding results in hydropower.
+                  image: >-
+                    http://localhost:8000/storage/88/860e0447a64ee1e1297bba2dc1b2f8d6.jpg
+  /api/expertise/1:
+    delete:
+      tags:
+        - Expertise
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 07:50:20 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Expertise has been deleted
+  /api/testimonials:
+    get:
+      tags:
+        - Testimonials
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          example: '5'
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '2'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:14:51 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  data:
+                    - id: 6
+                      client_name: Cleve Kunde
+                      company_name: Upton, Mann and Kohler
+                      description: >-
+                        Est atque voluptate quod at saepe eos praesentium.
+                        Debitis nulla illum voluptatibus cupiditate. Repudiandae
+                        quia sunt quibusdam ipsam maxime id ipsa eligendi.
+                        Tempore et vel fuga molestiae.
+                    - id: 7
+                      client_name: Ms. Tamara Sipes
+                      company_name: Fritsch-Trantow
+                      description: >-
+                        Rerum perspiciatis sed adipisci. Adipisci ut et aperiam
+                        provident sunt expedita. Animi nobis eos qui doloremque
+                        voluptatem reprehenderit at. Sunt quia sunt
+                        necessitatibus quis sapiente harum debitis. Voluptatem
+                        sint libero dicta.
+                    - id: 8
+                      client_name: Guillermo Medhurst
+                      company_name: Becker-Labadie
+                      description: >-
+                        Molestiae ut cum quidem et minima velit distinctio
+                        architecto. Neque voluptatem excepturi aperiam sed ut.
+                        Qui laborum cumque expedita omnis esse ad.
+                    - id: 9
+                      client_name: Orion Vandervort
+                      company_name: Ondricka, Stiedemann and Carroll
+                      description: >-
+                        Aut sequi quod distinctio aliquam sed. Accusamus et
+                        dolor ab. Dolorem voluptates assumenda est.
+                    - id: 10
+                      client_name: Sigurd Sipes
+                      company_name: Jones, Kerluke and Adams
+                      description: >-
+                        Aspernatur rem accusamus quia error et illum. Nobis
+                        nostrum id fugit sit error exercitationem. Ex
+                        voluptatibus et ut amet non perspiciatis modi illo.
+                        Similique nesciunt hic rerum cum.
+                  pagination:
+                    total: 20
+                    count: 5
+                    per_page: 5
+                    current_page: 2
+                    total_pages: 4
+    post:
+      tags:
+        - Testimonials
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                client_name:
+                  type: string
+                  example: Darrell Steward
+                company_name:
+                  type: string
+                  example: South market business plaza
+                description:
+                  type: string
+                  example: >-
+                    Quote Mark
+
+                    From the initial consultation to the final walk-through,
+                    they demonstrated professionalism, expertise, and a genuine
+                    commitment to excellence.
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:16:07 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created testimonial
+                status: success
+                data:
+                  id: 21
+                  client_name: Darrell Steward
+                  company_name: South market business plaza
+                  description: >-
+                    Quote Mark
+
+                    From the initial consultation to the final walk-through,
+                    they demonstrated professionalism, expertise, and a genuine
+                    commitment to excellence.
+  /api/testimonials/10:
+    get:
+      tags:
+        - Testimonials
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:16:55 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 10
+                  client_name: Sigurd Sipes
+                  company_name: Jones, Kerluke and Adams
+                  description: >-
+                    Aspernatur rem accusamus quia error et illum. Nobis nostrum
+                    id fugit sit error exercitationem. Ex voluptatibus et ut
+                    amet non perspiciatis modi illo. Similique nesciunt hic
+                    rerum cum.
+    post:
+      tags:
+        - Testimonials
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                client_name:
+                  type: string
+                  example: Darrell Steward 1
+                company_name:
+                  type: string
+                  example: South market business plaza 1
+                description:
+                  type: string
+                  example: >-
+                    Quote Mark
+
+                    From the initial consultation to the final walk-through,
+                    they demonstrated professionalism, expertise, and a genuine
+                    commitment to excellence.
+                _method:
+                  type: string
+                  example: put
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:18:32 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated testimonial
+                status: success
+                data:
+                  id: 10
+                  client_name: Darrell Steward 1
+                  company_name: South market business plaza 1
+                  description: >-
+                    Quote Mark
+
+                    From the initial consultation to the final walk-through,
+                    they demonstrated professionalism, expertise, and a genuine
+                    commitment to excellence.
+  /api/testimonials/1:
+    delete:
+      tags:
+        - Testimonials
+      summary: delete
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:19:01 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Testimonial has been deleted
+  /api/contacts:
+    get:
+      tags:
+        - Contact Us
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '2'
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          example: '5'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:53:19 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  data:
+                    - id: 16
+                      name: Carmella Pagac
+                      email: fabian.harvey@gottlieb.com
+                      phone_number: +1-203-515-1062
+                      subject: Architecto et qui impedit sit quia.
+                      message: >-
+                        Aliquid nihil placeat omnis ratione nisi quibusdam ut
+                        commodi. Neque praesentium ipsum veniam ratione. Neque
+                        consequatur occaecati soluta assumenda. Corporis omnis
+                        error numquam harum.
+                      created_at: '2025-02-25T08:50:37.000000Z'
+                      updated_at: '2025-02-25T08:50:37.000000Z'
+                    - id: 15
+                      name: Mr. Jaren Herman III
+                      email: lori07@yahoo.com
+                      phone_number: +1 (551) 413-3938
+                      subject: Corrupti laudantium nobis nemo.
+                      message: >-
+                        Eius tempora hic ut et molestiae commodi omnis. Debitis
+                        dolores at occaecati et quisquam doloremque. Voluptatum
+                        officiis commodi debitis veritatis alias iusto harum
+                        voluptatem. Fugiat voluptates eos qui repellat quo ut
+                        et.
+                      created_at: '2025-02-25T08:50:37.000000Z'
+                      updated_at: '2025-02-25T08:50:37.000000Z'
+                    - id: 14
+                      name: Dr. Sonny Wyman
+                      email: oren09@gmail.com
+                      phone_number: 1-458-306-8328
+                      subject: Rerum dolores rerum quis odit hic aliquid iusto.
+                      message: >-
+                        Amet rerum ut libero quo voluptates. Facere inventore
+                        aliquam veritatis libero et aspernatur. Voluptas quis
+                        esse illo in itaque autem voluptatem. Voluptatum nihil
+                        commodi quod sit rerum omnis tempora.
+                      created_at: '2025-02-25T08:50:37.000000Z'
+                      updated_at: '2025-02-25T08:50:37.000000Z'
+                    - id: 13
+                      name: Mr. Gerhard Abernathy I
+                      email: ikuhlman@gmail.com
+                      phone_number: 929.719.2669
+                      subject: Rerum molestiae dolor quibusdam officiis mollitia.
+                      message: >-
+                        Quis deserunt dolores iste eaque. Omnis eius qui odit ab
+                        sit aut et aspernatur. Aliquam quod commodi quam et
+                        numquam ullam. Laborum doloremque doloribus impedit
+                        sapiente repudiandae culpa.
+                      created_at: '2025-02-25T08:50:37.000000Z'
+                      updated_at: '2025-02-25T08:50:37.000000Z'
+                    - id: 12
+                      name: Tom Koss
+                      email: yfeeney@hotmail.com
+                      phone_number: +1 (240) 379-6998
+                      subject: Molestias ea dicta omnis et est voluptatem sit.
+                      message: >-
+                        Natus ea omnis magni tempore. Nulla voluptatem placeat
+                        eum laudantium. Atque molestiae ut qui delectus nostrum.
+                        Ut reprehenderit voluptas quidem non illum.
+                      created_at: '2025-02-25T08:50:37.000000Z'
+                      updated_at: '2025-02-25T08:50:37.000000Z'
+                  pagination:
+                    total: 20
+                    count: 5
+                    per_page: 5
+                    current_page: 2
+                    total_pages: 4
+    post:
+      tags:
+        - Contact Us
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Lal Bahadur Shrestha
+                email:
+                  type: string
+                  example: lalbahadur@gmail.com
+                phone_number:
+                  type: integer
+                  example: '9849123456'
+                subject:
+                  type: string
+                  example: About consultation
+                message:
+                  type: string
+                  example: i would like to consult about cement factory
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 08:55:03 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created contact
+                status: success
+                data:
+                  id: 21
+                  name: Lal Bahadur Shrestha
+                  email: lalbahadur@gmail.com
+                  phone_number: '9849123456'
+                  subject: About consultation
+                  message: i would like to consult about cement factory
+                  created_at: '2025-02-25T08:55:03.000000Z'
+                  updated_at: '2025-02-25T08:55:03.000000Z'
+  /api/contacts/21:
+    get:
+      tags:
+        - Contact Us
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 09:04:07 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 21
+                  name: Lal Bahadur Shrestha
+                  email: lalbahadur@gmail.com
+                  phone_number: '9849123456'
+                  subject: About consultation
+                  message: i would like to consult about cement factory
+                  created_at: '2025-02-25T08:55:03.000000Z'
+                  updated_at: '2025-02-25T08:55:03.000000Z'
+    post:
+      tags:
+        - Contact Us
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Lal Bahadur Shrestha a
+                email:
+                  type: string
+                  example: lalbahadur@gmail.com
+                phone_number:
+                  type: integer
+                  example: '9849123456'
+                subject:
+                  type: string
+                  example: About consultation
+                message:
+                  type: string
+                  example: i would like to consult about cement factory
+                _method:
+                  type: string
+                  example: put
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 09:04:50 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated contact
+                status: success
+                data:
+                  id: 21
+                  name: Lal Bahadur Shrestha a
+                  email: lalbahadur@gmail.com
+                  phone_number: '9849123456'
+                  subject: About consultation
+                  message: i would like to consult about cement factory
+                  created_at: '2025-02-25T08:55:03.000000Z'
+                  updated_at: '2025-02-25T09:04:50.000000Z'
+  /api/contacts/1:
+    delete:
+      tags:
+        - Contact Us
+      summary: delete
+      parameters:
+        - name: ''
+          in: header
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 09:05:32 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Contact has been deleted
+  /api/banners:
+    get:
+      tags:
+        - Banners
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 10:12:04 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - id: 1
+                    title: Quia fuga cumque fugiat labore ipsa.
+                    description: >-
+                      Dicta fugiat corrupti non repudiandae soluta. Perferendis
+                      ut quis odit vel molestiae iste delectus. Nesciunt
+                      suscipit doloremque ut harum itaque.
+                    image: null
+                  - id: 2
+                    title: Aut repellat quis voluptatibus.
+                    description: >-
+                      Eos autem similique quos atque repudiandae. Labore
+                      corrupti laborum a eos soluta fugiat. Ut sit qui sint
+                      laboriosam recusandae odit temporibus et. Sed vitae ipsum
+                      possimus tempore reprehenderit.
+                    image: null
+                  - id: 3
+                    title: Soluta dolor minima et excepturi.
+                    description: >-
+                      Est dolores ut ut commodi et sapiente. Aut qui et illo
+                      commodi voluptatibus voluptatem. Ut iure tempora minus
+                      consequatur. Dolor velit dolores ea culpa nesciunt. Sint
+                      vel id et amet nisi voluptatem.
+                    image: null
+                  - id: 4
+                    title: >-
+                      Maxime temporibus sit asperiores aliquid voluptatibus
+                      accusamus repellat.
+                    description: >-
+                      Dolorum ipsum velit laudantium voluptatem consequatur. Est
+                      esse eum aliquam cumque qui aut accusantium. Repellat
+                      dolor et explicabo assumenda consectetur aut omnis. Eaque
+                      ab optio harum.
+                    image: null
+                  - id: 5
+                    title: Provident quis quo nihil voluptas.
+                    description: >-
+                      Molestiae aut voluptas natus nulla rem laudantium
+                      recusandae. Voluptate at odit consequatur qui. Et minima
+                      totam aliquam cumque dolorem corporis. A voluptatem
+                      doloremque animi et.
+                    image: null
+    post:
+      tags:
+        - Banners
+      summary: create
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: >-
+                    Building Tomorrow Together, Your Trusted Construction
+                    Partner
+                description:
+                  type: string
+                  example: >-
+                    Construction websites are huge part of construction
+                    business.
+                image:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 10:14:18 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully created banner
+                status: success
+                data:
+                  id: 6
+                  title: >-
+                    Building Tomorrow Together, Your Trusted Construction
+                    Partner
+                  description: >-
+                    Construction websites are huge part of construction
+                    business.
+                  image: >-
+                    http://localhost:8000/storage/89/b1d7ba9058bd76afb3c7ef04c2ca3ba1.jpg
+  /api/banners/6:
+    get:
+      tags:
+        - Banners
+      summary: fetch
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 10:14:52 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  id: 6
+                  title: >-
+                    Building Tomorrow Together, Your Trusted Construction
+                    Partner
+                  description: >-
+                    Construction websites are huge part of construction
+                    business.
+                  image: >-
+                    http://localhost:8000/storage/89/b1d7ba9058bd76afb3c7ef04c2ca3ba1.jpg
+    post:
+      tags:
+        - Banners
+      summary: update
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: >-
+                    Building Tomorrow Together, Your Trusted Construction
+                    Partner f
+                description:
+                  type: string
+                  example: >-
+                    Construction websites are huge part of construction
+                    business.
+                image:
+                  type: string
+                  format: binary
+                _method:
+                  type: string
+                  example: put
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 10:16:23 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully updated banner
+                status: success
+                data:
+                  id: 6
+                  title: >-
+                    Building Tomorrow Together, Your Trusted Construction
+                    Partner f
+                  description: >-
+                    Construction websites are huge part of construction
+                    business.
+                  image: >-
+                    http://localhost:8000/storage/92/2a1d42c754164fcdacb7dac08cc92bef.jpg
+  /api/banners/1:
+    delete:
+      tags:
+        - Banners
+      summary: delete
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 10:16:48 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: banner has been deleted
+  /api/financial-index:
+    post:
+      tags:
+        - Financial Index
+      summary: save
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                  example: Credit Limits
+                document:
+                  type: string
+                  format: binary
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 11:03:50 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                message: Successfully Saved
+    get:
+      tags:
+        - Financial Index
+      summary: get all
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: string
+                example: PHP/8.3.16
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Date:
+              schema:
+                type: string
+                example: Tue, 25 Feb 2025 11:06:23 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Successfully fetched
+                status: success
+                data:
+                  - key: Annual Reports
+                    value: /storage/93/a75bee7d5de5456792dd68f4385c9cdf.pdf
+                    type: DOCUMENT
+                  - key: Credit Limits
+                    value: /storage/95/0c4c6e845e1e0440a2a242eea274f47a.pdf
+                    type: DOCUMENT

@@ -77,12 +77,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8000/api/login",
-									"protocol": "http",
+									"raw": "{{url}}/api/login",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"login"
@@ -162,12 +160,10 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8000/api/logout",
-									"protocol": "http",
+									"raw": "{{url}}/api/logout",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"logout"
@@ -262,16 +258,14 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8000/api/refresh-token/",
-									"protocol": "http",
+									"raw": "{{url}}/api/refresh-token/{{refresh_token}}",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"refresh-token",
-										""
+										"{{refresh_token}}"
 									]
 								}
 							},
@@ -348,12 +342,10 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8000/api/user-detail",
-									"protocol": "http",
+									"raw": "{{url}}/api/user-detail",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"user-detail"
@@ -451,12 +443,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8000/api/change-password",
-									"protocol": "http",
+									"raw": "{{url}}/api/change-password",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8000",
 									"path": [
 										"api",
 										"change-password"
@@ -3452,6 +3442,5070 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Press release has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Our Projects",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/projects",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/projects",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"projects"
+									],
+									"query": [
+										{
+											"key": "category_id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 05:29:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Mollitia eveniet dolores amet maxime blanditiis.\",\n            \"summary_1\": \"Expedita suscipit consectetur temporibus quia sunt laudantium. Quo occaecati esse dolor perferendis at amet autem. Voluptas voluptas animi qui. Molestiae qui quisquam optio ut animi culpa quod voluptates.\",\n            \"summary_2\": \"Quod eveniet ipsam dolore quia porro. Et corrupti repellendus iure. Consequatur sit ut distinctio non. Eum alias numquam nihil quas sunt ab magni.\",\n            \"features\": [\n                \"Non voluptatem adipisci voluptatem.\",\n                \"Ad sit repellendus ea autem officiis non.\",\n                \"Reiciendis nesciunt sit architecto magni voluptas itaque.\",\n                \"Repellat voluptas quaerat voluptatem laudantium aut vitae at quam.\",\n                \"Ex et provident nostrum itaque molestias.\",\n                \"Atque magni fugit neque vel.\"\n            ],\n            \"description\": \"<html><head><title>Officia et eos amet impedit dolor quia architecto non omnis.</title></head><body><form action=\\\"example.net\\\" method=\\\"POST\\\"><label for=\\\"username\\\">debitis</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">est</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"quod\\\"></div></body></html>\\n\",\n            \"image\": null,\n            \"categories\": []\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Mollitia voluptatem minima cum culpa.\",\n            \"summary_1\": \"At magni aperiam eveniet blanditiis. Quo possimus et similique. Minus asperiores sed quibusdam.\",\n            \"summary_2\": \"Perspiciatis repellat dignissimos sunt tenetur. Dolorum omnis eaque sunt accusamus eum voluptatem. Eligendi pariatur ipsum adipisci recusandae. Inventore dolor iste voluptatem aliquam. Consequatur ad consequatur mollitia nobis assumenda.\",\n            \"features\": [\n                \"Minima exercitationem nobis sit id labore velit voluptas.\",\n                \"Est nesciunt nemo voluptatibus voluptates.\",\n                \"At nulla qui consequatur omnis enim enim.\",\n                \"Odit est consequuntur nisi qui sed ut natus sapiente.\",\n                \"Qui sequi soluta voluptates consequatur rerum dolorem.\",\n                \"Eum doloribus itaque et ducimus porro est.\",\n                \"Ratione doloremque ullam non veritatis.\",\n                \"Et necessitatibus commodi inventore earum accusantium sit incidunt.\",\n                \"Animi velit earum amet quisquam.\",\n                \"Eius sapiente est quae et rem eveniet consequatur quasi.\"\n            ],\n            \"description\": \"<html><head><title>Porro et nihil.</title></head><body><form action=\\\"example.com\\\" method=\\\"POST\\\"><label for=\\\"username\\\">consequuntur</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">sed</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"dolores\\\"><div id=\\\"21361\\\"></div></div><div id=\\\"65072\\\"><div id=\\\"81520\\\">Provident dolores iure exercitationem suscipit iure sed.<table><thead><tr><th>Et sed.</th><th>Pariatur ab.</th><th>Cupiditate et odit.</th><th>Sunt velit suscipit id.</th><th>Voluptas excepturi tempora.</th></tr></thead><tbody><tr><td>Magnam aut et mollitia ducimus.</td><td>Consequatur totam ullam ea odio rerum labore est tenetur et porro.</td><td>Ratione ut harum quas molestias consequatur aut sint et unde.</td><td>Aut nulla est deserunt nobis optio consequatur iste eum.</td><td>Dolorum qui ut et excepturi odit quo voluptas ea doloremque deserunt voluptatum sed iusto.</td></tr><tr><td>Velit aliquid quo sed est.</td><td>Rem velit nemo esse aut id laborum doloremque deserunt et aut ut aperiam.</td><td>Dolores rerum voluptates facilis eos quia et repellendus accusamus autem qui.</td><td>Assumenda placeat.</td><td>Est est porro occaecati fuga dolor et voluptatibus nesciunt nulla est consequatur dolor nobis.</td></tr></tbody></table></div><div class=\\\"non\\\"></div><div class=\\\"aut\\\"></div><div class=\\\"minus\\\"><h2>Adipisci provident accusantium alias voluptas ratione sit minus.</h2>Qui modi recusandae accusamus.</div></div><div id=\\\"57025\\\"></div></body></html>\\n\",\n            \"image\": null,\n            \"categories\": []\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Voluptatem ea quidem qui et magni aliquid dolor.\",\n            \"summary_1\": \"Qui laudantium quae illum. Quos quae quos iusto labore dolorum quia. Repudiandae voluptatem dolores molestias deleniti aut voluptate enim. Delectus voluptatem placeat voluptatem enim.\",\n            \"summary_2\": \"Corporis laboriosam rerum fugiat ut sapiente debitis. Odio eius tempora et eos itaque dignissimos repudiandae. Eaque maxime ratione alias ea ab.\",\n            \"features\": [\n                \"Suscipit sunt optio facere in autem quasi ut.\",\n                \"Quae molestiae delectus molestiae.\",\n                \"Ab assumenda cumque ut eligendi iste quo esse.\",\n                \"Voluptatem quia nisi iure facere placeat.\",\n                \"Blanditiis similique quaerat maiores et.\",\n                \"Esse eum non et distinctio voluptate debitis.\",\n                \"Ad reiciendis voluptates ad veritatis explicabo.\",\n                \"Quibusdam inventore maxime non porro.\"\n            ],\n            \"description\": \"<html><head><title>Molestiae aut adipisci illo mollitia.</title></head><body><form action=\\\"example.org\\\" method=\\\"POST\\\"><label for=\\\"username\\\">illum</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">accusantium</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"quasi\\\"><i>Deserunt delectus inventore expedita.</i><i>Sit sed harum placeat rerum.</i><a href=\\\"example.org\\\">Qui velit molestias dolorem aut aliquid excepturi eos debitis nisi illo.</a><b>Maiores aut molestiae qui ipsum aliquam enim dignissimos consequuntur odit doloremque inventore.</b></div></body></html>\\n\",\n            \"image\": null,\n            \"categories\": []\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Saepe deserunt quam hic rem architecto fuga inventore debitis.\",\n            \"summary_1\": \"Similique laudantium qui praesentium animi. Modi id et enim beatae cumque possimus officiis velit. A odit cumque et quia fugit veritatis qui.\",\n            \"summary_2\": \"Veniam unde ut sunt voluptate voluptatem quo sit. Et exercitationem est vero. In velit minus autem pariatur. Incidunt qui tenetur voluptas tempore rerum neque.\",\n            \"features\": [\n                \"Omnis est dolores provident rerum sit mollitia repudiandae.\",\n                \"Et deleniti illum quibusdam quo.\",\n                \"Ducimus dolorem ipsum perferendis aut veritatis minima saepe est.\",\n                \"Voluptates necessitatibus sed veritatis dolorem et dignissimos.\",\n                \"Sit consequatur sint aut laborum qui facilis.\",\n                \"Atque nemo corrupti suscipit qui dolores.\",\n                \"Dicta et ut assumenda numquam illum quidem.\"\n            ],\n            \"description\": \"<html><head><title>Deleniti optio nostrum beatae.</title></head><body><form action=\\\"example.net\\\" method=\\\"POST\\\"><label for=\\\"username\\\">aut</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">corrupti</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"74690\\\"><div id=\\\"62827\\\"></div><div id=\\\"76757\\\"></div><div class=\\\"omnis\\\"></div><div id=\\\"54084\\\"></div></div></body></html>\\n\",\n            \"image\": null,\n            \"categories\": []\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Periodic Maintenance of Parasi-Bhairahawa Road\",\n            \"summary_1\": \"Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048\",\n            \"summary_2\": \"Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.\",\n            \"features\": [\n                \"Project Type: Road Construction (Completed)\",\n                \"Contract Amount (Inc. VAT): 288,136,062.58\",\n                \"Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki\",\n                \"J/V: Baniya Nirman Sewa Pvt Ltd.\",\n                \"Employer: Road Division Butwal\"\n            ],\n            \"description\": \"Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\\n\\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\\n\\nGreen Icon\\nLandmarks to intimate residential spaces\\nGreen Icon\\nLeverage cutting-edge technologies\\nGreen Icon\\nSustainable practices to drive efficiency\",\n            \"image\": \"http://localhost:8000/storage/77/f309243c96ed3c016cbd07c380f09088.jpg\",\n            \"categories\": []\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Periodic Maintenance of Parasi-Bhairahawa Road\",\n            \"summary_1\": \"Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048\",\n            \"summary_2\": \"Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.\",\n            \"features\": [\n                \"Project Type: Road Construction (Completed) 123\",\n                \"Contract Amount (Inc. VAT): 288,136,062.58\",\n                \"Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki\",\n                \"J/V: Baniya Nirman Sewa Pvt Ltd.\",\n                \"Employer: Road Division Butwal\"\n            ],\n            \"description\": \"Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\\n\\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\\n\\nGreen Icon\\nLandmarks to intimate residential spaces\\nGreen Icon\\nLeverage cutting-edge technologies\\nGreen Icon\\nSustainable practices to drive efficiency\",\n            \"image\": \"http://localhost:8000/storage/80/947a518d4fef13286c1f4d60ad647dcd.jpg\",\n            \"categories\": [\n                {\n                    \"id\": 3,\n                    \"title\": \"dolorem\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"aliquid\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Periodic Maintenance of Parasi-Bhairahawa Road",
+									"type": "text"
+								},
+								{
+									"key": "summary_1",
+									"value": "Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048",
+									"type": "text"
+								},
+								{
+									"key": "summary_2",
+									"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+									"type": "text"
+								},
+								{
+									"key": "features[0]",
+									"value": "Project Type: Road Construction (Completed)",
+									"type": "text"
+								},
+								{
+									"key": "features[1]",
+									"value": "Contract Amount (Inc. VAT): 288,136,062.58",
+									"type": "text"
+								},
+								{
+									"key": "features[2]",
+									"value": "Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki",
+									"type": "text"
+								},
+								{
+									"key": "features[3]",
+									"value": "J/V: Baniya Nirman Sewa Pvt Ltd.",
+									"type": "text"
+								},
+								{
+									"key": "features[4]",
+									"value": "Employer: Road Division Butwal",
+									"type": "text"
+								},
+								{
+									"key": "summary_2",
+									"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\n\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\n\nGreen Icon\nLandmarks to intimate residential spaces\nGreen Icon\nLeverage cutting-edge technologies\nGreen Icon\nSustainable practices to drive efficiency",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/projects",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Periodic Maintenance of Parasi-Bhairahawa Road",
+											"type": "text"
+										},
+										{
+											"key": "summary_1",
+											"value": "Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048",
+											"type": "text"
+										},
+										{
+											"key": "summary_2",
+											"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+											"type": "text"
+										},
+										{
+											"key": "features[0]",
+											"value": "Project Type: Road Construction (Completed)",
+											"type": "text"
+										},
+										{
+											"key": "features[1]",
+											"value": "Contract Amount (Inc. VAT): 288,136,062.58",
+											"type": "text"
+										},
+										{
+											"key": "features[2]",
+											"value": "Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki",
+											"type": "text"
+										},
+										{
+											"key": "features[3]",
+											"value": "J/V: Baniya Nirman Sewa Pvt Ltd.",
+											"type": "text"
+										},
+										{
+											"key": "features[4]",
+											"value": "Employer: Road Division Butwal",
+											"type": "text"
+										},
+										{
+											"key": "summary_2",
+											"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\n\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\n\nGreen Icon\nLandmarks to intimate residential spaces\nGreen Icon\nLeverage cutting-edge technologies\nGreen Icon\nSustainable practices to drive efficiency",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/projects",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 05:30:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created project\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 8,\n        \"title\": \"Periodic Maintenance of Parasi-Bhairahawa Road\",\n        \"summary_1\": \"Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048\",\n        \"summary_2\": \"Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.\",\n        \"features\": [\n            \"Project Type: Road Construction (Completed)\",\n            \"Contract Amount (Inc. VAT): 288,136,062.58\",\n            \"Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki\",\n            \"J/V: Baniya Nirman Sewa Pvt Ltd.\",\n            \"Employer: Road Division Butwal\"\n        ],\n        \"description\": \"Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\\n\\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\\n\\nGreen Icon\\nLandmarks to intimate residential spaces\\nGreen Icon\\nLeverage cutting-edge technologies\\nGreen Icon\\nSustainable practices to drive efficiency\",\n        \"image\": \"http://localhost:8000/storage/81/40503209a502e936bf31ea7ff31ac207.jpg\",\n        \"categories\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/projects/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/projects/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 05:20:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 7,\n        \"title\": \"Periodic Maintenance of Parasi-Bhairahawa Road\",\n        \"summary_1\": \"Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048\",\n        \"summary_2\": \"Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.\",\n        \"features\": [\n            \"Project Type: Road Construction (Completed) 123\",\n            \"Contract Amount (Inc. VAT): 288,136,062.58\",\n            \"Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki\",\n            \"J/V: Baniya Nirman Sewa Pvt Ltd.\",\n            \"Employer: Road Division Butwal\"\n        ],\n        \"description\": \"Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\\n\\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\\n\\nGreen Icon\\nLandmarks to intimate residential spaces\\nGreen Icon\\nLeverage cutting-edge technologies\\nGreen Icon\\nSustainable practices to drive efficiency\",\n        \"image\": \"http://localhost:8000/storage/80/947a518d4fef13286c1f4d60ad647dcd.jpg\",\n        \"categories\": [\n            {\n                \"id\": 3,\n                \"title\": \"dolorem\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"aliquid\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Periodic Maintenance of Parasi-Bhairahawa Road",
+									"type": "text"
+								},
+								{
+									"key": "summary_1",
+									"value": "Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048",
+									"type": "text"
+								},
+								{
+									"key": "summary_2",
+									"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+									"type": "text"
+								},
+								{
+									"key": "features[0]",
+									"value": "Project Type: Road Construction (Completed) 123",
+									"type": "text"
+								},
+								{
+									"key": "features[1]",
+									"value": "Contract Amount (Inc. VAT): 288,136,062.58",
+									"type": "text"
+								},
+								{
+									"key": "features[2]",
+									"value": "Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki",
+									"type": "text"
+								},
+								{
+									"key": "features[3]",
+									"value": "J/V: Baniya Nirman Sewa Pvt Ltd.",
+									"type": "text"
+								},
+								{
+									"key": "features[4]",
+									"value": "Employer: Road Division Butwal",
+									"type": "text"
+								},
+								{
+									"key": "summary_2",
+									"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\n\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\n\nGreen Icon\nLandmarks to intimate residential spaces\nGreen Icon\nLeverage cutting-edge technologies\nGreen Icon\nSustainable practices to drive efficiency",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/projects/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Periodic Maintenance of Parasi-Bhairahawa Road",
+											"type": "text"
+										},
+										{
+											"key": "summary_1",
+											"value": "Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048",
+											"type": "text"
+										},
+										{
+											"key": "summary_2",
+											"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+											"type": "text"
+										},
+										{
+											"key": "features[0]",
+											"value": "Project Type: Road Construction (Completed) 123",
+											"type": "text"
+										},
+										{
+											"key": "features[1]",
+											"value": "Contract Amount (Inc. VAT): 288,136,062.58",
+											"type": "text"
+										},
+										{
+											"key": "features[2]",
+											"value": "Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki",
+											"type": "text"
+										},
+										{
+											"key": "features[3]",
+											"value": "J/V: Baniya Nirman Sewa Pvt Ltd.",
+											"type": "text"
+										},
+										{
+											"key": "features[4]",
+											"value": "Employer: Road Division Butwal",
+											"type": "text"
+										},
+										{
+											"key": "summary_2",
+											"value": "Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\n\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\n\nGreen Icon\nLandmarks to intimate residential spaces\nGreen Icon\nLeverage cutting-edge technologies\nGreen Icon\nSustainable practices to drive efficiency",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/projects/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 05:30:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated project\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 7,\n        \"title\": \"Periodic Maintenance of Parasi-Bhairahawa Road\",\n        \"summary_1\": \"Periodic maintenance of parasi-Bhairahawa Road( km 532.240 to km 555.19) of NH05-026, and Bamaha Khola kothi River Road (km 598.21 to km 615.45) of NH01-048\",\n        \"summary_2\": \"Our team brings creativity, precision, and dedication to every phase of the project, from concept to completion, ensuring the best possible outcome.\",\n        \"features\": [\n            \"Project Type: Road Construction (Completed) 123\",\n            \"Contract Amount (Inc. VAT): 288,136,062.58\",\n            \"Upgradation of Dulegaunda-Lamagaun Road, Shuklagandaki\",\n            \"J/V: Baniya Nirman Sewa Pvt Ltd.\",\n            \"Employer: Road Division Butwal\"\n        ],\n        \"description\": \"Believe it or not, copywriting is one of the most important content-creation skills a designer can possess. If you think about it, design exists to support and deliver content—not the other way around.\\n\\nAs a designer, content should be the driving force behind many of your decisions, whether you’re creating the content or someone else is. So if you can understand how to write effective copy (and understand the purpose that it serves), you’ll be able to better serve your clients and ultimately create better designs.\\n\\nGreen Icon\\nLandmarks to intimate residential spaces\\nGreen Icon\\nLeverage cutting-edge technologies\\nGreen Icon\\nSustainable practices to drive efficiency\",\n        \"image\": \"http://localhost:8000/storage/80/947a518d4fef13286c1f4d60ad647dcd.jpg\",\n        \"categories\": [\n            {\n                \"id\": 3,\n                \"title\": \"dolorem\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"aliquid\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/projects/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/projects/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 04:19:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Project has been deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "save categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_ids[0]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "category_ids[1]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/projects/7/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"7",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_ids[0]",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "category_ids[1]",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/projects/7/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"7",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 05:19:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully saved categories\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 04:43:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"qui\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"aliquid\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"dolorem\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"doloremque\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"vero\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Projects",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Projects",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/categories",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 04:44:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created category\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Projects\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/categories/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 04:45:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Projects\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Project 1",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/categories/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Project 1",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/categories/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 04:46:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated category\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Project 1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/categories/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/categories/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 04:47:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Category has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Our Verticals",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/verticals",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"verticals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/verticals",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"verticals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:11:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Rerum molestias et quia debitis.\",\n            \"list\": [\n                \"Vel cum qui vitae qui.\",\n                \"Hic distinctio aliquid ab optio sed hic molestias.\",\n                \"Sapiente excepturi veniam ea porro sed ratione.\",\n                \"Quos est atque porro fuga laboriosam est totam.\",\n                \"Nihil neque tempore ad saepe debitis dolore consequuntur dolor.\",\n                \"Id eligendi voluptatem quae corporis fuga quo voluptatem non.\",\n                \"Delectus animi aperiam dolorum.\",\n                \"Mollitia illo accusamus vel eum ipsam nihil.\",\n                \"Voluptatibus iste asperiores quae iusto id.\"\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Fugit eligendi maxime architecto veritatis magnam unde.\",\n            \"list\": [\n                \"Adipisci assumenda distinctio occaecati minus nostrum qui in.\",\n                \"Incidunt libero et asperiores et totam eaque.\",\n                \"Velit quo voluptatibus id.\",\n                \"Nostrum eveniet dolor reiciendis sint esse eum voluptatem quibusdam.\",\n                \"Recusandae cupiditate debitis quis qui omnis molestias cum.\",\n                \"In eos magni et quas adipisci enim neque sit.\",\n                \"Eos cum aut voluptatem optio accusamus.\",\n                \"Commodi rerum ut ut velit qui ad voluptas.\",\n                \"Consectetur quas distinctio itaque libero.\",\n                \"Itaque id voluptates fuga ipsam aut aut.\"\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Delectus cumque quaerat qui animi earum commodi perspiciatis.\",\n            \"list\": [\n                \"Inventore rem voluptatem dolore ut officia excepturi et.\",\n                \"Nemo voluptatibus occaecati rerum recusandae deserunt vitae inventore.\",\n                \"Minus distinctio sed qui possimus qui odio nesciunt enim.\",\n                \"Eaque aut similique animi aliquid.\",\n                \"Enim qui qui quia nobis fugit.\",\n                \"Aspernatur rerum nostrum laudantium aspernatur laboriosam optio.\",\n                \"Quo accusamus id et doloremque et.\",\n                \"Earum voluptatem et dicta deserunt.\",\n                \"Accusamus voluptas nisi praesentium sapiente.\"\n            ]\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Laborum dolores repellat sed ut perferendis.\",\n            \"list\": [\n                \"Totam magnam possimus aut voluptatum.\",\n                \"Ab eaque maxime velit quis repellendus sed et.\",\n                \"Vel aliquid corporis quod voluptatem veniam.\",\n                \"Ipsa adipisci veniam delectus nobis reprehenderit suscipit et.\",\n                \"Molestiae aut laudantium saepe qui velit.\",\n                \"Nostrum qui neque doloremque quis.\",\n                \"Voluptas autem quis sint quam ratione qui assumenda.\",\n                \"Iusto impedit non dolor libero inventore distinctio.\",\n                \"Sed eum ipsa accusantium autem.\"\n            ]\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Quae nisi et sint voluptatibus.\",\n            \"list\": [\n                \"Odio voluptate sequi ab tempore.\",\n                \"Voluptates odio qui eveniet vitae sequi minima id ut.\",\n                \"Nostrum ut maiores sit nihil neque assumenda.\",\n                \"Sequi voluptas sunt similique aut rerum repellat.\",\n                \"Voluptatum ad molestias est sequi laborum.\",\n                \"Quas rerum provident reiciendis et aliquid dignissimos dolor.\",\n                \"Tenetur quis id nemo nesciunt quasi sunt dolor.\",\n                \"Nihil excepturi porro aut quidem doloremque dignissimos aperiam qui.\",\n                \"Perspiciatis in libero et saepe officia placeat est reiciendis.\"\n            ]\n        },\n        {\n            \"id\": 6,\n            \"title\": \"In sint nostrum consequatur consequatur tempore accusamus alias.\",\n            \"list\": [\n                \"Sit hic enim qui voluptates natus repudiandae.\",\n                \"At voluptatem reiciendis quo aut dolores et maiores magni.\",\n                \"Natus ullam ut ipsum velit distinctio qui.\",\n                \"Ipsum facere aut error tempore sint quia sunt.\",\n                \"Magnam quo aperiam non.\",\n                \"Omnis cupiditate earum qui corporis rerum.\",\n                \"Ut perferendis aliquid provident ad.\",\n                \"Aut nihil delectus sit corrupti eaque eum qui accusamus.\",\n                \"Odit quos debitis veniam quis eum excepturi.\",\n                \"Consequuntur aut minus dignissimos eos.\"\n            ]\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Numquam sed facilis et hic eum rerum.\",\n            \"list\": [\n                \"Itaque aut voluptate velit illo deleniti.\",\n                \"Sit laboriosam quo eum sit esse.\",\n                \"Deleniti ab libero sed adipisci iste aut quia.\",\n                \"Perferendis magnam in dolor tenetur modi.\",\n                \"Nobis harum vitae minima animi.\",\n                \"Pariatur veniam qui aut quos adipisci ut dolorem illum.\",\n                \"Libero reiciendis quisquam molestias molestiae accusantium exercitationem porro.\",\n                \"Ratione occaecati ad rerum.\",\n                \"Ut voluptatem alias quisquam aspernatur et minima consequatur.\",\n                \"Quos laborum quisquam perspiciatis sed.\"\n            ]\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Et itaque pariatur unde.\",\n            \"list\": [\n                \"Debitis facere odio maiores asperiores.\",\n                \"Ut aut qui eveniet sint magnam tenetur velit.\",\n                \"Molestias dolorem fugit ducimus ut harum porro.\",\n                \"Et nihil voluptatem aliquid et rerum non expedita consequatur.\",\n                \"Exercitationem quasi voluptas et sapiente illo soluta.\",\n                \"Unde voluptatibus nostrum et et.\",\n                \"Doloribus vitae autem eum exercitationem.\",\n                \"Sit ducimus architecto officiis et.\",\n                \"Dolor dolor distinctio quia nobis repudiandae vel consectetur quod.\",\n                \"Velit sit dicta modi minima odit vel quo.\"\n            ]\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Ut omnis fuga temporibus cum.\",\n            \"list\": [\n                \"Corporis ab aut cupiditate.\",\n                \"Rerum aut officia qui odio laborum aspernatur.\",\n                \"Facere aspernatur est accusantium veritatis id quae voluptate.\",\n                \"Quam consequuntur blanditiis quia aut.\",\n                \"Et consequuntur nisi nostrum et dolores aliquid exercitationem.\",\n                \"Qui iusto nulla fuga.\",\n                \"Corrupti deleniti tempore error aliquid voluptatem esse voluptas vel.\",\n                \"Officia similique autem id eum est ratione consequatur.\",\n                \"Omnis minima impedit voluptatem sed.\",\n                \"Rerum consequatur reprehenderit id id.\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Mining",
+									"type": "text"
+								},
+								{
+									"key": "list[0]",
+									"value": "Shivam Cements Ltd.",
+									"type": "text"
+								},
+								{
+									"key": "list[1]",
+									"value": "Bhugarbha Cements Pvt.Ltd",
+									"type": "text"
+								},
+								{
+									"key": "list[2]",
+									"value": "Riddhi Siddhi Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[3]",
+									"value": "Arghakhanchi Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[4]",
+									"value": "Shuvashree Agni Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[5]",
+									"value": "Hetauda Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[6]",
+									"value": "Hongshi Shivam Cements",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/verticals",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"verticals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Mining",
+											"type": "text"
+										},
+										{
+											"key": "list[0]",
+											"value": "Shivam Cements Ltd.",
+											"type": "text"
+										},
+										{
+											"key": "list[1]",
+											"value": "Bhugarbha Cements Pvt.Ltd",
+											"type": "text"
+										},
+										{
+											"key": "list[2]",
+											"value": "Riddhi Siddhi Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[3]",
+											"value": "Arghakhanchi Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[4]",
+											"value": "Shuvashree Agni Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[5]",
+											"value": "Hetauda Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[6]",
+											"value": "Hongshi Shivam Cements",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/verticals",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"verticals"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:14:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created vertical\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Mining\",\n        \"list\": [\n            \"Shivam Cements Ltd.\",\n            \"Bhugarbha Cements Pvt.Ltd\",\n            \"Riddhi Siddhi Cements\",\n            \"Arghakhanchi Cements\",\n            \"Shuvashree Agni Cements\",\n            \"Hetauda Cements\",\n            \"Hongshi Shivam Cements\"\n        ],\n        \"image\": \"http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/verticals/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"verticals",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/verticals/11",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"verticals",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:14:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Mining\",\n        \"list\": [\n            \"Shivam Cements Ltd.\",\n            \"Bhugarbha Cements Pvt.Ltd\",\n            \"Riddhi Siddhi Cements\",\n            \"Arghakhanchi Cements\",\n            \"Shuvashree Agni Cements\",\n            \"Hetauda Cements\",\n            \"Hongshi Shivam Cements\"\n        ],\n        \"image\": \"http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Mining",
+									"type": "text"
+								},
+								{
+									"key": "list[0]",
+									"value": "Shivam Cements Ltd.",
+									"type": "text"
+								},
+								{
+									"key": "list[1]",
+									"value": "Bhugarbha Cements Pvt.Ltd",
+									"type": "text"
+								},
+								{
+									"key": "list[2]",
+									"value": "Riddhi Siddhi Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[3]",
+									"value": "Arghakhanchi Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[4]",
+									"value": "Shuvashree Agni Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[5]",
+									"value": "Hetauda Cements",
+									"type": "text"
+								},
+								{
+									"key": "list[6]",
+									"value": "Hongshi Shivam Cements",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/verticals/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"verticals",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Mining",
+											"type": "text"
+										},
+										{
+											"key": "list[0]",
+											"value": "Shivam Cements Ltd.",
+											"type": "text"
+										},
+										{
+											"key": "list[1]",
+											"value": "Bhugarbha Cements Pvt.Ltd",
+											"type": "text"
+										},
+										{
+											"key": "list[2]",
+											"value": "Riddhi Siddhi Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[3]",
+											"value": "Arghakhanchi Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[4]",
+											"value": "Shuvashree Agni Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[5]",
+											"value": "Hetauda Cements",
+											"type": "text"
+										},
+										{
+											"key": "list[6]",
+											"value": "Hongshi Shivam Cements",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/verticals/11",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"verticals",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:17:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated vertical\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Mining\",\n        \"list\": [\n            \"Shivam Cements Ltd.\",\n            \"Bhugarbha Cements Pvt.Ltd\",\n            \"Riddhi Siddhi Cements\",\n            \"Arghakhanchi Cements\",\n            \"Shuvashree Agni Cements\",\n            \"Hetauda Cements\",\n            \"Hongshi Shivam Cements\"\n        ],\n        \"image\": \"http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/verticals/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"verticals",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/verticals/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"verticals",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:18:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Vertical has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Careers",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/careers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"careers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/careers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"careers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:38:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Data Entry Operator\",\n            \"address\": \"6979 Edgar Path Suite 107\\nPort Gennaro, ID 39601-0997\",\n            \"description\": \"<html><head><title>Asperiores quo soluta et sint molestias eveniet quae quos eaque.</title></head><body><form action=\\\"example.net\\\" method=\\\"POST\\\"><label for=\\\"username\\\">quis</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">eos</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"80061\\\"><div id=\\\"1794\\\"></div><div id=\\\"12383\\\"></div><div class=\\\"est\\\"><ul><li>Consequatur dolorem quibusdam.</li><li>Id repellendus.</li><li>Vel assumenda.</li><li>Ut quia voluptas.</li></ul></div></div><div id=\\\"37429\\\"></div><div class=\\\"libero\\\"></div><div class=\\\"impedit\\\"><div id=\\\"9658\\\"><table><thead><tr><th>Earum ut ut dolorem.</th><th>Cupiditate nihil ratione molestiae.</th></tr></thead><tbody><tr><td>Consequatur voluptatem et ut sunt dolorem molestiae voluptatem fugit nam.</td><td>Optio officia mollitia numquam quisquam repudiandae veniam.</td></tr></tbody></table><p>Iusto voluptas ullam recusandae et sit.</p></div><div id=\\\"46433\\\"></div></div></body></html>\\n\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Artillery Officer\",\n            \"address\": \"93462 Armstrong Ports Suite 006\\nEzrashire, MD 11119-3461\",\n            \"description\": \"<html><head><title>Molestias expedita ut eos harum ut sed ipsa.</title></head><body><form action=\\\"example.com\\\" method=\\\"POST\\\"><label for=\\\"username\\\">est</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">quaerat</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"91302\\\"></div><div class=\\\"fugiat\\\"><a href=\\\"example.com\\\">Est illo.</a><ul><li>Maiores aspernatur unde et.</li><li>Assumenda cupiditate voluptas est harum.</li><li>Minus exercitationem.</li><li>Voluptatum cupiditate.</li><li>Perspiciatis adipisci et molestiae.</li><li>Perferendis quibusdam.</li><li>Eveniet nostrum qui.</li><li>Nam dolores.</li><li>Sequi dicta.</li><li>Incidunt ut.</li><li>Ut rerum et nihil iste.</li></ul><h1>Aut autem sed sint molestiae minus vel numquam quos.</h1></div></body></html>\\n\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Naval Architects\",\n            \"address\": \"5398 Myrtis Meadows Apt. 867\\nCharleytown, NE 21211\",\n            \"description\": \"<html><head><title>Explicabo dolorem molestias voluptas sunt deserunt ut asperiores.</title></head><body><form action=\\\"example.org\\\" method=\\\"POST\\\"><label for=\\\"username\\\">iusto</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">molestiae</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"43486\\\"></div></body></html>\\n\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Plant and System Operator\",\n            \"address\": \"220 Emmy Dale Apt. 237\\nWillshire, OR 22000-8009\",\n            \"description\": \"<html><head><title>Illo excepturi et.</title></head><body><form action=\\\"example.net\\\" method=\\\"POST\\\"><label for=\\\"username\\\">quidem</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">in</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"20425\\\"><span>Magnam quae rerum doloremque ab hic.</span></div></body></html>\\n\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Rehabilitation Counselor\",\n            \"address\": \"571 Willms Forge Apt. 567\\nPaigeton, OK 23699-8141\",\n            \"description\": \"<html><head><title>Sapiente dicta minus voluptatem qui earum soluta magnam consequatur placeat laudantium tenetur.</title></head><body><form action=\\\"example.net\\\" method=\\\"POST\\\"><label for=\\\"username\\\">quam</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">molestiae</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"52108\\\"><h1>Qui non cupiditate quaerat expedita quisquam.</h1><p>Eos dolor sed et qui possimus.</p></div><div id=\\\"97304\\\"></div><div id=\\\"84427\\\"></div></body></html>\\n\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Letterpress Setters Operator\",\n            \"address\": \"214 O'Keefe Spurs\\nPort Tabitha, TN 05422-0666\",\n            \"description\": \"<html><head><title>Totam consectetur eum.</title></head><body><form action=\\\"example.com\\\" method=\\\"POST\\\"><label for=\\\"username\\\">est</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">quam</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"enim\\\"></div><div class=\\\"quae\\\">Temporibus et neque fugiat at neque et.<ul><li>A qui beatae.</li><li>Aliquid at iure ut aliquid.</li></ul></div><div id=\\\"44088\\\">Nostrum nisi ullam eaque voluptate nihil eligendi et vitae fugit.<h2>Expedita porro est minima vel labore.</h2><a href=\\\"example.com\\\">Blanditiis iusto esse rerum corrupti unde quo itaque aperiam.</a><i>Fuga.</i></div><div id=\\\"34496\\\"></div></body></html>\\n\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Order Clerk\",\n            \"address\": \"1523 Schulist Knolls\\nNorth Lorine, MO 32064-7625\",\n            \"description\": \"<html><head><title>Ipsam laudantium repellat tempora ratione voluptatem.</title></head><body><form action=\\\"example.org\\\" method=\\\"POST\\\"><label for=\\\"username\\\">repudiandae</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">impedit</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div id=\\\"30641\\\"></div><div class=\\\"ea\\\"></div><div class=\\\"et\\\"><div class=\\\"rerum\\\"><table><thead><tr><th>Reprehenderit consequatur ut.</th><th>Nam ullam maiores.</th><th>Omnis qui.</th></tr></thead><tbody><tr><td>Et et eos.</td><td>Hic illo molestias molestiae modi.</td><td>Tempora explicabo fugit facere sed illum et ea impedit.</td></tr><tr><td>Expedita doloremque tempore labore deserunt reiciendis consectetur reprehenderit ipsam illo.</td><td>Suscipit a illo.</td><td>Expedita quo vero et.</td></tr></tbody></table><h2>Inventore sit ipsa nam iure perferendis consequatur laboriosam necessitatibus inventore.</h2></div><div id=\\\"30301\\\"></div></div></body></html>\\n\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Precision Printing Worker\",\n            \"address\": \"1588 Ally Courts\\nNew Jacquelyn, NH 72180-1419\",\n            \"description\": \"<html><head><title>Sapiente repellat nesciunt possimus.</title></head><body><form action=\\\"example.org\\\" method=\\\"POST\\\"><label for=\\\"username\\\">unde</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">unde</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"alias\\\"><div id=\\\"52212\\\"><table><thead><tr><th>Odit doloribus blanditiis.</th><th>Harum aliquid expedita.</th><th>Perspiciatis.</th><th>Quo maxime natus.</th><th>Quo illo laboriosam.</th></tr></thead><tbody><tr><td>Consectetur officiis ipsa ad dolores odit voluptatibus.</td><td>Dolore ea et cumque quo aut sequi sit quibusdam ut omnis amet ut qui.</td><td>Qui ut voluptate et reprehenderit molestias.</td><td>Error voluptate sit officia similique tenetur est necessitatibus et ut.</td><td>Ut ea.</td></tr><tr><td>Reiciendis excepturi.</td><td>Et sed provident dolores iure maiores eos sint aut inventore.</td><td>Iure ut aut deleniti totam quis molestiae sed odio maiores a veritatis.</td><td>Et commodi.</td><td>Saepe nam enim fugit eaque.</td></tr><tr><td>Velit saepe sit.</td><td>Cumque ab harum eos odit quasi illo neque inventore aliquam.</td><td>Qui eum ut rerum voluptatum et quibusdam unde provident.</td><td>Labore nihil beatae ducimus rerum aliquam iste et.</td><td>Alias inventore quasi magni repellat porro facilis neque libero recusandae natus non sit.</td></tr><tr><td>Sunt doloribus dolores corrupti sed dolorum.</td><td>Et occaecati.</td><td>Et quisquam quibusdam velit ad quis adipisci eligendi.</td><td>Eveniet expedita.</td><td>Doloremque corporis dolores perferendis qui distinctio sint et.</td></tr><tr><td>Omnis ea perferendis.</td><td>Non asperiores deleniti impedit et est.</td><td>Corrupti repellendus necessitatibus quos ipsa eaque.</td><td>Aut nulla est voluptatem dolorum qui et facere qui omnis minima.</td><td>Quibusdam.</td></tr><tr><td>Rerum commodi aut perspiciatis.</td><td>Eum et.</td><td>Repudiandae non consequatur alias cumque eum aut libero.</td><td>Voluptates illo et.</td><td>Sit porro facere expedita quia ea quaerat perspiciatis.</td></tr><tr><td>Dicta aliquid repudiandae recusandae quas ea.</td><td>Omnis molestiae reprehenderit vel dolorem modi dolor rerum nisi a.</td><td>Est cum.</td><td>Eaque ut voluptatem.</td><td>Corporis adipisci.</td></tr><tr><td>Quasi aut ea et omnis et adipisci doloribus perferendis quae eos sapiente.</td><td>Ducimus maxime qui rem quia molestiae.</td><td>A iste.</td><td>Praesentium.</td><td>Provident autem.</td></tr><tr><td>Voluptatem est quod.</td><td>Nihil ut totam aut a nesciunt perspiciatis cum reprehenderit quo.</td><td>Minima veritatis officiis itaque id voluptates quasi harum sunt tempora et.</td><td>Ullam a quisquam vel.</td><td>Voluptatum odit eius corrupti veritatis possimus et reiciendis et illo.</td></tr><tr><td>Quod eum laborum hic qui.</td><td>Facere laudantium voluptas saepe aperiam quibusdam est ut quia minus eaque.</td><td>Ratione nihil placeat quod voluptas iusto nihil sed tempora totam.</td><td>Suscipit quis expedita asperiores dolorum doloribus.</td><td>Consequatur aliquid voluptatem id illo consequatur voluptas perferendis.</td></tr></tbody></table></div><div id=\\\"46890\\\"></div><div id=\\\"33507\\\"><i>Voluptas sint ratione rerum velit earum rerum sed.</i></div><div id=\\\"98427\\\"></div></div><div id=\\\"47968\\\"><div class=\\\"ipsam\\\"></div><div id=\\\"67700\\\"></div><div id=\\\"24264\\\"></div></div><div id=\\\"9236\\\"></div></body></html>\\n\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Engineering\",\n            \"address\": \"845 Michaela Greens Suite 127\\nPort Fidel, NY 01237\",\n            \"description\": \"<html><head><title>Consequuntur tempora suscipit et porro et fugit.</title></head><body><form action=\\\"example.net\\\" method=\\\"POST\\\"><label for=\\\"username\\\">tempore</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">et</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"odio\\\"></div><div id=\\\"72678\\\"></div><div id=\\\"90002\\\"><div id=\\\"18925\\\"><a href=\\\"example.com\\\">Iste molestiae illo quaerat eaque qui ipsam.</a></div><div id=\\\"41847\\\"></div></div></body></html>\\n\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Agricultural Engineer\",\n            \"address\": \"14391 Swaniawski Green Apt. 035\\nDoyleland, OH 48761-6930\",\n            \"description\": \"<html><head><title>Dolores aut et non qui aut laborum.</title></head><body><form action=\\\"example.org\\\" method=\\\"POST\\\"><label for=\\\"username\\\">sed</label><input type=\\\"text\\\" id=\\\"username\\\"><label for=\\\"password\\\">voluptas</label><input type=\\\"password\\\" id=\\\"password\\\"></form><div class=\\\"consequatur\\\"></div></body></html>\\n\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Principal Software Engineer",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Kalanki, Kathmandu",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "About Company\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\n\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\n\nAbout the Role\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\n\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\nEnsure scalability, performance, reliability, and security of the application.\nKeep up with trends in the constantly evolving technology.\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\nActively involved in ensuring implementation of organizational culture, process, and standards.\nJob Requirements\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\nDesired skills required of a front-end developer are React and Tailwind.\nDesired skills required of a back-end developer are Next and Supabase.\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/careers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"careers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Principal Software Engineer",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Kalanki, Kathmandu",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "About Company\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\n\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\n\nAbout the Role\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\n\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\nEnsure scalability, performance, reliability, and security of the application.\nKeep up with trends in the constantly evolving technology.\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\nActively involved in ensuring implementation of organizational culture, process, and standards.\nJob Requirements\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\nDesired skills required of a front-end developer are React and Tailwind.\nDesired skills required of a back-end developer are Next and Supabase.\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/careers",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"careers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:40:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created career\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 12,\n        \"title\": \"Principal Software Engineer\",\n        \"address\": \"Kalanki, Kathmandu\",\n        \"description\": \"About Company\\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\\n\\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\\n\\nAbout the Role\\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\\n\\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\\nEnsure scalability, performance, reliability, and security of the application.\\nKeep up with trends in the constantly evolving technology.\\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\\nActively involved in ensuring implementation of organizational culture, process, and standards.\\nJob Requirements\\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\\nDesired skills required of a front-end developer are React and Tailwind.\\nDesired skills required of a back-end developer are Next and Supabase.\\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/careers/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"careers",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/careers/12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"careers",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:43:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 12,\n        \"title\": \"Principal Software Engineer\",\n        \"address\": \"Kalanki, Kathmandu\",\n        \"description\": \"About Company\\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\\n\\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\\n\\nAbout the Role\\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\\n\\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\\nEnsure scalability, performance, reliability, and security of the application.\\nKeep up with trends in the constantly evolving technology.\\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\\nActively involved in ensuring implementation of organizational culture, process, and standards.\\nJob Requirements\\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\\nDesired skills required of a front-end developer are React and Tailwind.\\nDesired skills required of a back-end developer are Next and Supabase.\\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Principal Software Engineer 1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Kalanki, Kathmandu",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "About Company\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\n\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\n\nAbout the Role\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\n\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\nEnsure scalability, performance, reliability, and security of the application.\nKeep up with trends in the constantly evolving technology.\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\nActively involved in ensuring implementation of organizational culture, process, and standards.\nJob Requirements\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\nDesired skills required of a front-end developer are React and Tailwind.\nDesired skills required of a back-end developer are Next and Supabase.\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/careers/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"careers",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Principal Software Engineer 1",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Kalanki, Kathmandu",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "About Company\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\n\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\n\nAbout the Role\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\n\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\nEnsure scalability, performance, reliability, and security of the application.\nKeep up with trends in the constantly evolving technology.\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\nActively involved in ensuring implementation of organizational culture, process, and standards.\nJob Requirements\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\nDesired skills required of a front-end developer are React and Tailwind.\nDesired skills required of a back-end developer are Next and Supabase.\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/careers/12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"careers",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:44:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated career\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 12,\n        \"title\": \"Principal Software Engineer 1\",\n        \"address\": \"Kalanki, Kathmandu\",\n        \"description\": \"About Company\\nLeapfrog is on a mission to be a role model technology company. Since 2010, we have relentlessly worked on crafting better digital products with our team of superior engineers. We’re a full-stack company specializing in SaaS products and have served over 100 clients with our mastery of emerging technologies.\\n\\nWe’re thinkers and doers, creatives and coders, makers and builders— but most importantly, we are trusted partners with world-class engineers. Hundreds of companies in Boston, Seattle, Silicon Valley, and San Francisco choose us to gain speed, agility, quality, and stability, giving them an edge over their competitors.\\n\\nAbout the Role\\nAt Leapfrog, our mission is to be a role model technology company. We want to be trusted partners, world-class engineers, and craftspeople. We’ve crafted impactful software solutions for many industries and ecosystems.\\n\\nMake architectural decisions in collaboration with technology experts, ensure proper technical documentation.\\nPro-active involvement in project risk analysis and mitigation, continuously reviewing problems to determine the root cause in order to prevent them in the future.\\nEnsure scalability, performance, reliability, and security of the application.\\nKeep up with trends in the constantly evolving technology.\\nGather and analyze business requirements, understand the business perspective of the client, and plan product roadmap in collaboration with the project manager and client.\\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\\nIdentify training needs, organize, and coach team members on various aspects of their career growth.\\nActively involved in ensuring implementation of organizational culture, process, and standards.\\nJob Requirements\\nMinimum 7 years of experience preferably for US-based clients. Prior experience leading a small team of dedicated engineers will be a plus.\\nAn ideal candidate is someone who is multi-skilled and comfortable in both front-end and back-end technologies.\\nDesired skills required of a front-end developer are React and Tailwind.\\nDesired skills required of a back-end developer are Next and Supabase.\\nThe candidate should be able to own a code base independently and proactively gather and clarify requirements from the client.\\nEncourage, involve, motivate, and lead team members in learning and achieving project and departmental goals.\\nExperience with Python, AWS, Azure, and CI/CD pipelines is a bonus.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/careers/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"careers",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/careers/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"careers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 06:45:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Career has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Expertise",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/expertise",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"expertise"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/expertise",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"expertise"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:46:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"In et at necessitatibus quas sed enim.\",\n            \"description\": \"Et est ad doloremque in sapiente alias. Dolor animi laborum excepturi. Iste nobis cupiditate minima similique expedita. Doloribus et eum expedita ut sint et.\",\n            \"image\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Voluptates repudiandae vel nulla beatae.\",\n            \"description\": \"Explicabo consequatur cum quia sapiente. Tenetur et voluptatem qui accusamus. Beatae ullam maxime nam reprehenderit et neque et. Facilis suscipit harum in labore fugiat labore aperiam.\",\n            \"image\": null\n        },\n        {\n            \"id\": 3,\n            \"title\": \"In consequatur rerum accusantium porro.\",\n            \"description\": \"Iusto in magnam qui minima earum ea. Rerum eum dolore temporibus porro dolor eos totam omnis. Non voluptatem et ut dolore sit. Neque et cupiditate est consequatur facere.\",\n            \"image\": null\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Quae veniam qui provident eos unde nostrum.\",\n            \"description\": \"Placeat delectus voluptatum alias sit maxime porro. Error praesentium quia ut facere nam nemo perspiciatis. Ut qui sunt non et. Voluptas consequatur dolores ut voluptates.\",\n            \"image\": null\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Sed voluptate repellat rerum consequatur asperiores.\",\n            \"description\": \"Nulla eius non tempora et id. Placeat fugit dolores hic et quod eum pariatur. Voluptas asperiores assumenda nihil ullam in sit sapiente.\",\n            \"image\": null\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Non aperiam animi est.\",\n            \"description\": \"Voluptatum nesciunt quis velit. Dolores incidunt asperiores minus impedit. Asperiores eum et doloribus voluptatem ut in. Labore porro harum atque.\",\n            \"image\": null\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Accusamus corrupti tempora quibusdam et eligendi.\",\n            \"description\": \"Ea inventore est odio et. Consectetur est amet alias alias. Aut voluptatem eos alias aut velit eos consequuntur ducimus.\",\n            \"image\": null\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Ut voluptatem excepturi neque in quo earum ducimus.\",\n            \"description\": \"Quibusdam ut eligendi libero quisquam. Tenetur odit recusandae tenetur ad omnis incidunt. Qui consequatur excepturi porro deserunt cumque nisi.\",\n            \"image\": null\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Aliquam ut et nesciunt quam optio magnam.\",\n            \"description\": \"Id earum sint fugiat exercitationem aperiam et est. Recusandae consequatur consequatur consequatur ex vel. Similique et aut doloremque deleniti facere odit ab et.\",\n            \"image\": null\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Est voluptas est ea consequatur labore modi non.\",\n            \"description\": \"Praesentium aut ut consequuntur ut aut cupiditate. Voluptas ut explicabo explicabo est et. Quae nobis beatae omnis nisi praesentium esse fugit.\",\n            \"image\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Hydropower",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/expertise",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"expertise"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Hydropower",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/expertise",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"expertise"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:47:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created expertise\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Hydropower\",\n        \"description\": \"Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.\",\n        \"image\": \"http://localhost:8000/storage/86/75a0b156bc8e3ae5448428c2c042117b.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/expertise/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"expertise",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/expertise/11",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"expertise",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:47:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Hydropower\",\n        \"description\": \"Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.\",\n        \"image\": \"http://localhost:8000/storage/86/75a0b156bc8e3ae5448428c2c042117b.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Hydropower 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/expertise/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"expertise",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Hydropower 1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/expertise/11",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"expertise",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:49:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated expertise\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Hydropower 1\",\n        \"description\": \"Embracing innovation is at the core of our ethos. We utilize advanced technologies and sustainable practices to enhance efficiency, reduce environmental impact, and achieve outstanding results in hydropower.\",\n        \"image\": \"http://localhost:8000/storage/88/860e0447a64ee1e1297bba2dc1b2f8d6.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/expertise/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"expertise",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/expertise/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"expertise",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 07:50:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Expertise has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Testimonials",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/testimonials?limit=5&page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"testimonials"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/testimonials?limit=5&page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"testimonials"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:14:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 6,\n                \"client_name\": \"Cleve Kunde\",\n                \"company_name\": \"Upton, Mann and Kohler\",\n                \"description\": \"Est atque voluptate quod at saepe eos praesentium. Debitis nulla illum voluptatibus cupiditate. Repudiandae quia sunt quibusdam ipsam maxime id ipsa eligendi. Tempore et vel fuga molestiae.\"\n            },\n            {\n                \"id\": 7,\n                \"client_name\": \"Ms. Tamara Sipes\",\n                \"company_name\": \"Fritsch-Trantow\",\n                \"description\": \"Rerum perspiciatis sed adipisci. Adipisci ut et aperiam provident sunt expedita. Animi nobis eos qui doloremque voluptatem reprehenderit at. Sunt quia sunt necessitatibus quis sapiente harum debitis. Voluptatem sint libero dicta.\"\n            },\n            {\n                \"id\": 8,\n                \"client_name\": \"Guillermo Medhurst\",\n                \"company_name\": \"Becker-Labadie\",\n                \"description\": \"Molestiae ut cum quidem et minima velit distinctio architecto. Neque voluptatem excepturi aperiam sed ut. Qui laborum cumque expedita omnis esse ad.\"\n            },\n            {\n                \"id\": 9,\n                \"client_name\": \"Orion Vandervort\",\n                \"company_name\": \"Ondricka, Stiedemann and Carroll\",\n                \"description\": \"Aut sequi quod distinctio aliquam sed. Accusamus et dolor ab. Dolorem voluptates assumenda est.\"\n            },\n            {\n                \"id\": 10,\n                \"client_name\": \"Sigurd Sipes\",\n                \"company_name\": \"Jones, Kerluke and Adams\",\n                \"description\": \"Aspernatur rem accusamus quia error et illum. Nobis nostrum id fugit sit error exercitationem. Ex voluptatibus et ut amet non perspiciatis modi illo. Similique nesciunt hic rerum cum.\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 20,\n            \"count\": 5,\n            \"per_page\": 5,\n            \"current_page\": 2,\n            \"total_pages\": 4\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_name",
+									"value": "Darrell Steward",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "South market business plaza",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Quote Mark\nFrom the initial consultation to the final walk-through, they demonstrated professionalism, expertise, and a genuine commitment to excellence.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/testimonials",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"testimonials"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "client_name",
+											"value": "Darrell Steward",
+											"type": "text"
+										},
+										{
+											"key": "company_name",
+											"value": "South market business plaza",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Quote Mark\nFrom the initial consultation to the final walk-through, they demonstrated professionalism, expertise, and a genuine commitment to excellence.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/testimonials",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"testimonials"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:16:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created testimonial\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 21,\n        \"client_name\": \"Darrell Steward\",\n        \"company_name\": \"South market business plaza\",\n        \"description\": \"Quote Mark\\nFrom the initial consultation to the final walk-through, they demonstrated professionalism, expertise, and a genuine commitment to excellence.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/testimonials/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"testimonials",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/testimonials/10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"testimonials",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:16:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 10,\n        \"client_name\": \"Sigurd Sipes\",\n        \"company_name\": \"Jones, Kerluke and Adams\",\n        \"description\": \"Aspernatur rem accusamus quia error et illum. Nobis nostrum id fugit sit error exercitationem. Ex voluptatibus et ut amet non perspiciatis modi illo. Similique nesciunt hic rerum cum.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_name",
+									"value": "Darrell Steward 1",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "South market business plaza 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Quote Mark\nFrom the initial consultation to the final walk-through, they demonstrated professionalism, expertise, and a genuine commitment to excellence.",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/testimonials/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"testimonials",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "client_name",
+											"value": "Darrell Steward 1",
+											"type": "text"
+										},
+										{
+											"key": "company_name",
+											"value": "South market business plaza 1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Quote Mark\nFrom the initial consultation to the final walk-through, they demonstrated professionalism, expertise, and a genuine commitment to excellence.",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/testimonials/10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"testimonials",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:18:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated testimonial\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 10,\n        \"client_name\": \"Darrell Steward 1\",\n        \"company_name\": \"South market business plaza 1\",\n        \"description\": \"Quote Mark\\nFrom the initial consultation to the final walk-through, they demonstrated professionalism, expertise, and a genuine commitment to excellence.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/testimonials/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"testimonials",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/testimonials/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"testimonials",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:19:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Testimonial has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Contact Us",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/contacts?page=2&limit=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/contacts?page=2&limit=5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contacts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:53:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 16,\n                \"name\": \"Carmella Pagac\",\n                \"email\": \"fabian.harvey@gottlieb.com\",\n                \"phone_number\": \"+1-203-515-1062\",\n                \"subject\": \"Architecto et qui impedit sit quia.\",\n                \"message\": \"Aliquid nihil placeat omnis ratione nisi quibusdam ut commodi. Neque praesentium ipsum veniam ratione. Neque consequatur occaecati soluta assumenda. Corporis omnis error numquam harum.\",\n                \"created_at\": \"2025-02-25T08:50:37.000000Z\",\n                \"updated_at\": \"2025-02-25T08:50:37.000000Z\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Mr. Jaren Herman III\",\n                \"email\": \"lori07@yahoo.com\",\n                \"phone_number\": \"+1 (551) 413-3938\",\n                \"subject\": \"Corrupti laudantium nobis nemo.\",\n                \"message\": \"Eius tempora hic ut et molestiae commodi omnis. Debitis dolores at occaecati et quisquam doloremque. Voluptatum officiis commodi debitis veritatis alias iusto harum voluptatem. Fugiat voluptates eos qui repellat quo ut et.\",\n                \"created_at\": \"2025-02-25T08:50:37.000000Z\",\n                \"updated_at\": \"2025-02-25T08:50:37.000000Z\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Dr. Sonny Wyman\",\n                \"email\": \"oren09@gmail.com\",\n                \"phone_number\": \"1-458-306-8328\",\n                \"subject\": \"Rerum dolores rerum quis odit hic aliquid iusto.\",\n                \"message\": \"Amet rerum ut libero quo voluptates. Facere inventore aliquam veritatis libero et aspernatur. Voluptas quis esse illo in itaque autem voluptatem. Voluptatum nihil commodi quod sit rerum omnis tempora.\",\n                \"created_at\": \"2025-02-25T08:50:37.000000Z\",\n                \"updated_at\": \"2025-02-25T08:50:37.000000Z\"\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Mr. Gerhard Abernathy I\",\n                \"email\": \"ikuhlman@gmail.com\",\n                \"phone_number\": \"929.719.2669\",\n                \"subject\": \"Rerum molestiae dolor quibusdam officiis mollitia.\",\n                \"message\": \"Quis deserunt dolores iste eaque. Omnis eius qui odit ab sit aut et aspernatur. Aliquam quod commodi quam et numquam ullam. Laborum doloremque doloribus impedit sapiente repudiandae culpa.\",\n                \"created_at\": \"2025-02-25T08:50:37.000000Z\",\n                \"updated_at\": \"2025-02-25T08:50:37.000000Z\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Tom Koss\",\n                \"email\": \"yfeeney@hotmail.com\",\n                \"phone_number\": \"+1 (240) 379-6998\",\n                \"subject\": \"Molestias ea dicta omnis et est voluptatem sit.\",\n                \"message\": \"Natus ea omnis magni tempore. Nulla voluptatem placeat eum laudantium. Atque molestiae ut qui delectus nostrum. Ut reprehenderit voluptas quidem non illum.\",\n                \"created_at\": \"2025-02-25T08:50:37.000000Z\",\n                \"updated_at\": \"2025-02-25T08:50:37.000000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 20,\n            \"count\": 5,\n            \"per_page\": 5,\n            \"current_page\": 2,\n            \"total_pages\": 4\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lal Bahadur Shrestha",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lalbahadur@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "9849123456",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "About consultation",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "i would like to consult about cement factory",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/contacts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lal Bahadur Shrestha",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lalbahadur@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "9849123456",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "About consultation",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "i would like to consult about cement factory",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/contacts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contacts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 08:55:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created contact\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 21,\n        \"name\": \"Lal Bahadur Shrestha\",\n        \"email\": \"lalbahadur@gmail.com\",\n        \"phone_number\": \"9849123456\",\n        \"subject\": \"About consultation\",\n        \"message\": \"i would like to consult about cement factory\",\n        \"created_at\": \"2025-02-25T08:55:03.000000Z\",\n        \"updated_at\": \"2025-02-25T08:55:03.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/contacts/21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"21"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/contacts/21",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contacts",
+										"21"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 09:04:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 21,\n        \"name\": \"Lal Bahadur Shrestha\",\n        \"email\": \"lalbahadur@gmail.com\",\n        \"phone_number\": \"9849123456\",\n        \"subject\": \"About consultation\",\n        \"message\": \"i would like to consult about cement factory\",\n        \"created_at\": \"2025-02-25T08:55:03.000000Z\",\n        \"updated_at\": \"2025-02-25T08:55:03.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lal Bahadur Shrestha a",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lalbahadur@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "9849123456",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "About consultation",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "i would like to consult about cement factory",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/contacts/21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"21"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lal Bahadur Shrestha a",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lalbahadur@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "9849123456",
+											"type": "text"
+										},
+										{
+											"key": "subject",
+											"value": "About consultation",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "i would like to consult about cement factory",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/contacts/21",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contacts",
+										"21"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 09:04:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated contact\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 21,\n        \"name\": \"Lal Bahadur Shrestha a\",\n        \"email\": \"lalbahadur@gmail.com\",\n        \"phone_number\": \"9849123456\",\n        \"subject\": \"About consultation\",\n        \"message\": \"i would like to consult about cement factory\",\n        \"created_at\": \"2025-02-25T08:55:03.000000Z\",\n        \"updated_at\": \"2025-02-25T09:04:50.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/contacts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/contacts/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contacts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 09:05:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Banners",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/banners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"banners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/banners",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"banners"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:12:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Quia fuga cumque fugiat labore ipsa.\",\n            \"description\": \"Dicta fugiat corrupti non repudiandae soluta. Perferendis ut quis odit vel molestiae iste delectus. Nesciunt suscipit doloremque ut harum itaque.\",\n            \"image\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Aut repellat quis voluptatibus.\",\n            \"description\": \"Eos autem similique quos atque repudiandae. Labore corrupti laborum a eos soluta fugiat. Ut sit qui sint laboriosam recusandae odit temporibus et. Sed vitae ipsum possimus tempore reprehenderit.\",\n            \"image\": null\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Soluta dolor minima et excepturi.\",\n            \"description\": \"Est dolores ut ut commodi et sapiente. Aut qui et illo commodi voluptatibus voluptatem. Ut iure tempora minus consequatur. Dolor velit dolores ea culpa nesciunt. Sint vel id et amet nisi voluptatem.\",\n            \"image\": null\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Maxime temporibus sit asperiores aliquid voluptatibus accusamus repellat.\",\n            \"description\": \"Dolorum ipsum velit laudantium voluptatem consequatur. Est esse eum aliquam cumque qui aut accusantium. Repellat dolor et explicabo assumenda consectetur aut omnis. Eaque ab optio harum.\",\n            \"image\": null\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Provident quis quo nihil voluptas.\",\n            \"description\": \"Molestiae aut voluptas natus nulla rem laudantium recusandae. Voluptate at odit consequatur qui. Et minima totam aliquam cumque dolorem corporis. A voluptatem doloremque animi et.\",\n            \"image\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Building Tomorrow Together, Your Trusted Construction Partner",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Construction websites are huge part of construction business.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/banners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"banners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Building Tomorrow Together, Your Trusted Construction Partner",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Construction websites are huge part of construction business.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/banners",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"banners"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:14:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created banner\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Building Tomorrow Together, Your Trusted Construction Partner\",\n        \"description\": \"Construction websites are huge part of construction business.\",\n        \"image\": \"http://localhost:8000/storage/89/b1d7ba9058bd76afb3c7ef04c2ca3ba1.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/banners/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"banners",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/banners/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"banners",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:14:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Building Tomorrow Together, Your Trusted Construction Partner\",\n        \"description\": \"Construction websites are huge part of construction business.\",\n        \"image\": \"http://localhost:8000/storage/89/b1d7ba9058bd76afb3c7ef04c2ca3ba1.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Building Tomorrow Together, Your Trusted Construction Partner f",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Construction websites are huge part of construction business.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/banners/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"banners",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Building Tomorrow Together, Your Trusted Construction Partner f",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Construction websites are huge part of construction business.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/banners/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"banners",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:16:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated banner\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Building Tomorrow Together, Your Trusted Construction Partner f\",\n        \"description\": \"Construction websites are huge part of construction business.\",\n        \"image\": \"http://localhost:8000/storage/92/2a1d42c754164fcdacb7dac08cc92bef.jpg\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/banners/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"banners",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/banners/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"banners",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 10:16:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"banner has been deleted\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Financial Index",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "key",
+									"value": "Credit Limits",
+									"type": "text"
+								},
+								{
+									"key": "document",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Job Description_ Software Engineer - PHP .pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/financial-index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"financial-index"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "Annual Reports",
+											"type": "text"
+										},
+										{
+											"key": "document",
+											"type": "file",
+											"src": "/C:/Users/User/Downloads/Job Description_ Software Engineer - PHP .pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/financial-index",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"financial-index"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 11:03:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully Saved\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/financial-index",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"financial-index"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/financial-index",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"financial-index"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Feb 2025 11:06:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"key\": \"Annual Reports\",\n            \"value\": \"/storage/93/a75bee7d5de5456792dd68f4385c9cdf.pdf\",\n            \"type\": \"DOCUMENT\"\n        },\n        {\n            \"key\": \"Credit Limits\",\n            \"value\": \"/storage/95/0c4c6e845e1e0440a2a242eea274f47a.pdf\",\n            \"type\": \"DOCUMENT\"\n        }\n    ]\n}"
 						}
 					]
 				}
