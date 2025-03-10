@@ -1068,7 +1068,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/mission-details?paginate=1&limit=2&page=2",
+							"raw": "{{url}}/api/mission-details?paginate=1&limit=2&page=2&keys[0]=OUR_VISION&keys[1]=OUT_MISSION",
 							"host": [
 								"{{url}}"
 							],
@@ -1088,6 +1088,14 @@
 								{
 									"key": "page",
 									"value": "2"
+								},
+								{
+									"key": "keys[0]",
+									"value": "OUR_VISION"
+								},
+								{
+									"key": "keys[1]",
+									"value": "OUT_MISSION"
 								}
 							]
 						}
@@ -5013,66 +5021,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/verticals",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"verticals"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.3.16"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 25 Feb 2025 06:11:16 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Rerum molestias et quia debitis.\",\n            \"list\": [\n                \"Vel cum qui vitae qui.\",\n                \"Hic distinctio aliquid ab optio sed hic molestias.\",\n                \"Sapiente excepturi veniam ea porro sed ratione.\",\n                \"Quos est atque porro fuga laboriosam est totam.\",\n                \"Nihil neque tempore ad saepe debitis dolore consequuntur dolor.\",\n                \"Id eligendi voluptatem quae corporis fuga quo voluptatem non.\",\n                \"Delectus animi aperiam dolorum.\",\n                \"Mollitia illo accusamus vel eum ipsam nihil.\",\n                \"Voluptatibus iste asperiores quae iusto id.\"\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Fugit eligendi maxime architecto veritatis magnam unde.\",\n            \"list\": [\n                \"Adipisci assumenda distinctio occaecati minus nostrum qui in.\",\n                \"Incidunt libero et asperiores et totam eaque.\",\n                \"Velit quo voluptatibus id.\",\n                \"Nostrum eveniet dolor reiciendis sint esse eum voluptatem quibusdam.\",\n                \"Recusandae cupiditate debitis quis qui omnis molestias cum.\",\n                \"In eos magni et quas adipisci enim neque sit.\",\n                \"Eos cum aut voluptatem optio accusamus.\",\n                \"Commodi rerum ut ut velit qui ad voluptas.\",\n                \"Consectetur quas distinctio itaque libero.\",\n                \"Itaque id voluptates fuga ipsam aut aut.\"\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Delectus cumque quaerat qui animi earum commodi perspiciatis.\",\n            \"list\": [\n                \"Inventore rem voluptatem dolore ut officia excepturi et.\",\n                \"Nemo voluptatibus occaecati rerum recusandae deserunt vitae inventore.\",\n                \"Minus distinctio sed qui possimus qui odio nesciunt enim.\",\n                \"Eaque aut similique animi aliquid.\",\n                \"Enim qui qui quia nobis fugit.\",\n                \"Aspernatur rerum nostrum laudantium aspernatur laboriosam optio.\",\n                \"Quo accusamus id et doloremque et.\",\n                \"Earum voluptatem et dicta deserunt.\",\n                \"Accusamus voluptas nisi praesentium sapiente.\"\n            ]\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Laborum dolores repellat sed ut perferendis.\",\n            \"list\": [\n                \"Totam magnam possimus aut voluptatum.\",\n                \"Ab eaque maxime velit quis repellendus sed et.\",\n                \"Vel aliquid corporis quod voluptatem veniam.\",\n                \"Ipsa adipisci veniam delectus nobis reprehenderit suscipit et.\",\n                \"Molestiae aut laudantium saepe qui velit.\",\n                \"Nostrum qui neque doloremque quis.\",\n                \"Voluptas autem quis sint quam ratione qui assumenda.\",\n                \"Iusto impedit non dolor libero inventore distinctio.\",\n                \"Sed eum ipsa accusantium autem.\"\n            ]\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Quae nisi et sint voluptatibus.\",\n            \"list\": [\n                \"Odio voluptate sequi ab tempore.\",\n                \"Voluptates odio qui eveniet vitae sequi minima id ut.\",\n                \"Nostrum ut maiores sit nihil neque assumenda.\",\n                \"Sequi voluptas sunt similique aut rerum repellat.\",\n                \"Voluptatum ad molestias est sequi laborum.\",\n                \"Quas rerum provident reiciendis et aliquid dignissimos dolor.\",\n                \"Tenetur quis id nemo nesciunt quasi sunt dolor.\",\n                \"Nihil excepturi porro aut quidem doloremque dignissimos aperiam qui.\",\n                \"Perspiciatis in libero et saepe officia placeat est reiciendis.\"\n            ]\n        },\n        {\n            \"id\": 6,\n            \"title\": \"In sint nostrum consequatur consequatur tempore accusamus alias.\",\n            \"list\": [\n                \"Sit hic enim qui voluptates natus repudiandae.\",\n                \"At voluptatem reiciendis quo aut dolores et maiores magni.\",\n                \"Natus ullam ut ipsum velit distinctio qui.\",\n                \"Ipsum facere aut error tempore sint quia sunt.\",\n                \"Magnam quo aperiam non.\",\n                \"Omnis cupiditate earum qui corporis rerum.\",\n                \"Ut perferendis aliquid provident ad.\",\n                \"Aut nihil delectus sit corrupti eaque eum qui accusamus.\",\n                \"Odit quos debitis veniam quis eum excepturi.\",\n                \"Consequuntur aut minus dignissimos eos.\"\n            ]\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Numquam sed facilis et hic eum rerum.\",\n            \"list\": [\n                \"Itaque aut voluptate velit illo deleniti.\",\n                \"Sit laboriosam quo eum sit esse.\",\n                \"Deleniti ab libero sed adipisci iste aut quia.\",\n                \"Perferendis magnam in dolor tenetur modi.\",\n                \"Nobis harum vitae minima animi.\",\n                \"Pariatur veniam qui aut quos adipisci ut dolorem illum.\",\n                \"Libero reiciendis quisquam molestias molestiae accusantium exercitationem porro.\",\n                \"Ratione occaecati ad rerum.\",\n                \"Ut voluptatem alias quisquam aspernatur et minima consequatur.\",\n                \"Quos laborum quisquam perspiciatis sed.\"\n            ]\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Et itaque pariatur unde.\",\n            \"list\": [\n                \"Debitis facere odio maiores asperiores.\",\n                \"Ut aut qui eveniet sint magnam tenetur velit.\",\n                \"Molestias dolorem fugit ducimus ut harum porro.\",\n                \"Et nihil voluptatem aliquid et rerum non expedita consequatur.\",\n                \"Exercitationem quasi voluptas et sapiente illo soluta.\",\n                \"Unde voluptatibus nostrum et et.\",\n                \"Doloribus vitae autem eum exercitationem.\",\n                \"Sit ducimus architecto officiis et.\",\n                \"Dolor dolor distinctio quia nobis repudiandae vel consectetur quod.\",\n                \"Velit sit dicta modi minima odit vel quo.\"\n            ]\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Ut omnis fuga temporibus cum.\",\n            \"list\": [\n                \"Corporis ab aut cupiditate.\",\n                \"Rerum aut officia qui odio laborum aspernatur.\",\n                \"Facere aspernatur est accusantium veritatis id quae voluptate.\",\n                \"Quam consequuntur blanditiis quia aut.\",\n                \"Et consequuntur nisi nostrum et dolores aliquid exercitationem.\",\n                \"Qui iusto nulla fuga.\",\n                \"Corrupti deleniti tempore error aliquid voluptatem esse voluptas vel.\",\n                \"Officia similique autem id eum est ratione consequatur.\",\n                \"Omnis minima impedit voluptatem sed.\",\n                \"Rerum consequatur reprehenderit id id.\"\n            ]\n        }\n    ]\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "create",
@@ -5094,44 +5043,39 @@
 									"type": "text"
 								},
 								{
-									"key": "list[0]",
+									"key": "list[0][label]",
 									"value": "Shivam Cements Ltd.",
 									"type": "text"
 								},
 								{
-									"key": "list[1]",
+									"key": "list[0][url]",
+									"value": "http://google.com",
+									"type": "text"
+								},
+								{
+									"key": "list[1][label]",
 									"value": "Bhugarbha Cements Pvt.Ltd",
 									"type": "text"
 								},
 								{
-									"key": "list[2]",
-									"value": "Riddhi Siddhi Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[3]",
-									"value": "Arghakhanchi Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[4]",
-									"value": "Shuvashree Agni Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[5]",
-									"value": "Hetauda Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[6]",
-									"value": "Hongshi Shivam Cements",
+									"key": "list[1][url]",
+									"value": "http://google.com",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png"
+								},
+								{
+									"key": "banner",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png"
+								},
+								{
+									"key": "description",
+									"value": "this is some description",
+									"type": "text"
 								}
 							]
 						},
@@ -5146,116 +5090,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "title",
-											"value": "Mining",
-											"type": "text"
-										},
-										{
-											"key": "list[0]",
-											"value": "Shivam Cements Ltd.",
-											"type": "text"
-										},
-										{
-											"key": "list[1]",
-											"value": "Bhugarbha Cements Pvt.Ltd",
-											"type": "text"
-										},
-										{
-											"key": "list[2]",
-											"value": "Riddhi Siddhi Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[3]",
-											"value": "Arghakhanchi Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[4]",
-											"value": "Shuvashree Agni Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[5]",
-											"value": "Hetauda Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[6]",
-											"value": "Hongshi Shivam Cements",
-											"type": "text"
-										},
-										{
-											"key": "image",
-											"type": "file",
-											"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{url}}/api/verticals",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"verticals"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.3.16"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 25 Feb 2025 06:14:28 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully created vertical\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Mining\",\n        \"list\": [\n            \"Shivam Cements Ltd.\",\n            \"Bhugarbha Cements Pvt.Ltd\",\n            \"Riddhi Siddhi Cements\",\n            \"Arghakhanchi Cements\",\n            \"Shuvashree Agni Cements\",\n            \"Hetauda Cements\",\n            \"Hongshi Shivam Cements\"\n        ],\n        \"image\": \"http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "fetch",
@@ -5280,67 +5115,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/verticals/11",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"verticals",
-										"11"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.3.16"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 25 Feb 2025 06:14:56 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Mining\",\n        \"list\": [\n            \"Shivam Cements Ltd.\",\n            \"Bhugarbha Cements Pvt.Ltd\",\n            \"Riddhi Siddhi Cements\",\n            \"Arghakhanchi Cements\",\n            \"Shuvashree Agni Cements\",\n            \"Hetauda Cements\",\n            \"Hongshi Shivam Cements\"\n        ],\n        \"image\": \"http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "update",
@@ -5362,38 +5137,28 @@
 									"type": "text"
 								},
 								{
-									"key": "list[0]",
+									"key": "list[0][label]",
 									"value": "Shivam Cements Ltd.",
 									"type": "text"
 								},
 								{
-									"key": "list[1]",
+									"key": "list[0][url]",
+									"value": "http://google.com",
+									"type": "text"
+								},
+								{
+									"key": "list[1][label]",
 									"value": "Bhugarbha Cements Pvt.Ltd",
 									"type": "text"
 								},
 								{
-									"key": "list[2]",
-									"value": "Riddhi Siddhi Cements",
+									"key": "list[1][url]",
+									"value": "http://google.com",
 									"type": "text"
 								},
 								{
-									"key": "list[3]",
-									"value": "Arghakhanchi Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[4]",
-									"value": "Shuvashree Agni Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[5]",
-									"value": "Hetauda Cements",
-									"type": "text"
-								},
-								{
-									"key": "list[6]",
-									"value": "Hongshi Shivam Cements",
+									"key": "description",
+									"value": "this is some description",
 									"type": "text"
 								},
 								{
@@ -5404,7 +5169,14 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png",
+									"disabled": true
+								},
+								{
+									"key": "banner",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png",
+									"disabled": true
 								}
 							]
 						},
@@ -5420,202 +5192,32 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "title",
-											"value": "Mining",
-											"type": "text"
-										},
-										{
-											"key": "list[0]",
-											"value": "Shivam Cements Ltd.",
-											"type": "text"
-										},
-										{
-											"key": "list[1]",
-											"value": "Bhugarbha Cements Pvt.Ltd",
-											"type": "text"
-										},
-										{
-											"key": "list[2]",
-											"value": "Riddhi Siddhi Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[3]",
-											"value": "Arghakhanchi Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[4]",
-											"value": "Shuvashree Agni Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[5]",
-											"value": "Hetauda Cements",
-											"type": "text"
-										},
-										{
-											"key": "list[6]",
-											"value": "Hongshi Shivam Cements",
-											"type": "text"
-										},
-										{
-											"key": "_method",
-											"value": "put",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{url}}/api/verticals/11",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"verticals",
-										"11"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.3.16"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 25 Feb 2025 06:17:11 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"message\": \"Successfully updated vertical\",\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 11,\n        \"title\": \"Mining\",\n        \"list\": [\n            \"Shivam Cements Ltd.\",\n            \"Bhugarbha Cements Pvt.Ltd\",\n            \"Riddhi Siddhi Cements\",\n            \"Arghakhanchi Cements\",\n            \"Shuvashree Agni Cements\",\n            \"Hetauda Cements\",\n            \"Hongshi Shivam Cements\"\n        ],\n        \"image\": \"http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
-							"raw": "{{url}}/api/verticals/1",
+							"raw": "{{url}}/api/verticals/:id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"verticals",
-								"1"
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "success",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/verticals/1",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"verticals",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.3.16"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 25 Feb 2025 06:18:03 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Vertical has been deleted\"\n}"
-						}
-					]
+					"response": []
 				}
 			],
 			"auth": {

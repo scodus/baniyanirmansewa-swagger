@@ -656,6 +656,16 @@ paths:
           schema:
             type: integer
           example: '2'
+        - name: keys[0]
+          in: query
+          schema:
+            type: string
+          example: OUR_VISION
+        - name: keys[1]
+          in: query
+          schema:
+            type: string
+          example: OUT_MISSION
       responses:
         '200':
           description: OK
@@ -4396,201 +4406,9 @@ paths:
           example: '5'
       responses:
         '200':
-          description: OK
-          headers:
-            Host:
-              schema:
-                type: string
-                example: localhost:8000
-            Connection:
-              schema:
-                type: string
-                example: close
-            X-Powered-By:
-              schema:
-                type: string
-                example: PHP/8.3.16
-            Cache-Control:
-              schema:
-                type: string
-                example: no-cache, private
-            Date:
-              schema:
-                type: string
-                example: Tue, 25 Feb 2025 06:11:16 GMT
-            Content-Type:
-              schema:
-                type: string
-                example: application/json
-            Access-Control-Allow-Origin:
-              schema:
-                type: string
-                example: '*'
+          description: Successful response
           content:
-            application/json:
-              schema:
-                type: object
-              example:
-                message: Successfully fetched
-                status: success
-                data:
-                  - id: 1
-                    title: Rerum molestias et quia debitis.
-                    list:
-                      - Vel cum qui vitae qui.
-                      - Hic distinctio aliquid ab optio sed hic molestias.
-                      - Sapiente excepturi veniam ea porro sed ratione.
-                      - Quos est atque porro fuga laboriosam est totam.
-                      - >-
-                        Nihil neque tempore ad saepe debitis dolore consequuntur
-                        dolor.
-                      - >-
-                        Id eligendi voluptatem quae corporis fuga quo voluptatem
-                        non.
-                      - Delectus animi aperiam dolorum.
-                      - Mollitia illo accusamus vel eum ipsam nihil.
-                      - Voluptatibus iste asperiores quae iusto id.
-                  - id: 2
-                    title: Fugit eligendi maxime architecto veritatis magnam unde.
-                    list:
-                      - >-
-                        Adipisci assumenda distinctio occaecati minus nostrum
-                        qui in.
-                      - Incidunt libero et asperiores et totam eaque.
-                      - Velit quo voluptatibus id.
-                      - >-
-                        Nostrum eveniet dolor reiciendis sint esse eum
-                        voluptatem quibusdam.
-                      - >-
-                        Recusandae cupiditate debitis quis qui omnis molestias
-                        cum.
-                      - In eos magni et quas adipisci enim neque sit.
-                      - Eos cum aut voluptatem optio accusamus.
-                      - Commodi rerum ut ut velit qui ad voluptas.
-                      - Consectetur quas distinctio itaque libero.
-                      - Itaque id voluptates fuga ipsam aut aut.
-                  - id: 3
-                    title: >-
-                      Delectus cumque quaerat qui animi earum commodi
-                      perspiciatis.
-                    list:
-                      - Inventore rem voluptatem dolore ut officia excepturi et.
-                      - >-
-                        Nemo voluptatibus occaecati rerum recusandae deserunt
-                        vitae inventore.
-                      - >-
-                        Minus distinctio sed qui possimus qui odio nesciunt
-                        enim.
-                      - Eaque aut similique animi aliquid.
-                      - Enim qui qui quia nobis fugit.
-                      - >-
-                        Aspernatur rerum nostrum laudantium aspernatur
-                        laboriosam optio.
-                      - Quo accusamus id et doloremque et.
-                      - Earum voluptatem et dicta deserunt.
-                      - Accusamus voluptas nisi praesentium sapiente.
-                  - id: 4
-                    title: Laborum dolores repellat sed ut perferendis.
-                    list:
-                      - Totam magnam possimus aut voluptatum.
-                      - Ab eaque maxime velit quis repellendus sed et.
-                      - Vel aliquid corporis quod voluptatem veniam.
-                      - >-
-                        Ipsa adipisci veniam delectus nobis reprehenderit
-                        suscipit et.
-                      - Molestiae aut laudantium saepe qui velit.
-                      - Nostrum qui neque doloremque quis.
-                      - Voluptas autem quis sint quam ratione qui assumenda.
-                      - Iusto impedit non dolor libero inventore distinctio.
-                      - Sed eum ipsa accusantium autem.
-                  - id: 5
-                    title: Quae nisi et sint voluptatibus.
-                    list:
-                      - Odio voluptate sequi ab tempore.
-                      - Voluptates odio qui eveniet vitae sequi minima id ut.
-                      - Nostrum ut maiores sit nihil neque assumenda.
-                      - Sequi voluptas sunt similique aut rerum repellat.
-                      - Voluptatum ad molestias est sequi laborum.
-                      - >-
-                        Quas rerum provident reiciendis et aliquid dignissimos
-                        dolor.
-                      - Tenetur quis id nemo nesciunt quasi sunt dolor.
-                      - >-
-                        Nihil excepturi porro aut quidem doloremque dignissimos
-                        aperiam qui.
-                      - >-
-                        Perspiciatis in libero et saepe officia placeat est
-                        reiciendis.
-                  - id: 6
-                    title: >-
-                      In sint nostrum consequatur consequatur tempore accusamus
-                      alias.
-                    list:
-                      - Sit hic enim qui voluptates natus repudiandae.
-                      - >-
-                        At voluptatem reiciendis quo aut dolores et maiores
-                        magni.
-                      - Natus ullam ut ipsum velit distinctio qui.
-                      - Ipsum facere aut error tempore sint quia sunt.
-                      - Magnam quo aperiam non.
-                      - Omnis cupiditate earum qui corporis rerum.
-                      - Ut perferendis aliquid provident ad.
-                      - Aut nihil delectus sit corrupti eaque eum qui accusamus.
-                      - Odit quos debitis veniam quis eum excepturi.
-                      - Consequuntur aut minus dignissimos eos.
-                  - id: 7
-                    title: Numquam sed facilis et hic eum rerum.
-                    list:
-                      - Itaque aut voluptate velit illo deleniti.
-                      - Sit laboriosam quo eum sit esse.
-                      - Deleniti ab libero sed adipisci iste aut quia.
-                      - Perferendis magnam in dolor tenetur modi.
-                      - Nobis harum vitae minima animi.
-                      - Pariatur veniam qui aut quos adipisci ut dolorem illum.
-                      - >-
-                        Libero reiciendis quisquam molestias molestiae
-                        accusantium exercitationem porro.
-                      - Ratione occaecati ad rerum.
-                      - >-
-                        Ut voluptatem alias quisquam aspernatur et minima
-                        consequatur.
-                      - Quos laborum quisquam perspiciatis sed.
-                  - id: 8
-                    title: Et itaque pariatur unde.
-                    list:
-                      - Debitis facere odio maiores asperiores.
-                      - Ut aut qui eveniet sint magnam tenetur velit.
-                      - Molestias dolorem fugit ducimus ut harum porro.
-                      - >-
-                        Et nihil voluptatem aliquid et rerum non expedita
-                        consequatur.
-                      - Exercitationem quasi voluptas et sapiente illo soluta.
-                      - Unde voluptatibus nostrum et et.
-                      - Doloribus vitae autem eum exercitationem.
-                      - Sit ducimus architecto officiis et.
-                      - >-
-                        Dolor dolor distinctio quia nobis repudiandae vel
-                        consectetur quod.
-                      - Velit sit dicta modi minima odit vel quo.
-                  - id: 9
-                    title: Ut omnis fuga temporibus cum.
-                    list:
-                      - Corporis ab aut cupiditate.
-                      - Rerum aut officia qui odio laborum aspernatur.
-                      - >-
-                        Facere aspernatur est accusantium veritatis id quae
-                        voluptate.
-                      - Quam consequuntur blanditiis quia aut.
-                      - >-
-                        Et consequuntur nisi nostrum et dolores aliquid
-                        exercitationem.
-                      - Qui iusto nulla fuga.
-                      - >-
-                        Corrupti deleniti tempore error aliquid voluptatem esse
-                        voluptas vel.
-                      - Officia similique autem id eum est ratione consequatur.
-                      - Omnis minima impedit voluptatem sed.
-                      - Rerum consequatur reprehenderit id id.
+            application/json: {}
     post:
       tags:
         - Our Verticals
@@ -4604,30 +4422,27 @@ paths:
                 title:
                   type: string
                   example: Mining
-                list[0]:
+                list[0][label]:
                   type: string
                   example: Shivam Cements Ltd.
-                list[1]:
+                list[0][url]:
+                  type: string
+                  example: http://google.com
+                list[1][label]:
                   type: string
                   example: Bhugarbha Cements Pvt.Ltd
-                list[2]:
+                list[1][url]:
                   type: string
-                  example: Riddhi Siddhi Cements
-                list[3]:
-                  type: string
-                  example: Arghakhanchi Cements
-                list[4]:
-                  type: string
-                  example: Shuvashree Agni Cements
-                list[5]:
-                  type: string
-                  example: Hetauda Cements
-                list[6]:
-                  type: string
-                  example: Hongshi Shivam Cements
+                  example: http://google.com
                 image:
                   type: string
                   format: binary
+                banner:
+                  type: string
+                  format: binary
+                description:
+                  type: string
+                  example: this is some description
       parameters:
         - name: Accept
           in: header
@@ -4635,57 +4450,10 @@ paths:
             type: string
           example: application/json
       responses:
-        '201':
-          description: Created
-          headers:
-            Host:
-              schema:
-                type: string
-                example: localhost:8000
-            Connection:
-              schema:
-                type: string
-                example: close
-            X-Powered-By:
-              schema:
-                type: string
-                example: PHP/8.3.16
-            Cache-Control:
-              schema:
-                type: string
-                example: no-cache, private
-            Date:
-              schema:
-                type: string
-                example: Tue, 25 Feb 2025 06:14:28 GMT
-            Content-Type:
-              schema:
-                type: string
-                example: application/json
-            Access-Control-Allow-Origin:
-              schema:
-                type: string
-                example: '*'
+        '200':
+          description: Successful response
           content:
-            application/json:
-              schema:
-                type: object
-              example:
-                message: Successfully created vertical
-                status: success
-                data:
-                  id: 11
-                  title: Mining
-                  list:
-                    - Shivam Cements Ltd.
-                    - Bhugarbha Cements Pvt.Ltd
-                    - Riddhi Siddhi Cements
-                    - Arghakhanchi Cements
-                    - Shuvashree Agni Cements
-                    - Hetauda Cements
-                    - Hongshi Shivam Cements
-                  image: >-
-                    http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg
+            application/json: {}
   /api/verticals/11:
     get:
       tags:
@@ -4699,56 +4467,9 @@ paths:
           example: application/json
       responses:
         '200':
-          description: OK
-          headers:
-            Host:
-              schema:
-                type: string
-                example: localhost:8000
-            Connection:
-              schema:
-                type: string
-                example: close
-            X-Powered-By:
-              schema:
-                type: string
-                example: PHP/8.3.16
-            Cache-Control:
-              schema:
-                type: string
-                example: no-cache, private
-            Date:
-              schema:
-                type: string
-                example: Tue, 25 Feb 2025 06:14:56 GMT
-            Content-Type:
-              schema:
-                type: string
-                example: application/json
-            Access-Control-Allow-Origin:
-              schema:
-                type: string
-                example: '*'
+          description: Successful response
           content:
-            application/json:
-              schema:
-                type: object
-              example:
-                message: Successfully fetched
-                status: success
-                data:
-                  id: 11
-                  title: Mining
-                  list:
-                    - Shivam Cements Ltd.
-                    - Bhugarbha Cements Pvt.Ltd
-                    - Riddhi Siddhi Cements
-                    - Arghakhanchi Cements
-                    - Shuvashree Agni Cements
-                    - Hetauda Cements
-                    - Hongshi Shivam Cements
-                  image: >-
-                    http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg
+            application/json: {}
     post:
       tags:
         - Our Verticals
@@ -4762,31 +4483,28 @@ paths:
                 title:
                   type: string
                   example: Mining
-                list[0]:
+                list[0][label]:
                   type: string
                   example: Shivam Cements Ltd.
-                list[1]:
+                list[0][url]:
+                  type: string
+                  example: http://google.com
+                list[1][label]:
                   type: string
                   example: Bhugarbha Cements Pvt.Ltd
-                list[2]:
+                list[1][url]:
                   type: string
-                  example: Riddhi Siddhi Cements
-                list[3]:
+                  example: http://google.com
+                description:
                   type: string
-                  example: Arghakhanchi Cements
-                list[4]:
-                  type: string
-                  example: Shuvashree Agni Cements
-                list[5]:
-                  type: string
-                  example: Hetauda Cements
-                list[6]:
-                  type: string
-                  example: Hongshi Shivam Cements
+                  example: this is some description
                 _method:
                   type: string
                   example: put
                 image:
+                  type: string
+                  format: binary
+                banner:
                   type: string
                   format: binary
       parameters:
@@ -4797,106 +4515,26 @@ paths:
           example: application/json
       responses:
         '200':
-          description: OK
-          headers:
-            Host:
-              schema:
-                type: string
-                example: localhost:8000
-            Connection:
-              schema:
-                type: string
-                example: close
-            X-Powered-By:
-              schema:
-                type: string
-                example: PHP/8.3.16
-            Cache-Control:
-              schema:
-                type: string
-                example: no-cache, private
-            Date:
-              schema:
-                type: string
-                example: Tue, 25 Feb 2025 06:17:11 GMT
-            Content-Type:
-              schema:
-                type: string
-                example: application/json
-            Access-Control-Allow-Origin:
-              schema:
-                type: string
-                example: '*'
+          description: Successful response
           content:
-            application/json:
-              schema:
-                type: object
-              example:
-                message: Successfully updated vertical
-                status: success
-                data:
-                  id: 11
-                  title: Mining
-                  list:
-                    - Shivam Cements Ltd.
-                    - Bhugarbha Cements Pvt.Ltd
-                    - Riddhi Siddhi Cements
-                    - Arghakhanchi Cements
-                    - Shuvashree Agni Cements
-                    - Hetauda Cements
-                    - Hongshi Shivam Cements
-                  image: >-
-                    http://localhost:8000/storage/83/490831a081e98fc504f7ae7a058b73f2.jpg
-  /api/verticals/1:
+            application/json: {}
+  /api/verticals/{id}:
     delete:
       tags:
         - Our Verticals
       summary: delete
       parameters:
-        - name: Accept
-          in: header
+        - name: id
+          in: path
           schema:
-            type: string
-          example: application/json
+            type: integer
+          required: true
+          example: '5'
       responses:
         '200':
-          description: OK
-          headers:
-            Host:
-              schema:
-                type: string
-                example: localhost:8000
-            Connection:
-              schema:
-                type: string
-                example: close
-            X-Powered-By:
-              schema:
-                type: string
-                example: PHP/8.3.16
-            Cache-Control:
-              schema:
-                type: string
-                example: no-cache, private
-            Date:
-              schema:
-                type: string
-                example: Tue, 25 Feb 2025 06:18:03 GMT
-            Content-Type:
-              schema:
-                type: string
-                example: application/json
-            Access-Control-Allow-Origin:
-              schema:
-                type: string
-                example: '*'
+          description: Successful response
           content:
-            application/json:
-              schema:
-                type: object
-              example:
-                status: success
-                message: Vertical has been deleted
+            application/json: {}
   /api/careers:
     get:
       tags:
