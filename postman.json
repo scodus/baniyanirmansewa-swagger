@@ -37,7 +37,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"Pa$$word2\"\r\n}",
+							"raw": "{\r\n    \"email\":\"test@example.com\",\r\n    \"password\":\"password\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -866,7 +866,8 @@
 								{
 									"key": "value",
 									"value": "some value",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "document",
@@ -994,13 +995,13 @@
 								{
 									"key": "data[1][value]",
 									"value": "random value",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "data[1][document]",
 									"type": "file",
-									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg",
-									"disabled": true
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
 								}
 							]
 						},
@@ -1067,13 +1068,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/mission-details",
+							"raw": "{{url}}/api/mission-details?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"mission-details"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -1577,6 +1592,86 @@
 							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Mission detail has been deleted\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Store multiple",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vision_key",
+									"value": "OUR_VISION",
+									"type": "text"
+								},
+								{
+									"key": "vision_value",
+									"value": "The vision aspires to achieve growth and leadership in the construction industry by prioritizing quality, safety, sustainability, and innovation, while consistently exceeding client expectations and building lasting structures that leave a positive legacy.",
+									"type": "text"
+								},
+								{
+									"key": "mission_key",
+									"value": "OUT_MISSION",
+									"type": "text"
+								},
+								{
+									"key": "mission_value",
+									"value": "The mission focuses on delivering exceptional and innovative construction services that prioritize client satisfaction through quality craftsmanship, sustainability, community development, and fostering strong relationships, while ensuring a safe work environment for all employees.",
+									"type": "text"
+								},
+								{
+									"key": "data[0][title]",
+									"value": "Sustainability",
+									"type": "text"
+								},
+								{
+									"key": "data[0][description]",
+									"value": "1 To build a sustainable future by providing eco-friendly construction services using advanced technologies & resource management.",
+									"type": "text"
+								},
+								{
+									"key": "data[0][image]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								},
+								{
+									"key": "data[1][title]",
+									"value": "Innovation",
+									"type": "text"
+								},
+								{
+									"key": "data[1][description]",
+									"value": "2 To deliver exceptional construction services, prioritizing client satisfaction through quality craftsmanship, timely execution, and innovative solutions.",
+									"type": "text"
+								},
+								{
+									"key": "data[1][image]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/mission-details/multiple",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"mission-details",
+								"multiple"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"auth": {
@@ -1627,13 +1722,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/founders",
+							"raw": "{{url}}/api/founders?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"founders"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -2296,13 +2405,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/directors",
+							"raw": "{{url}}/api/directors?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"directors"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -3494,7 +3617,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/projects",
+							"raw": "{{url}}/api/projects?limit=2&page=1",
 							"host": [
 								"{{url}}"
 							],
@@ -3507,6 +3630,19 @@
 									"key": "category_id",
 									"value": "2",
 									"disabled": true
+								},
+								{
+									"key": "paginate",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
 								}
 							]
 						}
@@ -3646,7 +3782,17 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png"
+								},
+								{
+									"key": "category_ids[0]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "category_ids[1]",
+									"value": "2",
+									"type": "text"
 								}
 							]
 						},
@@ -4321,13 +4467,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/categories",
+							"raw": "{{url}}/api/categories?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"categories"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -4829,13 +4989,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/verticals",
+							"raw": "{{url}}/api/verticals?paginate=1&limit=2&page=5",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"verticals"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "5"
+								}
 							]
 						}
 					},
@@ -5492,13 +5666,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/careers",
+							"raw": "{{url}}/api/careers?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"careers"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -6040,13 +6228,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/expertise",
+							"raw": "{{url}}/api/expertise?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"expertise"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -6356,14 +6558,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{url}}/api/expertise/11",
+							"raw": "{{url}}/api/expertise/1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"expertise",
-								"11"
+								"1"
 							]
 						}
 					},
@@ -7789,13 +7991,27 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/banners",
+							"raw": "{{url}}/api/banners?paginate=1&limit=2&page=2",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"banners"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -8329,7 +8545,7 @@
 							"formdata": [
 								{
 									"key": "key",
-									"value": "Credit Limits",
+									"value": "Credit Limits new",
 									"type": "text"
 								},
 								{
@@ -8508,6 +8724,481 @@
 							"body": "{\n    \"message\": \"Successfully fetched\",\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"key\": \"Annual Reports\",\n            \"value\": \"/storage/93/a75bee7d5de5456792dd68f4385c9cdf.pdf\",\n            \"type\": \"DOCUMENT\"\n        },\n        {\n            \"key\": \"Credit Limits\",\n            \"value\": \"/storage/95/0c4c6e845e1e0440a2a242eea274f47a.pdf\",\n            \"type\": \"DOCUMENT\"\n        }\n    ]\n}"
 						}
 					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Gallery",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/galleries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"galleries"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Gallery 1",
+									"type": "text"
+								},
+								{
+									"key": "images[0]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								},
+								{
+									"key": "images[1]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/galleries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"galleries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "new title",
+									"type": "text"
+								},
+								{
+									"key": "images[0]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/Fight Another Day (2024) [1080p] [BluRay] [5.1] [YTS.MX]/www.YTS.MX.jpg"
+								},
+								{
+									"key": "images[1]",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/galleries/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"galleries",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/galleries/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"galleries",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/galleries/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"galleries",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{access_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Award",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/awards?paginate=1&limit=2&page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"awards"
+							],
+							"query": [
+								{
+									"key": "paginate",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu",
+									"type": "text"
+								},
+								{
+									"key": "author_name",
+									"value": "Ian Aikman",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\n\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.\n\nThis severe weather could also affect Oklahoma and southern Arkansas, but further north in Arkansas, cloud cover is looking a little better up through Indiana, where there should be some decent clear skies.\n\nBy the time the eclipse reaches northern Indiana, Ohio and northeast portions of the US, overall there’ll generally be some clear spells but some high level cloud could locally be a bit thicker to obscure the Sun.\n\nFor eastern Canada, Maine and up to New Brunswick, the forecast is looking good with some cloudless skies.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/awards",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"awards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/awards/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"awards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Stone Laying Ceremony Marks Commencement of 132 kV Amarpur-Dhungesanghu",
+									"type": "text"
+								},
+								{
+									"key": "author_name",
+									"value": "Ian Aikman",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "At the start of the eclipse, there should be some good clear skies in Mexico, but into Texas, Austin and Dallas are looking quite cloudy with an increasing threat of some severe weather.\n\nFor eastern areas of Texas, severe storms, including tornadoes, may actually impact travel here after the spectacle.\n\nThis severe weather could also affect Oklahoma and southern Arkansas, but further north in Arkansas, cloud cover is looking a little better up through Indiana, where there should be some decent clear skies.\n\nBy the time the eclipse reaches northern Indiana, Ohio and northeast portions of the US, overall there’ll generally be some clear spells but some high level cloud could locally be a bit thicker to obscure the Sun.\n\nFor eastern Canada, Maine and up to New Brunswick, the forecast is looking good with some cloudless skies.",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/logo with letters OPC.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/awards/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"awards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/awards/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"awards",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"auth": {
